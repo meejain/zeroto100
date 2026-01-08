@@ -5,6 +5,7 @@
 .cards-icon-container {
   background-color: #00341c;
   padding: 100px 0;
+  margin: 0 !important; /* Remove default section margin */
 }
 
 .cards-icon-container > div {

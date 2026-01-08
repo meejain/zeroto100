@@ -4,7 +4,12 @@ export default function decorate(block) {
     const label = row.children[0];
     const summary = document.createElement('summary');
     summary.className = 'accordion-dark-item-label';
-    summary.append(...label.childNodes);
+    
+    // Wrap label content in a span for hover animation
+    const labelText = document.createElement('span');
+    labelText.className = 'accordion-dark-item-label-text';
+    labelText.append(...label.childNodes);
+    summary.append(labelText);
 
     // Content is the second column
     const body = row.children[1];

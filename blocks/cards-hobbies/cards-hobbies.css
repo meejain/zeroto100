@@ -5,6 +5,7 @@
 .cards-hobbies-container {
   background-color: #f5f5f0;
   padding: 80px 0;
+  margin: 0 !important; /* Remove default section margin */
 }
 
 .cards-hobbies-wrapper {
@@ -22,6 +23,53 @@
   text-align: center;
   margin: 0 auto 60px;
   line-height: 1.2;
+}
+
+/* "Show More Work" button styling - button is in default-content-wrapper within same section */
+.cards-hobbies-container .default-content-wrapper p.button-container {
+  text-align: center;
+  margin: 60px 0 0;
+}
+
+.cards-hobbies-container .default-content-wrapper p.button-container a.button:any-link,
+.cards-hobbies-container .default-content-wrapper p.button-container a.button {
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Rethink Sans', sans-serif;
+  font-size: 1rem !important; /* 16px */
+  font-weight: 700;
+  color: #1a1a1a !important; /* Black text */
+  text-decoration: none !important;
+  background-color: transparent !important;
+  border: 2px solid #1a1a1a !important; /* Black border */
+  border-radius: 40px !important; /* Pill shape */
+  padding: 24px 40px !important;
+  min-height: 68px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 0 !important;
+}
+
+.cards-hobbies-container .default-content-wrapper p.button-container a.button:hover,
+.cards-hobbies-container .default-content-wrapper p.button-container a.button:focus {
+  background-color: #1a1a1a !important; /* Black background on hover */
+  color: #fff !important; /* White text on hover */
+  transform: translateY(-2px);
+  text-decoration: none !important;
+}
+
+/* Responsive adjustments for button */
+@media (width >= 900px) {
+  .cards-hobbies-container .default-content-wrapper p.button-container {
+    margin-top: 80px;
+  }
+}
+
+@media (width >= 1200px) {
+  .cards-hobbies-container .default-content-wrapper p.button-container {
+    margin-top: 100px;
+  }
 }
 
 /* Two-column flexbox layout */
@@ -145,6 +193,10 @@
     margin-bottom: 80px;
   }
 
+  .cards-hobbies-container .button-container {
+    margin-top: 80px;
+  }
+
   .cards-hobbies {
     gap: 50px;
   }
@@ -236,6 +288,10 @@
 
   .cards-hobbies .cards-hobbies-card-body p {
     font-size: 1.125rem;
+  }
+
+  .cards-hobbies-container .button-container {
+    margin-top: 100px;
   }
 }
 
