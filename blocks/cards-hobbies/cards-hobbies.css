@@ -1,0 +1,291 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap');
+
+/* Section container styling */
+.cards-hobbies-container {
+  background-color: #f5f5f0;
+  padding: 80px 0;
+}
+
+.cards-hobbies-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Heading styling */
+.cards-hobbies-container h2 {
+  color: #006034;
+  font-family: 'Rethink Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 auto 60px;
+  line-height: 1.2;
+}
+
+/* Two-column flexbox layout */
+.cards-hobbies {
+  display: flex;
+  gap: 40px;
+}
+
+/* Each column is a vertical flex container */
+.cards-hobbies-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Offset second column down */
+.cards-hobbies-column:nth-child(2) {
+  margin-top: 150px;
+}
+
+/* Individual card */
+.cards-hobbies-column > li {
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  opacity: 0;
+  translate: 0 30px;
+  transition: opacity 0.6s ease, translate 0.6s ease, transform 0.3s ease;
+}
+
+.cards-hobbies-column > li.animate-in {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.cards-hobbies-column > li:hover {
+  transform: translateY(-6px);
+}
+
+/* Image container */
+.cards-hobbies .cards-hobbies-card-image {
+  line-height: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cards-hobbies .cards-hobbies-card-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cards-hobbies-column > li img {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Column 1 Card 1 & Column 2 Card 2 - shorter height */
+.cards-hobbies-column:nth-child(1) > li:nth-child(1) img,
+.cards-hobbies-column:nth-child(2) > li:nth-child(2) img {
+  min-height: 380px;
+}
+
+/* Column 1 Card 2 & Column 2 Card 1 - taller height */
+.cards-hobbies-column:nth-child(1) > li:nth-child(2) img,
+.cards-hobbies-column:nth-child(2) > li:nth-child(1) img {
+  min-height: 480px;
+}
+
+.cards-hobbies-column > li:hover img {
+  transform: scale(1.05);
+}
+
+/* Text content overlay */
+.cards-hobbies .cards-hobbies-card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+  z-index: 2;
+}
+
+.cards-hobbies .cards-hobbies-card-body h4,
+.cards-hobbies .cards-hobbies-card-body strong {
+  display: block;
+  font-family: 'Rethink Sans', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.cards-hobbies .cards-hobbies-card-body p,
+.cards-hobbies .cards-hobbies-card-body {
+  font-family: 'DM Sans', sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Tablet and up */
+@media (width >= 900px) {
+  .cards-hobbies-container {
+    padding: 100px 0;
+  }
+
+  .cards-hobbies-container h2 {
+    font-size: 2.9375rem;
+    margin-bottom: 80px;
+  }
+
+  .cards-hobbies {
+    gap: 50px;
+  }
+
+  .cards-hobbies-column {
+    gap: 50px;
+  }
+
+  /* Offset second column down more on tablet */
+  .cards-hobbies-column:nth-child(2) {
+    margin-top: 180px;
+  }
+
+  /* Column 1 Card 1 & Column 2 Card 2 - shorter height */
+  .cards-hobbies-column:nth-child(1) > li:nth-child(1) img,
+  .cards-hobbies-column:nth-child(2) > li:nth-child(2) img {
+    min-height: 420px;
+  }
+
+  /* Column 1 Card 2 & Column 2 Card 1 - taller height */
+  .cards-hobbies-column:nth-child(1) > li:nth-child(2) img,
+  .cards-hobbies-column:nth-child(2) > li:nth-child(1) img {
+    min-height: 540px;
+  }
+
+  .cards-hobbies .cards-hobbies-card-body {
+    padding: 40px;
+  }
+
+  .cards-hobbies .cards-hobbies-card-body h4,
+  .cards-hobbies .cards-hobbies-card-body strong {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+
+  .cards-hobbies .cards-hobbies-card-body p {
+    font-size: 1.0625rem;
+  }
+}
+
+/* Desktop */
+@media (width >= 1200px) {
+  .cards-hobbies-container {
+    padding: 120px 0;
+  }
+
+  .cards-hobbies-wrapper {
+    padding: 0 60px;
+  }
+
+  .cards-hobbies {
+    gap: 60px;
+  }
+
+  .cards-hobbies-column {
+    gap: 60px;
+  }
+
+  /* Offset second column down more on desktop */
+  .cards-hobbies-column:nth-child(2) {
+    margin-top: 200px;
+  }
+
+  .cards-hobbies-column > li {
+    border-radius: 32px;
+  }
+
+  /* Column 1 Card 1 & Column 2 Card 2 - shorter height */
+  .cards-hobbies-column:nth-child(1) > li:nth-child(1) img,
+  .cards-hobbies-column:nth-child(2) > li:nth-child(2) img {
+    min-height: 460px;
+  }
+
+  /* Column 1 Card 2 & Column 2 Card 1 - taller height */
+  .cards-hobbies-column:nth-child(1) > li:nth-child(2) img,
+  .cards-hobbies-column:nth-child(2) > li:nth-child(1) img {
+    min-height: 600px;
+  }
+
+  .cards-hobbies .cards-hobbies-card-body {
+    padding: 48px;
+  }
+
+  .cards-hobbies .cards-hobbies-card-body h4,
+  .cards-hobbies .cards-hobbies-card-body strong {
+    font-size: 2.25rem;
+    margin-bottom: 10px;
+  }
+
+  .cards-hobbies .cards-hobbies-card-body p {
+    font-size: 1.125rem;
+  }
+}
+
+/* Mobile - single column */
+@media (width < 900px) {
+  .cards-hobbies {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .cards-hobbies-column {
+    gap: 32px;
+  }
+
+  /* Remove stagger effect on mobile */
+  .cards-hobbies-column:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
+/* Small mobile */
+@media (width < 600px) {
+  .cards-hobbies-container {
+    padding: 60px 0;
+  }
+
+  .cards-hobbies-wrapper {
+    padding: 0 24px;
+  }
+
+  .cards-hobbies-container h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .cards-hobbies-column > li {
+    border-radius: 20px;
+  }
+
+  .cards-hobbies .cards-hobbies-card-body {
+    padding: 24px;
+  }
+
+  .cards-hobbies .cards-hobbies-card-body h4,
+  .cards-hobbies .cards-hobbies-card-body strong {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+  }
+
+  .cards-hobbies .cards-hobbies-card-body p {
+    font-size: 0.9375rem;
+  }
+}
