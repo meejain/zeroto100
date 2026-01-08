@@ -21,7 +21,7 @@
 export default function parse(element, { document }) {
   // Extract quote text - look for paragraph with substantial text
   const paragraphs = Array.from(element.querySelectorAll('p.framer-text, p'));
-  const quoteText = paragraphs.find(p => p.textContent.length > 50);
+  const quoteText = paragraphs.find((p) => p.textContent.length > 50);
 
   // Extract attribution logo
   const logo = element.querySelector('img[src*="NjPOE"], img[src*="magnet"], img');

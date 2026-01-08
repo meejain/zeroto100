@@ -4,7 +4,7 @@
 }
 
 .accordion-dark-item {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
 }
 
 .accordion-dark-item-label {
@@ -37,7 +37,7 @@
 
 .accordion-dark-item-body {
   padding: 0 0 20px;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(255 255 255 / 80%);
   line-height: 1.6;
 }
 

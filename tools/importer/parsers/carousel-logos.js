@@ -26,7 +26,7 @@ export default function parse(element, { document }) {
   // Build cells array - one row per logo
   const cells = [];
 
-  logos.forEach(logo => {
+  logos.forEach((logo) => {
     cells.push([logo.cloneNode(true)]);
   });
 

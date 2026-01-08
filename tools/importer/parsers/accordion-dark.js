@@ -26,7 +26,7 @@ export default function parse(element, { document }) {
   // Build cells array - one row per Q&A pair
   const cells = [];
 
-  questions.forEach(question => {
+  questions.forEach((question) => {
     // Get the question text
     const questionText = question.textContent.trim();
 

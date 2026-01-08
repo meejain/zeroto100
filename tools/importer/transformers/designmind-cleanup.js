@@ -13,23 +13,23 @@
 
 const TransformHook = {
   beforeTransform: 'beforeTransform',
-  afterTransform: 'afterTransform'
+  afterTransform: 'afterTransform',
 };
 
-export default function transform(hookName, element, payload) {
+export default function transform(hookName, element) {
   if (hookName === TransformHook.beforeTransform) {
     // Remove Framer overlay and editor elements
     // EXTRACTED: Found in captured DOM <div id="overlay">, <div id="__framer-editorbar">
     WebImporter.DOMUtils.remove(element, [
       '#overlay',
       '#__framer-editorbar',
-      '#svg-templates'
+      '#svg-templates',
     ]);
 
     // Remove hidden elements
     // EXTRACTED: Found class pattern hidden-* in captured DOM
     const hiddenElements = element.querySelectorAll('[class*="hidden-"]');
-    hiddenElements.forEach(el => el.remove());
+    hiddenElements.forEach((el) => el.remove());
 
     // Re-enable scrolling if blocked
     if (element.style.overflow === 'hidden') {
@@ -40,7 +40,7 @@ export default function transform(hookName, element, payload) {
   if (hookName === TransformHook.afterTransform) {
     // Clean up tracking and event attributes
     const allElements = element.querySelectorAll('*');
-    allElements.forEach(el => {
+    allElements.forEach((el) => {
       el.removeAttribute('data-framer-name');
       el.removeAttribute('data-framer-page-optimized-for');
       el.removeAttribute('onclick');
@@ -51,7 +51,7 @@ export default function transform(hookName, element, payload) {
       'iframe',
       'link',
       'noscript',
-      'source'
+      'source',
     ]);
   }
 }

@@ -27,10 +27,10 @@ export default function parse(element, { document }) {
   const childDivs = Array.from(element.querySelectorAll(':scope > div > div, :scope > div'));
 
   // Separate text content from image content
-  let textColumn = [];
+  const textColumn = [];
   let imageColumn = null;
 
-  childDivs.forEach(div => {
+  childDivs.forEach((div) => {
     const hasMainImage = div.querySelector('img[src*="8wCpBAl"], img[src*="services"]');
     const heading = div.querySelector('h2, h3');
     const list = div.querySelector('ul, ol');
@@ -43,7 +43,7 @@ export default function parse(element, { document }) {
       // This is text content
       if (heading) textColumn.push(heading.cloneNode(true));
       if (list) textColumn.push(list.cloneNode(true));
-      paragraphs.forEach(p => textColumn.push(p.cloneNode(true)));
+      paragraphs.forEach((p) => textColumn.push(p.cloneNode(true)));
     }
   });
 

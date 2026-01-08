@@ -32,7 +32,7 @@ export default function parse(element, { document }) {
   const contentCell = [];
   if (heading) contentCell.push(heading.cloneNode(true));
   if (description) contentCell.push(description.cloneNode(true));
-  ctaLinks.forEach(cta => contentCell.push(cta.cloneNode(true)));
+  ctaLinks.forEach((cta) => contentCell.push(cta.cloneNode(true)));
 
   // Build cells array - 2 columns: content | image
   const cells = [];

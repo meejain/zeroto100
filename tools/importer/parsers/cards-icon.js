@@ -25,7 +25,7 @@ export default function parse(element, { document }) {
   const cardContainers = Array.from(element.querySelectorAll(':scope > div > div, :scope > div'));
 
   // Filter to only containers that have both image and text
-  const cards = cardContainers.filter(container => {
+  const cards = cardContainers.filter((container) => {
     const hasImage = container.querySelector('img, picture');
     const hasText = container.querySelector('h2, h3, h4, h5, h6, p.framer-text');
     return hasImage && hasText;
@@ -34,7 +34,7 @@ export default function parse(element, { document }) {
   // Build cells array - one row per card
   const cells = [];
 
-  cards.forEach(card => {
+  cards.forEach((card) => {
     const image = card.querySelector('img, picture img');
     const title = card.querySelector('h2, h3, h4, h5, h6');
     const description = card.querySelector('p.framer-text, p');
