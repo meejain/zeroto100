@@ -1,0 +1,57 @@
+.quote-simple {
+  text-align: center;
+  padding: 64px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.quote-simple::before {
+  content: '"';
+  font-size: 6rem;
+  color: #f97316;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.quote-simple .quote-simple-text {
+  padding-top: 48px;
+}
+
+.quote-simple .quote-simple-text p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #333;
+  font-style: italic;
+  margin: 0 0 32px;
+}
+
+.quote-simple .quote-simple-attribution {
+  margin-top: 24px;
+}
+
+.quote-simple .quote-simple-attribution p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+.quote-simple .quote-simple-attribution img {
+  max-height: 40px;
+  width: auto;
+  margin-top: 16px;
+}
+
+@media (width >= 900px) {
+  .quote-simple {
+    padding: 80px 48px;
+  }
+
+  .quote-simple .quote-simple-text p {
+    font-size: 1.75rem;
+  }
+}
