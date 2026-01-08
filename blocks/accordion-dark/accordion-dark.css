@@ -27,11 +27,19 @@
 }
 
 .accordion-dark-item {
-  background-color: #ffffff; /* White background */
+  background-color: #fff; /* White background */
   border-radius: 20px; /* Rounded corners */
   padding: 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  box-shadow: 0 1px 3px rgb(0 0 0 / 5%); /* Subtle shadow */
   overflow: hidden; /* Prevent content overflow during animation */
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-dark-item.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .accordion-dark-item-label {
@@ -83,20 +91,20 @@
 }
 
 .accordion-dark-item-body {
-  padding: 0 24px 16px 24px;
+  padding: 0 24px 16px;
   font-family: 'Rethink Sans', sans-serif;
   font-size: 0.9375rem; /* 15px */
   font-weight: 400;
-  color: #666666; /* Gray text */
+  color: #666; /* Gray text */
   line-height: 1.65;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), padding 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .accordion-dark-item[open] .accordion-dark-item-body {
   max-height: 2000px;
-  padding: 0 24px 16px 24px;
+  padding: 0 24px 16px;
 }
 
 .accordion-dark-item-body p {
@@ -129,11 +137,11 @@
 
   .accordion-dark-item-body {
     font-size: 1rem; /* 16px */
-    padding: 0 32px 20px 32px;
+    padding: 0 32px 20px;
   }
 
   .accordion-dark-item[open] .accordion-dark-item-body {
-    padding: 0 32px 20px 32px;
+    padding: 0 32px 20px;
   }
 }
 
@@ -158,11 +166,11 @@
 
   .accordion-dark-item-body {
     font-size: 1.0625rem; /* 17px */
-    padding: 0 36px 22px 36px;
+    padding: 0 36px 22px;
   }
 
   .accordion-dark-item[open] .accordion-dark-item-body {
-    padding: 0 36px 22px 36px;
+    padding: 0 36px 22px;
   }
 }
 
@@ -187,11 +195,11 @@
 
   .accordion-dark-item-body {
     font-size: 0.9375rem; /* 15px */
-    padding: 0 20px 16px 20px;
+    padding: 0 20px 16px;
   }
 
   .accordion-dark-item[open] .accordion-dark-item-body {
-    padding: 0 20px 16px 20px;
+    padding: 0 20px 16px;
   }
 
   .accordion-dark-item-label::after {
@@ -224,11 +232,11 @@
 
   .accordion-dark-item-body {
     font-size: 0.875rem; /* 14px */
-    padding: 0 18px 14px 18px;
+    padding: 0 18px 14px;
   }
 
   .accordion-dark-item[open] .accordion-dark-item-body {
-    padding: 0 18px 14px 18px;
+    padding: 0 18px 14px;
   }
 
   .accordion-dark-item-label::after {
