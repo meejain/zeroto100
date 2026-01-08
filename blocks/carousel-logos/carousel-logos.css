@@ -1,6 +1,5 @@
 .carousel-logos {
   overflow: hidden;
-  padding: 32px 0;
   background: #fff;
 }
 
@@ -26,10 +25,10 @@
 }
 
 .carousel-logos-item img {
-  max-height: 40px;
+  max-height: 150px;
   width: auto;
-  filter: grayscale(100%);
-  opacity: 0.6;
+  /* filter: grayscale(100%);
+  opacity: 0.6; */
   transition: all 0.3s;
 }
 
