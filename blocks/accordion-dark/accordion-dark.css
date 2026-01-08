@@ -1,0 +1,46 @@
+.accordion-dark {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-dark-item {
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
+}
+
+.accordion-dark-item-label {
+  cursor: pointer;
+  padding: 20px 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #fff;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-dark-item-label::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #f97316;
+  transition: transform 0.3s;
+}
+
+.accordion-dark-item[open] .accordion-dark-item-label::after {
+  content: '−';
+}
+
+.accordion-dark-item-label::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-dark-item-body {
+  padding: 0 0 20px;
+  color: rgb(255 255 255 / 80%);
+  line-height: 1.6;
+}
+
+.accordion-dark-item-body p {
+  margin: 0;
+}

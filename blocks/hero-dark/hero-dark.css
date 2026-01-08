@@ -1,0 +1,74 @@
+.hero-dark-container .hero-dark-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-dark {
+  position: relative;
+  padding: 80px 24px;
+  min-height: 500px;
+  background-color: #1a3320;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-dark h1 {
+  max-width: 600px;
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 0 0 24px;
+}
+
+.hero-dark p {
+  color: rgb(255 255 255 / 90%);
+  font-size: 1.125rem;
+  max-width: 500px;
+  margin: 0 0 32px;
+}
+
+.hero-dark a.button {
+  background-color: #f97316;
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.hero-dark a.button:hover {
+  background-color: #ea580c;
+}
+
+.hero-dark picture {
+  flex-shrink: 0;
+}
+
+.hero-dark img {
+  max-width: 400px;
+  height: auto;
+}
+
+@media (width >= 900px) {
+  .hero-dark {
+    padding: 80px 64px;
+  }
+
+  .hero-dark h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (width < 900px) {
+  .hero-dark {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-dark img {
+    max-width: 300px;
+  }
+}
