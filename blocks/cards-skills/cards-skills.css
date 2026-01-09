@@ -14,7 +14,7 @@
 /* Heading styling */
 .cards-skills-container h2 {
   color: #006034;
-  font-family: 'Rethink Sans', sans-serif;
+  font-family: 'Rethink Sans', 'Rethink Sans Fallback', sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
   text-align: center;
@@ -73,7 +73,7 @@
 .cards-skills .cards-skills-card-body h4,
 .cards-skills .cards-skills-card-body strong {
   display: block;
-  font-family: 'Rethink Sans', sans-serif;
+  font-family: 'Rethink Sans', 'Rethink Sans Fallback', sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   color: #1a1a1a;
@@ -83,7 +83,7 @@
 
 .cards-skills .cards-skills-card-body p,
 .cards-skills .cards-skills-card-body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', 'DM Sans Fallback', sans-serif;
   color: #666;
   font-size: 1rem;
   font-weight: 400;

@@ -99,7 +99,7 @@
 
 /* Quote text styling */
 .quote-simple .quote-simple-text p {
-  font-family: 'Rethink Sans', sans-serif;
+  font-family: 'Rethink Sans', 'Rethink Sans Fallback', sans-serif;
   font-size: 2.5rem; /* 40px */
   font-weight: 400;
   color: #fff; /* White text */

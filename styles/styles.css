@@ -56,6 +56,21 @@
   src: local('Arial');
 }
 
+/* Google Fonts fallbacks to prevent CLS */
+@font-face {
+  font-family: 'Rethink Sans Fallback';
+  size-adjust: 97%;
+  ascent-override: 95%;
+  src: local('Arial');
+}
+
+@font-face {
+  font-family: 'DM Sans Fallback';
+  size-adjust: 100%;
+  ascent-override: 92%;
+  src: local('Arial');
+}
+
 @media (width >= 900px) {
   :root {
     /* body sizes */

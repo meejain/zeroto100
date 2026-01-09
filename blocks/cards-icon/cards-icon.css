@@ -18,7 +18,7 @@
 /* Heading styling */
 .cards-icon-container h2 {
   color: #fff;
-  font-family: 'Rethink Sans', sans-serif;
+  font-family: 'Rethink Sans', 'Rethink Sans Fallback', sans-serif;
   font-size: 2.9375rem; /* 47px */
   font-weight: 500;
   text-align: center;
@@ -69,7 +69,7 @@
 
 .cards-icon .cards-icon-card-body strong {
   display: block;
-  font-family: 'Rethink Sans', sans-serif;
+  font-family: 'Rethink Sans', 'Rethink Sans Fallback', sans-serif;
   font-size: 2rem; /* 32px */
   font-weight: 500;
   color: #1a3320;
@@ -79,7 +79,7 @@
 
 .cards-icon .cards-icon-card-body p,
 .cards-icon .cards-icon-card-body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', 'DM Sans Fallback', sans-serif;
   color: #555;
   font-size: 1.125rem; /* 18px */
   font-weight: 400;

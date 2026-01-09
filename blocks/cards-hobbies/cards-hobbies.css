@@ -14,7 +14,7 @@
 /* Heading styling */
 .cards-hobbies-container h2 {
   color: #006034;
-  font-family: 'Rethink Sans', sans-serif;
+  font-family: 'Rethink Sans', 'Rethink Sans Fallback', sans-serif;
   font-size: 2.5rem;
   font-weight: 500;
   text-align: center;
@@ -33,7 +33,7 @@
   display: inline-flex !important;
   justify-content: center;
   align-items: center;
-  font-family: 'Rethink Sans', sans-serif;
+  font-family: 'Rethink Sans', 'Rethink Sans Fallback', sans-serif;
   font-size: 1rem !important; /* 16px */
   font-weight: 700;
   color: #1a1a1a !important; /* Black text */
@@ -168,7 +168,7 @@
 .cards-hobbies .cards-hobbies-card-body h4,
 .cards-hobbies .cards-hobbies-card-body strong {
   display: block;
-  font-family: 'Rethink Sans', sans-serif;
+  font-family: 'Rethink Sans', 'Rethink Sans Fallback', sans-serif;
   font-size: 1.75rem;
   font-weight: 500;
   color: #fff;
@@ -178,7 +178,7 @@
 
 .cards-hobbies .cards-hobbies-card-body p,
 .cards-hobbies .cards-hobbies-card-body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', 'DM Sans Fallback', sans-serif;
   color: rgb(255 255 255 / 90%);
   font-size: 1rem;
   font-weight: 400;
