@@ -1,4 +1,0 @@
-mountpoints:
-  /:
-    url: https://content.da.live/meejain/zeroto100/
-    type: markup
