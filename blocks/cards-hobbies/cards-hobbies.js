@@ -4,12 +4,12 @@ export default function decorate(block) {
   /* Create two-column layout */
   const column1 = document.createElement('div');
   column1.className = 'cards-hobbies-column';
-  
+
   const column2 = document.createElement('div');
   column2.className = 'cards-hobbies-column';
 
   const allCards = [];
-  
+
   // Process all cards first
   [...block.children].forEach((row) => {
     const li = document.createElement('li');

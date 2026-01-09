@@ -32,7 +32,7 @@
   height: 318px;
   left: -91px;
   top: 378px;
-  background-color: rgba(0, 97, 53, 0.35);
+  background-color: rgb(0 97 53 / 35%);
   filter: blur(100px);
   pointer-events: none;
   z-index: 0;
@@ -45,7 +45,7 @@
   height: 490px;
   right: -197px;
   top: -148px;
-  background-color: rgba(0, 97, 53, 0.99);
+  background-color: rgb(0 97 53 / 99%);
   filter: blur(100px);
   pointer-events: none;
   z-index: 0;

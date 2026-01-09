@@ -18,12 +18,12 @@ export default function decorate(block) {
   // Animate cards on scroll - re-trigger every time section enters/exits viewport
   const cards = block.querySelectorAll('li');
   let animationTimeouts = [];
-  
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       const card = entry.target;
       const index = Array.from(cards).indexOf(card);
-      
+
       if (entry.isIntersecting) {
         // Card is entering viewport - animate in with stagger
         const timeout = setTimeout(() => {
