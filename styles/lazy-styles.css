@@ -1,5 +1,8 @@
 /* add global styles that can be loaded post LCP here */
 
+/* Google Fonts - consolidated import for all blocks */
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap');
+
 /* code blocks */
 code,
 pre {
