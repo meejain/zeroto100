@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap');
+
 .hero-dark-container {
   background-color: #f5f5f0;
 }
@@ -27,7 +29,7 @@
 .hero-dark h1 {
   max-width: 650px;
   color: #006034;
-  font-family: 'Rethink Sans', 'Rethink Sans Fallback', sans-serif;
+  font-family: 'Rethink Sans', sans-serif;
   font-size: 4.5rem;
   font-weight: 500;
   line-height: 1.14;
@@ -37,7 +39,7 @@
 
 .hero-dark p {
   color: #333;
-  font-family: 'DM Sans', 'DM Sans Fallback', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 1.4375rem;
   font-weight: 400;
   line-height: 1.4;
@@ -80,7 +82,6 @@
   width: 100%;
   height: auto;
   display: block;
-  aspect-ratio: 1024 / 900;
 }
 
 @media (width >= 1200px) {

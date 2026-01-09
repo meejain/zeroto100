@@ -1,3 +1,6 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700&display=swap');
+
 /* Quote section container - cream/white background */
 .quote-simple-container {
   background-color: #f5f5f0; /* Light beige/cream background matching other sections */
@@ -99,7 +102,7 @@
 
 /* Quote text styling */
 .quote-simple .quote-simple-text p {
-  font-family: 'Rethink Sans', 'Rethink Sans Fallback', sans-serif;
+  font-family: 'Rethink Sans', sans-serif;
   font-size: 2.5rem; /* 40px */
   font-weight: 400;
   color: #fff; /* White text */
