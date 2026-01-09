@@ -8,6 +8,10 @@ export default function decorate(block) {
   const column2 = document.createElement('div');
   column2.className = 'cards-hobbies-column';
 
+  // Create ul elements for proper list semantics
+  const ul1 = document.createElement('ul');
+  const ul2 = document.createElement('ul');
+
   const allCards = [];
 
   // Process all cards first
@@ -29,11 +33,15 @@ export default function decorate(block) {
   // Split cards into two columns (odd cards in column 1, even cards in column 2)
   allCards.forEach((card, index) => {
     if (index % 2 === 0) {
-      column1.append(card);
+      ul1.append(card);
     } else {
-      column2.append(card);
+      ul2.append(card);
     }
   });
+
+  // Append ul elements to columns
+  column1.append(ul1);
+  column2.append(ul2);
 
   // Replace block content with two columns
   block.replaceChildren(column1, column2);
