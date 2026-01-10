@@ -1,22 +1,22 @@
 /* Section container styling */
-.cards-icon-container {
+.cards-experience-container {
   background-color: #00341c;
   padding: 100px 0;
   margin: 0 !important; /* Remove default section margin */
 }
 
-.cards-icon-container > div {
+.cards-experience-container > div {
   max-width: 1400px !important;
 }
 
-.cards-icon-wrapper {
+.cards-experience-wrapper {
   max-width: none;
   margin: 0 auto;
   padding: 0 60px;
 }
 
 /* Heading styling */
-.cards-icon-container h2 {
+.cards-experience-container h2 {
   color: #fff;
   font-family: 'Rethink Sans', sans-serif;
   font-size: 2.9375rem; /* 47px */
@@ -28,7 +28,7 @@
 }
 
 /* Cards grid */
-.cards-icon > ul {
+.cards-experience > ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -38,7 +38,7 @@
 }
 
 /* Individual card */
-.cards-icon > ul > li {
+.cards-experience > ul > li {
   background-color: #fff;
   border-radius: 32px;
   padding: 48px 40px;
@@ -51,23 +51,23 @@
   translate: 0 30px;
 }
 
-.cards-icon > ul > li.animate-in {
+.cards-experience > ul > li.animate-in {
   opacity: 1;
   translate: 0 0;
 }
 
-.cards-icon > ul > li:hover {
+.cards-experience > ul > li:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 30px rgb(0 0 0 / 12%);
 }
 
 /* Text content (appears first visually) */
-.cards-icon .cards-icon-card-body {
+.cards-experience .cards-experience-card-body {
   margin: 0 0 24px;
   order: 1;
 }
 
-.cards-icon .cards-icon-card-body strong {
+.cards-experience .cards-experience-card-body strong {
   display: block;
   font-family: 'Rethink Sans', sans-serif;
   font-size: 2rem; /* 32px */
@@ -77,8 +77,8 @@
   line-height: 1.25;
 }
 
-.cards-icon .cards-icon-card-body p,
-.cards-icon .cards-icon-card-body {
+.cards-experience .cards-experience-card-body p,
+.cards-experience .cards-experience-card-body {
   font-family: 'DM Sans', sans-serif;
   color: #555;
   font-size: 1.125rem; /* 18px */
@@ -87,7 +87,7 @@
 }
 
 /* Image (appears second visually) */
-.cards-icon .cards-icon-card-image {
+.cards-experience .cards-experience-card-image {
   line-height: 0;
   margin: 0;
   order: 2;
@@ -97,7 +97,7 @@
   min-height: 200px;
 }
 
-.cards-icon > ul > li img {
+.cards-experience > ul > li img {
   width: 100%;
   max-width: 340px;
   height: auto;
@@ -105,72 +105,72 @@
 }
 
 @media (width >= 900px) {
-  .cards-icon-container {
+  .cards-experience-container {
     padding: 140px 0;
   }
 
-  .cards-icon-container h2 {
+  .cards-experience-container h2 {
     font-size: 2.9375rem;
     margin-bottom: 100px;
   }
 
-  .cards-icon > ul {
+  .cards-experience > ul {
     gap: 30px;
   }
 
-  .cards-icon > ul > li {
+  .cards-experience > ul > li {
     padding: 56px 48px;
   }
 
-  .cards-icon .cards-icon-card-body strong {
+  .cards-experience .cards-experience-card-body strong {
     font-size: 2.25rem;
   }
 }
 
 @media (width >= 1200px) {
-  .cards-icon-container {
+  .cards-experience-container {
     padding: 160px 0;
   }
 
-  .cards-icon-wrapper {
+  .cards-experience-wrapper {
     padding: 0 80px;
   }
 
-  .cards-icon > ul {
+  .cards-experience > ul {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
 
-  .cards-icon > ul > li {
+  .cards-experience > ul > li {
     padding: 64px 56px;
   }
 
-  .cards-icon .cards-icon-card-body strong {
+  .cards-experience .cards-experience-card-body strong {
     font-size: 2.5rem;
   }
 
-  .cards-icon .cards-icon-card-body p {
+  .cards-experience .cards-experience-card-body p {
     font-size: 1.125rem;
   }
 }
 
 @media (width < 900px) {
-  .cards-icon > ul {
+  .cards-experience > ul {
     grid-template-columns: 1fr;
     gap: 32px;
   }
 }
 
 @media (width < 600px) {
-  .cards-icon .cards-icon-card-body strong {
+  .cards-experience .cards-experience-card-body strong {
     font-size: 1.75rem;
   }
 
-  .cards-icon .cards-icon-card-body p {
+  .cards-experience .cards-experience-card-body p {
     font-size: 1rem;
   }
 
-  .cards-icon > ul > li {
+  .cards-experience > ul > li {
     padding: 36px 28px;
   }
 }
