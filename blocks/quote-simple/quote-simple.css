@@ -6,7 +6,7 @@
 }
 
 .quote-simple-wrapper {
-  width: 1040px; /* Fixed width like Design Mind */
+  /* width: 1040px; Fixed width like Design Mind */
   max-width: calc(100% - 80px); /* Allow some margin on smaller screens */
   margin: 0 auto;
   display: flex;
