@@ -47,7 +47,13 @@ Your site is now live at:
      - **Org**: `meejain`
      - **Site**: `zeroto100`
 
-## Step 4: Set Up Local Development
+## Step 4: Preview and Publish Content
+
+1. In DA, Click the **Preview** button to preview your changes.
+3. Once satisfied with the preview, click the **Publish** button to make your content live.
+4. Your content will now be available on both preview and live URLs.
+
+## Step 5: Set Up Local Development
 
 ### Install AEM CLI
 
@@ -70,8 +76,8 @@ aem up
 
 This starts a local server at `http://localhost:3000/`
 
-## Step 5: Install AEM Sidekick
+## Step 6: Install AEM Sidekick (Optional)
 
 1. Install the [AEM Sidekick Chrome Extension](https://chrome.google.com/webstore/search/aem%20sidekick)
 2. Pin the extension for easy access
-3. Use Sidekick to preview and publish content across environments
+3. Use Sidekick to preview and publish content.
