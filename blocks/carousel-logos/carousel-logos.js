@@ -15,7 +15,13 @@ export default function decorate(block) {
 
   const wrapper = document.createElement('div');
   wrapper.className = 'carousel-logos-wrapper';
-  wrapper.append(ul, clone);
+  
+  // Create multiple copies for a fuller carousel (4 copies total)
+  for (let i = 0; i < 4; i += 1) {
+    const clone = ul.cloneNode(true);
+    if (i > 0) clone.setAttribute('aria-hidden', 'true');
+    wrapper.append(clone);
+  }
 
   block.replaceChildren(wrapper);
 }

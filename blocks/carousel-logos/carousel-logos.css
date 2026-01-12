@@ -1,20 +1,31 @@
+.carousel-logos-container {
+  margin: 0 !important;
+}
+
 .carousel-logos {
   overflow: hidden;
   background: #fff;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 24px 0;
 }
 
 .carousel-logos-wrapper {
   display: flex;
-  animation: carousel-logos-scroll 30s linear infinite;
 }
 
 .carousel-logos-track {
   display: flex;
-  gap: 48px;
+  gap: 32px;
   list-style: none;
   margin: 0;
   padding: 0;
   flex-shrink: 0;
+  animation: carousel-logos-scroll 30s linear infinite;
+}
+
+.carousel-logos-track:last-child {
+  margin-left: 32px;
 }
 
 .carousel-logos-item {
@@ -41,10 +52,10 @@
   }
 
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
-.carousel-logos-wrapper:hover {
+.carousel-logos-wrapper:hover .carousel-logos-track {
   animation-play-state: paused;
 }
