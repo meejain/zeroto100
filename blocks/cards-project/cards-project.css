@@ -191,7 +191,7 @@ main .cards-project {
 /* Large desktop */
 @media (width >= 1200px) {
   main .cards-project {
-    padding: 80px 80px;
+    padding: 80px;
   }
 
   .cards-project .cards-project-container {
