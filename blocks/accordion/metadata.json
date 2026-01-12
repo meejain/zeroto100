@@ -1,0 +1,39 @@
+{
+    "variantName": "accordion",
+    "baseBlock": "accordion",
+    "version": "1.0.0",
+    "created": "2026-01-08T13:35:00.000Z",
+    "sourceContext": {
+      "originUrl": "https://www.wearedesignmind.com/",
+      "originPage": "Design Mind homepage",
+      "blockPosition": "bottom"
+    },
+    "visualCharacteristics": {
+      "colorScheme": "dark",
+      "density": "compact",
+      "purpose": "faq",
+      "imagePattern": "noimg"
+    },
+    "contentPattern": {
+      "structure": "question + answer pairs",
+      "buttonCount": 0,
+      "imageCount": 0
+    },
+    "reuseGuidance": {
+      "suitableFor": [
+        "FAQ sections",
+        "expandable content on dark backgrounds",
+        "service details"
+      ],
+      "notSuitableFor": [
+        "light background pages",
+        "image-heavy accordions",
+        "navigation menus"
+      ]
+    },
+    "usage": {
+      "pagesUsing": ["/content/index"],
+      "reuseCount": 1,
+      "lastUsed": "2026-01-08T13:35:00.000Z"
+    }
+  }
