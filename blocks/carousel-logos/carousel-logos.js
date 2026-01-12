@@ -9,19 +9,15 @@ export default function decorate(block) {
     ul.append(li);
   });
 
-  // Duplicate items for seamless loop
+  // Duplicate items for seamless infinite loop
+  // We need exactly 2 copies: when animation reaches -50%,
+  // the second copy is in the same position as the first started
   const clone = ul.cloneNode(true);
   clone.setAttribute('aria-hidden', 'true');
 
   const wrapper = document.createElement('div');
   wrapper.className = 'carousel-logos-wrapper';
-  
-  // Create multiple copies for a fuller carousel (4 copies total)
-  for (let i = 0; i < 4; i += 1) {
-    const clone = ul.cloneNode(true);
-    if (i > 0) clone.setAttribute('aria-hidden', 'true');
-    wrapper.append(clone);
-  }
+  wrapper.append(ul, clone);
 
   block.replaceChildren(wrapper);
 }

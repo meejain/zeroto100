@@ -228,7 +228,7 @@ export default async function decorate(block) {
 
         // Add hover handlers for desktop with delay to prevent premature closing
         let closeTimeout;
-        
+
         navSection.addEventListener('mouseenter', () => {
           if (isDesktop.matches) {
             // Clear any pending close timeout
