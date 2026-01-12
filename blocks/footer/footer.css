@@ -196,17 +196,24 @@ footer .footer > div > div:last-child .default-content-wrapper p:last-child {
     margin-bottom: 40px;
   }
 
-  /* Bottom section - right align on desktop */
+  /* Bottom section - flex layout with copyright left, links right */
   footer .footer > div > div:last-child .default-content-wrapper {
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
   }
 
   footer .footer > div > div:last-child .default-content-wrapper p {
-    display: inline;
+    margin: 0;
   }
 
-  footer .footer > div > div:last-child .default-content-wrapper p::after {
-    content: ' ';
+  footer .footer > div > div:last-child .default-content-wrapper p:first-child {
+    text-align: left;
+  }
+
+  footer .footer > div > div:last-child .default-content-wrapper p:last-child {
+    text-align: right;
   }
 }
 
