@@ -335,7 +335,7 @@ header nav .nav-sections button {
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
-    padding: 0;
+    padding: 10px;
   }
 
   /* Hover effect on nav items */
@@ -388,7 +388,7 @@ header nav .nav-sections button {
   }
 
   header nav .nav-sections .dropdown-icon.black {
-    background: #f5f5f5;
+    background: black;
   }
 
   header nav .nav-sections .dropdown-icon img {

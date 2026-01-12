@@ -226,9 +226,16 @@ export default async function decorate(block) {
         // Decorate dropdown items with rich content
         decorateDropdownItems(subMenu);
 
-        // Add hover handlers for desktop
+        // Add hover handlers for desktop with delay to prevent premature closing
+        let closeTimeout;
+        
         navSection.addEventListener('mouseenter', () => {
           if (isDesktop.matches) {
+            // Clear any pending close timeout
+            if (closeTimeout) {
+              clearTimeout(closeTimeout);
+              closeTimeout = null;
+            }
             toggleAllNavSections(navSections);
             navSection.setAttribute('aria-expanded', 'true');
           }
@@ -236,7 +243,10 @@ export default async function decorate(block) {
 
         navSection.addEventListener('mouseleave', () => {
           if (isDesktop.matches) {
-            navSection.setAttribute('aria-expanded', 'false');
+            // Add a delay before closing to allow moving to dropdown
+            closeTimeout = setTimeout(() => {
+              navSection.setAttribute('aria-expanded', 'false');
+            }, 200);
           }
         });
       }
