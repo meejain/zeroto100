@@ -1,6 +1,14 @@
-# Lab 1: Getting Started with AEM Edge Delivery Services
+# Lab 1: Getting Started with Adobe Experience Manager - Edge Delivery Services
 
-This lab walks you through creating and developing a website using Adobe Experience Manager (AEM) Edge Delivery Services.
+This lab walks you through creating and developing a website using Adobe Experience Manager - Edge Delivery Services
+
+## Prerequisites
+
+Before starting this lab, ensure you have:
+
+- A personal GitHub account
+- A laptop (Mac or Windows) with an installed IDE — preferably an AI-enabled editor (Cursor is strongly recommended; VS Code is also acceptable)
+- Node.js and npm installed on your local system
 
 ## Step 1: Create Your Repository from Boilerplate
 
@@ -8,7 +16,8 @@ This lab walks you through creating and developing a website using Adobe Experie
 2. Click **"Use this template"** → **"Create a new repository"**
 3. Choose your GitHub user/org as the owner
 4. Set the repository to **public** (recommended)
-5. Create the repository
+5. Set **"Include all branches"** to **On**
+6. Click **"Create repository"**
 
 ## Step 2: Install AEM Code Sync
 
