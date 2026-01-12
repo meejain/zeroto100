@@ -35,7 +35,7 @@ Your site is now live at:
 ## Step 3: Author and Manage Content
 
 1. Navigate to [DA.live](https://da.live/start)
-2. Add your newly created repository link (e.g., `https://github.com/meejain/zeroto100`)
+2. Add your newly created github repository link
 3. Select the **AEM Boilerplate** option. This will create boilerplate content.
 4. Visit https://da.live/apps/import and import the following pages using the **"By URL"** option:
    - `https://main--zeroto100--meejain.aem.live/lab1`
