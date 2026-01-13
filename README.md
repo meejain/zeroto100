@@ -157,16 +157,18 @@ body {
 3. Add the following configuration:
 
 ```json
-"helix-mcp-server": {
-  "command": "npx",
-  "args": [
-    "-y",
-    "github:jindaliiita/eds-mcp"
-  ],
-  "env": {
-    "HELIX_ADMIN_API_TOKEN": "{token}"
+"mcpServers": {
+    "helix-mcp-server": {
+      "command": "npx",
+      "args": [
+          "-y",
+          "github:jindaliiita/eds-mcp"
+        ],
+      "env": {
+        "HELIX_ADMIN_API_TOKEN": "{token}"
+      }
+    }
   }
-}
 ```
 
 **For Visual Studio Code:**
