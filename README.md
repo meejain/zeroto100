@@ -162,11 +162,7 @@ body {
 
 **For Visual Studio Code:**
 
-1. Open VS Code
-2. Create or edit the MCP configuration file at:
-   - **Windows**: `%APPDATA%\Code\User\globalStorage\rooveterinaryinc.roo-cline\settings\cline_mcp_settings.json`
-   - **macOS/Linux**: `~/.config/Code/User/globalStorage/rooveterinaryinc.roo-cline/settings/cline_mcp_settings.json`
-3. Add the following configuration:
+1. Edit the same MCP configuration file and add DA Live Admin to the `mcpServers` object:
 
 ```json
 {
@@ -180,10 +176,27 @@ body {
       "env": {
         "HELIX_ADMIN_API_TOKEN": "{token}"
       }
+    },
+    "da-live-admin": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "github:meejain/mcp-da-live-admin"
+      ],
+      "env": {
+        "DA_ADMIN_API_TOKEN": "{token}"
+      }
     }
   }
 }
 ```
+2. Click on "Configure Tools" icon at the bottom of AI Chat window in VSCode.
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/c3107dec-0018-4850-9ac2-e2914e4f23a6" />
+
+3. Enable `da-live-admin` and `helix-mcp-server`
+<img width="610" height="501" alt="image" src="https://github.com/user-attachments/assets/8baa6d3a-b2b3-4868-b5b8-281faf2180f7" />
+
+4. Once enabled successfully, the list of tools should appear. 
 
 **Retrieve Access Token (Same for both Cursor and VS Code):**
 
