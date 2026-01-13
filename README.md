@@ -22,7 +22,7 @@ Before starting this lab, ensure you have:
 
 1. Visit the [Dev Day Boilerplate repository](https://github.com/meejain/zeroto100)
 2. Click **"Use this template"** → **"Create a new repository"**
-   <img width="1310" height="106" alt="Screenshot 2026-01-13 at 7 11 10 PM" src="https://github.com/user-attachments/assets/c78657f1-23e0-4f24-9249-10bb06ea34c7" />
+   <img width="1267" height="100" alt="Screenshot 2026-01-13 at 7 28 19 PM" src="https://github.com/user-attachments/assets/04dd7645-7f8b-4294-97eb-0405915cc747" />
    
 3. Set **"Include all branches"** to **On**
    <img width="739" height="270" alt="Screenshot 2026-01-13 at 7 11 34 PM" src="https://github.com/user-attachments/assets/aa731085-9026-411e-bc2f-8a38f6e32bc0" />
