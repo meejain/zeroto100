@@ -7,7 +7,7 @@ This lab walks you through creating and developing a website using Adobe Experie
 Before starting this lab, ensure you have:
 
 - A personal GitHub account
-- A laptop (Mac or Windows) with an installed IDE — preferably an AI-enabled editor (Cursor is strongly recommended; VS Code is also acceptable)
+- A laptop (Mac, Windows Or Linux) with an installed IDE — preferably an AI-enabled editor (Cursor is strongly recommended; VS Code is also acceptable)
 - Node.js and npm installed on your local system
 
 ---
@@ -22,10 +22,13 @@ Before starting this lab, ensure you have:
 
 1. Visit the [Dev Day Boilerplate repository](https://github.com/meejain/zeroto100)
 2. Click **"Use this template"** → **"Create a new repository"**
-3. Choose your GitHub user/org as the owner
-4. Set the repository to **public** (recommended)
-5. Set **"Include all branches"** to **On**
-6. Click **"Create repository"**
+   <img width="1310" height="106" alt="Screenshot 2026-01-13 at 7 11 10 PM" src="https://github.com/user-attachments/assets/c78657f1-23e0-4f24-9249-10bb06ea34c7" />
+3. Set **"Include all branches"** to **On**
+   <img width="739" height="270" alt="Screenshot 2026-01-13 at 7 11 34 PM" src="https://github.com/user-attachments/assets/aa731085-9026-411e-bc2f-8a38f6e32bc0" />
+4. Choose your GitHub user/org as the owner
+5. Provide the repository name
+6. Set the repository to **public** (recommended)
+7. Click **"Create repository"**
 
 ### Step 2: Install AEM Code Sync
 
@@ -49,7 +52,6 @@ Your site is now live at:
    - `https://main--zeroto100--meejain.aem.live/lab1`
    - `https://main--zeroto100--meejain.aem.live/nav`
    - `https://main--zeroto100--meejain.aem.live/footer`
-   
 5. In the **Org** field, enter your organization name and in **Site** field, enter your repository name.
    - For example: If your DA.live URL is `https://da.live/#/meejain/zeroto100`, then:
      - **Org**: `meejain`
@@ -58,8 +60,11 @@ Your site is now live at:
 ### Step 4: Preview and Publish Content
 
 1. In DA, Click the **Preview** button to preview your changes.
-2. Once satisfied with the preview, click the **Publish** button to make your content live.
-3. Your content will now be available on both preview and live URLs.
+  <img width="134" height="110" alt="Screenshot 2026-01-13 at 7 16 36 PM" src="https://github.com/user-attachments/assets/cbe3d9a7-14b8-4266-ba8c-5aa46e8f11d1" />
+  <img width="311" height="88" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/0c91a162-59e1-4cf1-9b3c-d4e8c57b8483" />
+3. Once satisfied with the preview, click the **Publish** button to make your content live.
+   <img width="311" height="88" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/3998c247-7269-49e9-ad5f-d1cdea050bb0" />
+5. Your content will now be available on both preview and live URLs.
 
 **Congratulations!** 🎉 You have successfully bootstrapped your live personal website with default blocks on AEM Edge Delivery Services. Your site is now live and accessible on the web!
 
@@ -87,14 +92,14 @@ For easier content preview and publishing workflow:
 npm install -g @adobe/aem-cli
 ```
 
-### Step 2: Clone Your Repository
+### Step 2: Clone Your Repository (via SSH or HTTPS)
 
 ```bash
 git clone https://github.com/<owner>/<repo>
 cd <repo>
 ```
 
-> Replace `<owner>` with your GitHub username and `<repo>` with your repository name.
+> Replace `<owner>` with your GitHub user/org and `<repo>` with your repository name.
 
 ### Step 3: Start Local Development Server
 
