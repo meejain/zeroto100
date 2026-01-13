@@ -296,29 +296,19 @@ javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken
 
 ### Step 2: Install GitHub CLI and Add Agent Skills
 
-#### 2.1 Install GitHub CLI
+#### 2.1 Install GitHub CLI (If not present)
 
 **For macOS:**
 
-Using [Homebrew](https://brew.sh/):
-
-```bash
-brew install gh
-```
-
-> For more installation options on macOS, see the [official installation guide](https://github.com/cli/cli/blob/trunk/docs/install_macos.md#homebrew)
+See the [official installation guide](https://github.com/cli/cli/blob/trunk/docs/install_macos.md#homebrew)
 
 **For Windows:**
 
-Using [WinGet](https://learn.microsoft.com/en-us/windows/package-manager/winget/):
+See the [official installation guide](https://github.com/cli/cli/blob/trunk/docs/install_windows.md)
 
-```pwsh
-winget install --id GitHub.cli
-```
+**For Linux:**
 
-> **Note**: After installation, you will need to **open a new terminal window** for the changes to take effect. Simply opening a new tab will not be sufficient.
-
-> For more installation options on Windows, see the [official installation guide](https://github.com/cli/cli/blob/trunk/docs/install_windows.md)
+https://github.com/cli/cli/blob/trunk/docs/install_linux.md#recommended-official
 
 #### 2.2 Install gh-upskill Extension
 
@@ -336,7 +326,7 @@ Navigate to your project root directory:
 cd <repo>
 ```
 
-> Replace `<repo>` with your repository name (the folder you cloned in Exercise 2).
+> Replace `<repo>` with your repository name (the repo you cloned in Exercise 2).
 
 Then run:
 
