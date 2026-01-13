@@ -67,7 +67,7 @@ Your site is now live at:
 2. Once satisfied with the preview, click the **Publish** button to make your content live.
   <img width="311" height="88" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
   
-2. Your content will now be available on both preview and live URLs.
+3. Your content will now be available on both preview and live URLs.
 
 
 **Congratulations!** 🎉 You have successfully bootstrapped your live personal website with default blocks on AEM Edge Delivery Services. Your site is now live and accessible on the web!
