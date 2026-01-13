@@ -148,7 +148,46 @@ body {
 
 ### Step 1: Configure MCP Servers
 
-#### 1.1 Configure Helix MCP Server and DA Live Admin MCP Server
+Before adding the MCP server configuration, you need to get the access tokens first.
+
+#### 1.1 Get Access Tokens
+
+**a) Get Helix Admin API Token:**
+
+- Go to https://admin.hlx.page/login
+- Use the `login_adobe` address to login with the Adobe identity provider
+- You will be forwarded to https://admin.hlx.page/profile
+- Open your browser's **Developer Tools** (F12)
+- Go to the **Application** tab and **Storage**
+- Under **Cookies**, find `auth_token`
+- Copy the value of the `auth_token` cookie
+- Save this token - you'll need it in the next step as `{helix-token}`
+
+**b) Get DA Live Admin API Token using Bookmarklet:**
+
+**Step 1: Create the Bookmarklet**
+
+- In your browser, create a new bookmark (Right-click bookmarks bar → Add Page)
+- Name: `Get DA Token`
+- In the URL/Location field, paste the following code:
+
+```javascript
+javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken!=='function'){alert('adobeIMS not available on this page');return;}try{const r=await adobeIMS.getAccessToken();if(!r||!r.token){alert('Token not found in response');console.log(r);return;}prompt('Adobe IMS Access Token (Ctrl/Cmd + C to copy):',r.token);}catch(e){console.error(e);alert('Failed to get access token');}})();
+```
+
+- Save the bookmark
+
+**Step 2: Use the Bookmarklet**
+
+- Navigate to https://da.live
+- Click on the **Get DA Token** bookmarklet in your bookmarks bar
+- A prompt will appear with your access token
+- Copy the token
+- Save this token - you'll need it in the next step as `{da-token}`
+
+#### 1.2 Add MCP Server Configuration
+
+Now that you have both tokens, add the MCP servers to your IDE. **Replace `{helix-token}` and `{da-token}` with your actual tokens from step 1.1.**
 
 **For Cursor IDE:**
 
@@ -156,7 +195,9 @@ body {
 2. Go to **Cursor Settings** → **Tools & MCP**
    <img width="1028" height="378" alt="Screenshot 2026-01-13 at 7 46 55 PM" src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" />
 
-3. Add the following configuration:
+3. Add the following configuration (replace the token placeholders with your actual tokens):
+
+> **Note**: If you already have other MCP servers configured, just add `helix-mcp-server` and `da-live-admin` to your existing `mcpServers` object. Don't replace your entire configuration!
 
 ```json
 {
@@ -187,7 +228,10 @@ body {
 
 **For Visual Studio Code:**
 
-1. Edit the same MCP configuration file and add DA Live Admin to the `mcpServers` object:
+1. Open VS Code
+2. Add the following configuration (replace the token placeholders with your actual tokens):
+
+> **Note**: If you already have other MCP servers configured, just add `helix-mcp-server` and `da-live-admin` to your existing `mcpServers` object. Don't replace your entire configuration!
 
 ```json
 {
@@ -215,46 +259,15 @@ body {
   }
 }
 ```
-2. Click on "Configure Tools" icon at the bottom of AI Chat window in VSCode.
+4. Click on "Configure Tools" icon at the bottom of AI Chat window in VSCode.
+
 <img width="300" alt="image" src="https://github.com/user-attachments/assets/c3107dec-0018-4850-9ac2-e2914e4f23a6" />
 
-3. Enable `da-live-admin` and `helix-mcp-server`
+5. Enable `da-live-admin` and `helix-mcp-server`
+
 <img width="610" height="501" alt="image" src="https://github.com/user-attachments/assets/8baa6d3a-b2b3-4868-b5b8-281faf2180f7" />
 
-4. Once enabled successfully, the list of tools should appear. 
-
-**Retrieve helix-token (Same for both Cursor and VS Code):**
-
-- Go to https://admin.hlx.page/login
-- Use the `login_adobe` address to login with the Adobe identity provider
-- You will be forwarded to https://admin.hlx.page/profile
-- Open your browser's **Developer Tools** (F12)
-- Go to the **Application** tab and **Storage**
-- Under **Cookies**, find `auth_token`
-- Copy the value of the `auth_token` cookie
-- Replace `"{helix-token}"` in the configuration with your actual token
-
-**Get your da-token using Bookmarklet (Same for both Cursor and VS Code):**
-
-**a) Create the Bookmarklet**
-
-- In your browser, create a new bookmark (Right-click bookmarks bar → Add Page)
-- Name: `Get DA Token`
-- In the URL/Location field, paste the following code:
-
-```javascript
-javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken!=='function'){alert('adobeIMS not available on this page');return;}try{const r=await adobeIMS.getAccessToken();if(!r||!r.token){alert('Token not found in response');console.log(r);return;}prompt('Adobe IMS Access Token (Ctrl/Cmd + C to copy):',r.token);}catch(e){console.error(e);alert('Failed to get access token');}})();
-```
-
-- Save the bookmark
-
-**b) Use the Bookmarklet**
-
-- Navigate to https://da.live
-- Click on the **Get DA Token** bookmarklet in your bookmarks bar
-- A prompt will appear with your access token
-- Copy the token
-- Replace `"{token}"` in the DA Live Admin configuration with your actual token
+6. Once enabled successfully, the list of tools should appear.
 
 ### Step 2: Install GitHub CLI and Add Agent Skills
 
