@@ -2,6 +2,23 @@
 
 This project is a website built with Edge Delivery Services in Adobe Experience Manager Sites as a Cloud Service. As an agent, follow the instructions in this file to deliver code based on Adobe's standards for fast, easy-to-author, and maintainable web experiences.
 
+## ⚠️ CRITICAL: MANDATORY SKILL USAGE - READ THIS FIRST
+
+**BEFORE starting ANY development task, you MUST:**
+
+1. **List the `.skills/` directory** to see available skills
+2. **Identify the relevant skill(s)** for the task at hand
+3. **Read the full SKILL.md file** and follow its instructions exactly
+4. **Announce the skill usage** by saying "Using Skill: {Skill Name}"
+
+**This is non-negotiable. No exceptions. Failing to use skills results in:**
+- ❌ Inconsistent code quality
+- ❌ Missed best practices
+- ❌ Wasted time and effort
+- ❌ Rework and frustration
+
+**✅ If you're about to write code without consulting a skill, STOP and list the skills directory first.**
+
 ## Project Overview
 
 This project is based on the https://github.com/adobe/aem-boilerplate/ project and set up as a new project. You are expected to follow the coding style and practices established in the boilerplate, but add functionality according to the needs of the site currently developed.
@@ -152,12 +169,66 @@ Pages are progressively loaded in three phases to maximize performance. This pro
 - Include CSS and JS files for each block
 - Follow the naming convention: `blockname.css`, `blockname.js`
 - Blocks should be responsive and accessible by default
+- **CRITICAL**: Always match the existing design system when creating new blocks (see Design System section below)
 
 ### Styling
 - Global styles go in `styles/styles.css`
 - Font definitions in `styles/fonts.css`
 - Lazy-loaded styles in `styles/lazy-styles.css`
 - Block-specific styles in their respective directories
+
+### Design System
+
+**BEFORE creating or modifying any block, you MUST review existing blocks to understand and match the design system.**
+
+Most projects have a consistent design language across all blocks. New blocks must follow the existing patterns to maintain visual consistency.
+
+#### Implementation Pattern
+When creating a new block:
+
+1. **Review Existing Blocks**: Read CSS from 2-3 similar blocks to understand the design patterns
+   ```javascript
+   // Example: Check existing blocks first
+   await readFile('blocks/cards/cards.css');
+   await readFile('blocks/hero/hero.css');
+   ```
+
+2. **Extract Patterns**: Identify and note:
+   - **Typography**: Font families, sizes, weights, line heights
+   - **Colors**: Text colors, background colors, accent colors, brand colors
+   - **Spacing**: Section padding, margins, gaps, container widths
+   - **Breakpoints**: Media query breakpoints and responsive behavior
+   - **Visual Effects**: Animations, transitions, shadows, border radius
+   - **Section Structure**: Container/wrapper classes and their styling patterns
+
+3. **Match Theme**: Use the exact same design tokens:
+   - Font families and typography scale
+   - Color values (don't approximate - use exact hex/rgb values)
+   - Spacing scale and padding/margin values
+   - Animation timing and easing functions
+
+4. **Section-Level Styling**: Support section container and wrapper classes:
+   ```css
+   .{blockname}-container {
+     /* Section-level styling (background, spacing, etc.) */
+   }
+
+   .{blockname}-wrapper {
+     /* Content wrapper with max-width and padding */
+   }
+
+   .{blockname}-container h2 {
+     /* Heading styles matching project theme */
+   }
+   ```
+
+5. **Test Consistency**: Ensure the new block looks like it belongs with existing blocks
+   - Visual hierarchy should match
+   - Spacing rhythm should be consistent
+   - Hover/interaction states should follow the same patterns
+   - Responsive behavior should match breakpoints
+
+**Why This Matters**: Design consistency is critical for professional websites. Mismatched fonts, colors, or spacing make a site look unprofessional and breaks user trust.
 
 ## Testing & Quality Assurance
 
