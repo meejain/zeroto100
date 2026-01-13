@@ -58,8 +58,20 @@ Your site is now live at:
 ### Step 4: Preview and Publish Content
 
 1. In DA, Click the **Preview** button to preview your changes.
-3. Once satisfied with the preview, click the **Publish** button to make your content live.
-4. Your content will now be available on both preview and live URLs.
+2. Once satisfied with the preview, click the **Publish** button to make your content live.
+3. Your content will now be available on both preview and live URLs.
+
+**Congratulations!** 🎉 You have successfully bootstrapped your live personal website with default blocks on AEM Edge Delivery Services. Your site is now live and accessible on the web!
+
+### Optional: Install AEM Sidekick
+
+For easier content preview and publishing workflow:
+
+1. Install the [AEM Sidekick Chrome Extension](https://chrome.google.com/webstore/search/aem%20sidekick)
+2. Pin the extension for easy access
+3. Navigate to your site (preview or live URL)
+4. Click the Sidekick icon in your browser
+5. Use Sidekick to preview and publish content directly from your browser without going to DA.live
 
 ---
 
@@ -112,17 +124,7 @@ body {
 4. Save the file (Ctrl/Cmd + S)
 5. Watch your browser automatically reload and display the change!
 
-**Congratulations!** You now understand the EDS development flow:
+**Congratulations!** 🎉 You now understand the EDS development flow:
 - Make changes locally
 - See instant feedback in the browser
 - Iterate quickly without waiting for builds or deployments
-
----
-
-## Optional: Install AEM Sidekick
-
-For easier content preview and publishing:
-
-1. Install the [AEM Sidekick Chrome Extension](https://chrome.google.com/webstore/search/aem%20sidekick)
-2. Pin the extension for easy access
-3. Use Sidekick to preview and publish content directly from your browser
