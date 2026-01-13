@@ -259,15 +259,15 @@ Now that you have both tokens, add the MCP servers to your IDE. **Replace `{heli
   }
 }
 ```
-4. Click on "Configure Tools" icon at the bottom of AI Chat window in VSCode.
+3. Click on "Configure Tools" icon at the bottom of AI Chat window in VSCode.
 
 <img width="300" alt="image" src="https://github.com/user-attachments/assets/c3107dec-0018-4850-9ac2-e2914e4f23a6" />
 
-5. Enable `da-live-admin` and `helix-mcp-server`
+4. Enable `da-live-admin` and `helix-mcp-server`
 
 <img width="610" height="501" alt="image" src="https://github.com/user-attachments/assets/8baa6d3a-b2b3-4868-b5b8-281faf2180f7" />
 
-6. Once enabled successfully, the list of tools should appear.
+5. Once enabled successfully, the list of tools should appear.
 
 ### Step 2: Install GitHub CLI and Add Agent Skills
 
