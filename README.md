@@ -148,27 +148,41 @@ body {
 
 ### Step 1: Configure MCP Servers
 
-#### 1.1 Configure Helix MCP Server
+#### 1.1 Configure Helix MCP Server and DA Live Admin MCP Server
 
 **For Cursor IDE:**
 
 1. Open Cursor IDE
 2. Go to **Cursor Settings** → **Tools & MCP**
+   <img width="1028" height="378" alt="Screenshot 2026-01-13 at 7 46 55 PM" src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" />
+
 3. Add the following configuration:
 
 ```json
-"mcpServers": {
+{
+  "mcpServers": {
     "helix-mcp-server": {
       "command": "npx",
       "args": [
-          "-y",
-          "github:jindaliiita/eds-mcp"
-        ],
+        "-y",
+        "github:jindaliiita/eds-mcp"
+      ],
       "env": {
-        "HELIX_ADMIN_API_TOKEN": "{token}"
+        "HELIX_ADMIN_API_TOKEN": "{helix-token}"
+      }
+    },
+    "da-live-admin": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "github:meejain/mcp-da-live-admin"
+      ],
+      "env": {
+        "DA_ADMIN_API_TOKEN": "{da-token}"
       }
     }
   }
+}
 ```
 
 **For Visual Studio Code:**
@@ -185,7 +199,7 @@ body {
         "github:jindaliiita/eds-mcp"
       ],
       "env": {
-        "HELIX_ADMIN_API_TOKEN": "{token}"
+        "HELIX_ADMIN_API_TOKEN": "{helix-token}"
       }
     },
     "da-live-admin": {
@@ -195,7 +209,7 @@ body {
         "github:meejain/mcp-da-live-admin"
       ],
       "env": {
-        "DA_ADMIN_API_TOKEN": "{token}"
+        "DA_ADMIN_API_TOKEN": "{da-token}"
       }
     }
   }
@@ -209,7 +223,7 @@ body {
 
 4. Once enabled successfully, the list of tools should appear. 
 
-**Retrieve Access Token (Same for both Cursor and VS Code):**
+**Retrieve helix-token (Same for both Cursor and VS Code):**
 
 - Go to https://admin.hlx.page/login
 - Use the `login_adobe` address to login with the Adobe identity provider
@@ -218,59 +232,9 @@ body {
 - Go to the **Application** tab and **Storage**
 - Under **Cookies**, find `auth_token`
 - Copy the value of the `auth_token` cookie
-- Replace `"{token}"` in the configuration with your actual token
+- Replace `"{helix-token}"` in the configuration with your actual token
 
-#### 1.2 Configure DA Live Admin MCP Server
-
-**For Cursor IDE:**
-
-1. In Cursor Settings → Tools & MCP, add:
-
-```json
-"da-live-admin": {
-  "command": "npx",
-  "args": [
-    "-y",
-    "github:meejain/mcp-da-live-admin"
-  ],
-  "env": {
-    "DA_ADMIN_API_TOKEN": "{token}"
-  }
-}
-```
-
-**For Visual Studio Code:**
-
-1. Edit the same MCP configuration file and add DA Live Admin to the `mcpServers` object:
-
-```json
-{
-  "mcpServers": {
-    "helix-mcp-server": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "github:jindaliiita/eds-mcp"
-      ],
-      "env": {
-        "HELIX_ADMIN_API_TOKEN": "{token}"
-      }
-    },
-    "da-live-admin": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "github:meejain/mcp-da-live-admin"
-      ],
-      "env": {
-        "DA_ADMIN_API_TOKEN": "{token}"
-      }
-    }
-  }
-}
-```
-
-**Get your DA Admin API Token using Bookmarklet (Same for both Cursor and VS Code):**
+**Get your da-token using Bookmarklet (Same for both Cursor and VS Code):**
 
 **a) Create the Bookmarklet**
 
@@ -291,8 +255,6 @@ javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken
 - A prompt will appear with your access token
 - Copy the token
 - Replace `"{token}"` in the DA Live Admin configuration with your actual token
-
-**c) Restart your IDE** (Cursor or VS Code) for the MCP server configurations to take effect
 
 ### Step 2: Install GitHub CLI and Add Agent Skills
 
