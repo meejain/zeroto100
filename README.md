@@ -269,49 +269,7 @@ Now that you have both tokens, add the MCP servers to your IDE. **Replace `{heli
 
 5. Once enabled successfully, the list of tools should appear.
 
-### Step 2: Install GitHub CLI and Add Agent Skills
-
-#### 2.1 Install GitHub CLI (If not present)
-
-**For macOS:**
-
-See the [official installation guide](https://github.com/cli/cli/blob/trunk/docs/install_macos.md#homebrew)
-
-**For Windows:**
-
-See the [official installation guide](https://github.com/cli/cli/blob/trunk/docs/install_windows.md)
-
-**For Linux:**
-
-https://github.com/cli/cli/blob/trunk/docs/install_linux.md#recommended-official
-
-#### 2.2 Install gh-upskill Extension
-
-Install the gh-upskill extension for GitHub CLI:
-
-```bash
-gh extension install trieloff/gh-upskill
-```
-
-#### 2.3 Add AEM Skills to Your Project
-
-Navigate to your project root directory:
-
-```bash
-cd <repo>
-```
-
-> Replace `<repo>` with your repository name (the repo you cloned in Exercise 2).
-
-Then run:
-
-```bash
-gh upskill adobe/helix-website --all
-```
-
-This command will add AEM-specific skills to your project, enabling AI agents to better understand and work with AEM Edge Delivery Services patterns and best practices.
-
-### Step 3: Build a Block Using AI
+### Step 2: Build a Block Using AI
 
 **TODO**
 
