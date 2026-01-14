@@ -18,8 +18,7 @@ Create a **tabs block** to replace the accordion in the "Expertise" section. You
 
 Your implementation will be scored on:
 
-### Lighthouse Score (100 points)
-- **Performance**: 100/100
+- **Lighthouse Score (Performance)**: 100/100
 - **Accessibility**: 100/100
 - **Best Practices**: 100/100
 
