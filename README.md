@@ -361,7 +361,20 @@ This workflow demonstrates a complete development cycle - from content editing t
    This prompt will:
    - Generate the block's JavaScript (`accordion.js`)
    - Generate the block's CSS (`accordion.css`)
-   - Follow the project's design system and coding standards
+   - Follow the project's coding standards
+   
+   **Follow-up: Adapt Styling from Existing Design**
+   
+   After the basic accordion block is generated, you can adapt styling from an existing design:
+   ```
+   Can you check accordion designed on the page - https://lab2--zeroto100--meejain.aem.live/lab2 
+   and convert the styling as is
+   ```
+   
+   This will:
+   - Inspect the accordion design
+   - Extract the visual styling
+   - Apply the same design to your accordion block
 
 3. **Push Code to Repository** (manual or AI-assisted):
    ```
@@ -420,3 +433,15 @@ Ensure images are lazy-loaded and CSS is minimal.
 - MCP servers provide AI with context about your project
 - AI assists with code generation following EDS patterns
 - You can iterate faster with AI-powered development
+
+---
+
+## Troubleshooting
+
+### MCP Installation Issues with npx
+
+If you're facing issues with MCP server installation or the servers are not connecting properly, try clearing the npx cache:
+
+```bash
+rm -rf ~/.npm/_npx
+```
