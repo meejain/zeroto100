@@ -36,14 +36,11 @@ If your version is lower than 20.x.x, you'll need to upgrade:
 1. Visit the [Dev Day Boilerplate repository](https://github.com/meejain/zeroto100)
 2. Click **"Use this template"** → **"Create a new repository"**
    <img width="1267" height="100" alt="Screenshot 2026-01-13 at 7 28 19 PM" src="https://github.com/user-attachments/assets/04dd7645-7f8b-4294-97eb-0405915cc747" />
-   
-3. Set **"Include all branches"** to **On**
-   <img width="739" height="270" alt="Screenshot 2026-01-13 at 7 11 34 PM" src="https://github.com/user-attachments/assets/aa731085-9026-411e-bc2f-8a38f6e32bc0" />
-   
-4. Choose your GitHub user/org as the owner
-5. Provide the repository name
-6. Set the repository to **public** (recommended)
-7. Click **"Create repository"**
+
+3. Choose your GitHub user/org as the owner
+4. Provide the repository name
+5. Set the repository to **public** (recommended)
+6. Click **"Create repository"**
 
 ### Step 2: Install AEM Code Sync
 
