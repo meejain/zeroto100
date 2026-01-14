@@ -1,34 +1,442 @@
-# Your Project's Title...
-Your project's description...
+# Dev Day Lab - Zero to 100: Prompt, Build & Go Live with your High-Performance Personal Website with AI
 
-## Environments
-- Preview: https://main--{repo}--{owner}.aem.page/
-- Live: https://main--{repo}--{owner}.aem.live/
+A hands-on lab where you'll be building your very own personal website from the ground up with ease. You'll be using Adobe Experience Manager with AI tools like Cursor, and by the end, you'll be walking away with your own live site — a keepsake you can share and continue evolving
 
-## Documentation
+## Prerequisites
 
-Before using the aem-boilerplate, we recommand you to go through the documentation on https://www.aem.live/docs/ and more specifically:
-1. [Developer Tutorial](https://www.aem.live/developer/tutorial)
-2. [The Anatomy of a Project](https://www.aem.live/developer/anatomy-of-a-project)
-3. [Web Performance](https://www.aem.live/developer/keeping-it-100)
-4. [Markup, Sections, Blocks, and Auto Blocking](https://www.aem.live/developer/markup-sections-blocks)
+Before starting this lab, ensure you have:
 
-## Installation
+- A personal GitHub account
+- A laptop (Mac, Windows Or Linux) with an installed IDE — preferably an AI-enabled editor (Cursor is strongly recommended; VS Code is also acceptable)
+- Node.js (version 20 or higher) and npm installed on your local system
 
-```sh
-npm i
+### Checking and Upgrading Node.js
+
+Check your current Node.js version:
+
+```bash
+node --version
 ```
 
-## Linting
+If your version is lower than 20.x.x, you'll need to upgrade:
 
-```sh
-npm run lint
+- **Mac/Linux**: Use [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm#installing-and-updating) or download from [nodejs.org](https://nodejs.org/)
+- **Windows**: Use [nvm-windows](https://github.com/coreybutler/nvm-windows#installation--upgrades) or download from [nodejs.org](https://nodejs.org/)
+
+---
+
+## Exercise 1: Bootstrap a Live Personal Site
+
+**Objective**: Set up your GitHub repository, configure DA (Document Authoring), add your personal content, and publish your site.
+
+**Outcome**: You will have a live personal website running on AEM Edge Delivery Services.
+
+### Step 1: Create Your Repository from Boilerplate
+
+1. Visit the [Dev Day Boilerplate repository](https://github.com/meejain/zeroto100)
+2. Click **"Use this template"** → **"Create a new repository"**
+   <img width="1267" height="100" alt="Screenshot 2026-01-13 at 7 28 19 PM" src="https://github.com/user-attachments/assets/04dd7645-7f8b-4294-97eb-0405915cc747" />
+
+3. Choose your GitHub user/org as the owner
+4. Provide the repository name
+5. Set the repository to **public** (recommended)
+6. Click **"Create repository"**
+
+### Step 2: Install AEM Code Sync
+
+1. Visit [AEM Code Sync GitHub App](https://github.com/apps/aem-code-sync/installations/new)
+2. Under **Repository access**, select **"Only select repositories"**
+3. Choose your newly created repository
+4. Click **"Save"**
+
+Your site is now live at:
+- **Preview**: `https://main--<repo>--<owner>.aem.page/`
+- **Production**: `https://main--<repo>--<owner>.aem.live/`
+
+> **Note**: Replace `<repo>` with your repository name and `<owner>` with your GitHub user/org.
+
+### Step 3: Author and Manage Content
+
+1. Navigate to [DA.live](https://da.live/start)
+2. Add your newly created github repository link
+3. Select the **AEM Boilerplate** option. This will create boilerplate content.
+4. Visit https://da.live/apps/import and import the following pages using the **"By URL"** option:
+   - `https://main--zeroto100--meejain.aem.live/lab1`
+   - `https://main--zeroto100--meejain.aem.live/nav`
+   - `https://main--zeroto100--meejain.aem.live/footer`
+5. In the **Org** field, enter your organization name and in **Site** field, enter your repository name.
+   - For example: If your DA.live URL is `https://da.live/#/meejain/zeroto100`, then:
+     - **Org**: `meejain`
+     - **Site**: `zeroto100`
+
+### Step 4: Preview and Publish Content
+
+1. In DA, Click the **Preview** button to preview your changes.
+  <img width="311" height="88" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
+
+2. Once satisfied with the preview, click the **Publish** button to make your content live.
+  <img width="311" height="88" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
+  
+3. Your content will now be available on both preview and live URLs.
+
+
+**Congratulations!** 🎉 You have successfully bootstrapped your live personal website with default blocks on AEM Edge Delivery Services. Your site is now live and accessible on the web!
+
+### Optional: Install AEM Sidekick
+
+For easier content preview and publishing workflow:
+
+1. Install the [AEM Sidekick Chrome Extension](https://chrome.google.com/webstore/search/aem%20sidekick)
+2. Pin the extension for easy access
+3. Navigate to your site (preview or live URL)
+4. Click the Sidekick icon in your browser
+5. Use Sidekick to preview and publish content directly from your browser without going to DA.live
+
+---
+
+## Exercise 2: Know the Development Flow for EDS
+
+**Objective**: Set up local development environment, make changes to code, and experience live reload.
+
+**Outcome**: You will understand the local development workflow and see real-time changes reflected in your browser.
+
+### Step 1: Install AEM CLI
+
+```bash
+npm install -g @adobe/aem-cli
 ```
 
-## Local development
+### Step 2: Clone Your Repository (via SSH or HTTPS)
 
-1. Create a new repository based on the `aem-boilerplate` template
-1. Add the [AEM Code Sync GitHub App](https://github.com/apps/aem-code-sync) to the repository
-1. Install the [AEM CLI](https://github.com/adobe/helix-cli): `npm install -g @adobe/aem-cli`
-1. Start AEM Proxy: `aem up` (opens your browser at `http://localhost:3000`)
-1. Open the `{repo}` directory in your favorite IDE and start coding :)
+```bash
+git clone https://github.com/<owner>/<repo>
+cd <repo>
+```
+
+> Replace `<owner>` with your GitHub user/org and `<repo>` with your repository name.
+
+### Step 3: Start Local Development Server
+
+```bash
+aem up
+```
+
+This starts a local server at `http://localhost:3000/`
+
+Your browser should automatically open. If not, navigate to http://localhost:3000/ manually.
+
+### Step 4: Make a Minor Change and See Live Reload
+
+Let's make a simple CSS change to see live reload in action:
+
+1. Open your project in your IDE (Cursor or VS Code)
+2. Navigate to `styles/styles.css`
+3. Find the `body` selector and modify a style property. For example, change the background color:
+
+```css
+body {
+  /* Add or modify this line */
+  background-color: black;
+}
+```
+
+4. Save the file (Ctrl/Cmd + S)
+5. Watch your browser automatically reload and display the change!
+
+**Congratulations!** 🎉 You now understand the EDS development flow:
+- Make changes locally
+- See instant feedback in the browser
+- Iterate quickly without waiting for builds or deployments
+
+---
+
+## Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI
+
+**Objective**: Configure AI tooling (MCP servers) and build a block using AI assistance.
+
+**Outcome**: You will be able to leverage AI to accelerate your development work in EDS.
+
+### Step 1: Configure MCP Servers
+
+Before adding the MCP server configuration, you need to get the access tokens first.
+
+#### 1.1 Get Access Tokens
+
+**a) Get Helix Admin API Token:**
+
+- Go to https://admin.hlx.page/login
+- Use the `login_adobe` address to login with the Adobe identity provider
+- You will be forwarded to https://admin.hlx.page/profile
+- Open your browser's **Developer Tools** (F12)
+- Go to the **Application** tab and **Storage**
+- Under **Cookies**, find `auth_token`
+- Copy the value of the `auth_token` cookie
+- Save this token - you'll need it in the next step as `{helix-token}`
+
+**b) Get DA Live Admin API Token using Bookmarklet:**
+
+**Step 1: Create the Bookmarklet**
+
+- In your browser, create a new bookmark (Right-click bookmarks bar → Add Page)
+- Name: `Get DA Token`
+- In the URL/Location field, paste the following code:
+
+```javascript
+javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken!=='function'){alert('adobeIMS not available on this page');return;}try{const r=await adobeIMS.getAccessToken();if(!r||!r.token){alert('Token not found in response');console.log(r);return;}prompt('Adobe IMS Access Token (Ctrl/Cmd + C to copy):',r.token);}catch(e){console.error(e);alert('Failed to get access token');}})();
+```
+
+- Save the bookmark
+
+**Step 2: Use the Bookmarklet**
+
+- Navigate to https://da.live
+- Click on the **Get DA Token** bookmarklet in your bookmarks bar
+- A prompt will appear with your access token
+- Copy the token
+- Save this token - you'll need it in the next step as `{da-token}`
+
+#### 1.2 Add MCP Server Configuration
+
+Now that you have both tokens, add the MCP servers to your IDE. **Replace `{helix-token}` and `{da-token}` with your actual tokens from step 1.1.**
+
+**For Cursor IDE:**
+
+1. Open Cursor IDE
+2. Go to **Cursor Settings** → **Tools & MCP**
+   <img width="1028" height="378" alt="Screenshot 2026-01-13 at 7 46 55 PM" src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" />
+
+3. Add the following configuration (replace the token placeholders with your actual tokens):
+
+> **Note**: If you already have other MCP servers configured, just add `helix-mcp-server` and `da-live-admin` to your existing `mcpServers` object. Don't replace your entire configuration!
+
+```json
+{
+  "mcpServers": {
+    "helix-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "github:jindaliiita/eds-mcp"
+      ],
+      "env": {
+        "HELIX_ADMIN_API_TOKEN": "{helix-token}"
+      }
+    },
+    "da-live-admin": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "github:meejain/mcp-da-live-admin"
+      ],
+      "env": {
+        "DA_ADMIN_API_TOKEN": "{da-token}"
+      }
+    }
+  }
+}
+```
+
+**For Visual Studio Code:**
+
+1. Open VS Code
+2. Add the following configuration (replace the token placeholders with your actual tokens):
+
+> **Note**: If you already have other MCP servers configured, just add `helix-mcp-server` and `da-live-admin` to your existing `mcpServers` object. Don't replace your entire configuration!
+
+```json
+{
+  "mcpServers": {
+    "helix-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "github:jindaliiita/eds-mcp"
+      ],
+      "env": {
+        "HELIX_ADMIN_API_TOKEN": "{helix-token}"
+      }
+    },
+    "da-live-admin": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "github:meejain/mcp-da-live-admin"
+      ],
+      "env": {
+        "DA_ADMIN_API_TOKEN": "{da-token}"
+      }
+    }
+  }
+}
+```
+3. Click on "Configure Tools" icon at the bottom of AI Chat window in VSCode.
+
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/c3107dec-0018-4850-9ac2-e2914e4f23a6" />
+
+4. Enable `da-live-admin` and `helix-mcp-server`
+
+<img width="610" height="501" alt="image" src="https://github.com/user-attachments/assets/8baa6d3a-b2b3-4868-b5b8-281faf2180f7" />
+
+5. Once enabled successfully, the list of tools should appear.
+
+### Step 2: Install GitHub CLI and Add Agent Skills
+
+#### 2.1 Install GitHub CLI (If not present)
+
+**For macOS:**
+
+See the [official installation guide](https://github.com/cli/cli/blob/trunk/docs/install_macos.md#homebrew)
+
+**For Windows:**
+
+See the [official installation guide](https://github.com/cli/cli/blob/trunk/docs/install_windows.md)
+
+**For Linux:**
+
+See the [official installation guide](https://github.com/cli/cli/blob/trunk/docs/install_linux.md#recommended-official)
+
+> **Note**: After installation, you may need to authenticate with GitHub by running `gh auth login` before using `gh` commands.
+
+#### 2.2 Install gh-upskill Extension
+
+Install the gh-upskill extension for GitHub CLI:
+
+```bash
+gh extension install trieloff/gh-upskill
+```
+
+#### 2.3 Add AEM Skills to Your Project
+
+Navigate to your project root directory:
+
+```bash
+cd <repo>
+```
+
+> Replace `<repo>` with your repository name (the repo you cloned in Exercise 2).
+
+Then run:
+
+```bash
+gh upskill adobe/helix-website --dest-path .claude/skills --all
+```
+
+This command will add AEM-specific skills to your project, enabling AI agents to better understand and work with AEM Edge Delivery Services patterns and best practices.
+
+### Step 3: Build a Block Using AI
+
+Now that you have MCP servers configured, you can use AI to help you build blocks and manage content. Here are some sample workflows and prompts to get you started:
+
+#### Sample Workflow: Replace a Block with Another Block Type
+
+This workflow demonstrates a complete development cycle - from content editing to code generation to publishing.
+
+**Scenario**: Replace a `cards-skills` block with an `accordion` block while preserving the content.
+
+> **Note**: In the prompts below, replace `[org]`, `[site]`, and `[page-path]` with your own DA organization name, site/repository name, and page path. For example, if your DA URL is `https://da.live/edit#/meejain/zeroto100/lab1`, then `[org]` is `meejain`, `[site]` is `zeroto100`, and `[page-path]` is `lab1`.
+
+**Step-by-step prompts:**
+
+1. **Content Edit and Preview** (using Cursor/VS Code):
+   ```
+   Get the page from DA at https://da.live/edit#/[org]/[site]/[page-path], 
+   replace the cards-skills block with an Accordion block containing the same content, 
+   and preview the page.
+   ```
+   
+   This prompt will:
+   - Fetch the page content from DA
+   - Replace the block structure
+   - Update the content on DA
+   - Provide the page with new content
+
+2. **Code Generation** (if the block doesn't exist yet):
+   ```
+   Write the code for the Accordion block as well.
+   ```
+   
+   This prompt will:
+   - Generate the block's JavaScript (`accordion.js`)
+   - Generate the block's CSS (`accordion.css`)
+   - Follow the project's coding standards
+   
+   **Follow-up: Adapt Styling from Existing Design**
+   
+   After the basic accordion block is generated, you can adapt styling from an existing design:
+   ```
+   Can you check accordion designed on the page - https://lab2--zeroto100--meejain.aem.live/lab2 
+   and convert the styling as is
+   ```
+   
+   This will:
+   - Inspect the accordion design
+   - Extract the visual styling
+   - Apply the same design to your accordion block
+
+3. **Push Code to Repository** (manual or AI-assisted):
+   ```
+   Push the updated code to the repository
+   ```
+   
+   Or manually:
+   ```bash
+   git add blocks/accordion/
+   git commit -m "Add accordion block"
+   git push origin main
+   ```
+
+4. **Publish the Resource** (using DA or Sidekick):
+   - Use the Publish button in DA.live
+   - Or use the AEM Sidekick extension
+   - Or use this prompt:
+   ```
+   Publish the resource https://da.live/edit#/[org]/[site]/[page-path]
+   ```
+
+#### More Sample Prompts
+
+**Creating a New Block:**
+```
+Create a hero-banner block with a heading, subtext, background image, 
+and call-to-action button. Match the existing design system.
+```
+
+**Modifying an Existing Block:**
+```
+Update the cards block to add hover animations and ensure it's 
+responsive across mobile, tablet, and desktop breakpoints.
+```
+
+**Debugging a Block:**
+```
+The carousel block isn't working properly. Debug the issue and fix it.
+```
+
+**Content Management:**
+```
+Get the page from DA at https://da.live/edit#/[org]/[repo]/[path] 
+and update the hero section text.
+```
+
+**Performance Optimization:**
+```
+Review all blocks and optimize them for Core Web Vitals. 
+Ensure images are lazy-loaded and CSS is minimal.
+```
+
+**Congratulations!** 🎉 You can now use AI to accelerate your EDS development:
+- MCP servers provide AI with context about your project
+- AI assists with code generation following EDS patterns
+- You can iterate faster with AI-powered development
+
+---
+
+## Troubleshooting
+
+### MCP Installation Issues with npx
+
+If you're facing issues with MCP server installation or the servers are not connecting properly, try clearing the npx cache:
+
+```bash
+rm -rf ~/.npm/_npx
+```
