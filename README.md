@@ -25,11 +25,11 @@ If your version is lower than 20.x.x, you'll need to upgrade:
 
 ---
 
-## Exercise 1: Bootstrap a Live Personal Site with Default Blocks
+## Exercise 1: Bootstrap a Live Personal Site
 
-**Objective**: Set up your GitHub repository, configure DA.live, add your personal content, and publish your site.
+**Objective**: Set up your GitHub repository, configure DA (Document Authoring), add your personal content, and publish your site.
 
-**Outcome**: You will have a live personal website with default blocks running on AEM Edge Delivery Services.
+**Outcome**: You will have a live personal website running on AEM Edge Delivery Services.
 
 ### Step 1: Create Your Repository from Boilerplate
 
