@@ -8,7 +8,20 @@ Before starting this lab, ensure you have:
 
 - A personal GitHub account
 - A laptop (Mac, Windows Or Linux) with an installed IDE — preferably an AI-enabled editor (Cursor is strongly recommended; VS Code is also acceptable)
-- Node.js and npm installed on your local system
+- Node.js (version 20 or higher) and npm installed on your local system
+
+### Checking and Upgrading Node.js
+
+Check your current Node.js version:
+
+```bash
+node --version
+```
+
+If your version is lower than 20.x.x, you'll need to upgrade:
+
+- **Mac/Linux**: Use [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm#installing-and-updating) or download from [nodejs.org](https://nodejs.org/)
+- **Windows**: Use [nvm-windows](https://github.com/coreybutler/nvm-windows#installation--upgrades) or download from [nodejs.org](https://nodejs.org/)
 
 ---
 
