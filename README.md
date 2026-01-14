@@ -1,6 +1,6 @@
-# Lab: Getting Started with Adobe Experience Manager - Edge Delivery Services
+# Dev Day Lab - Zero to 100: Prompt, Build & Go Live with your High-Performance Personal Website with AI
 
-This lab walks you through creating and developing a website using Adobe Experience Manager - Edge Delivery Services
+A hands-on lab where you'll be building your very own personal website from the ground up with ease. You'll be using Adobe Experience Manager with AI tools like Cursor, and by the end, you'll be walking away with your own live site — a keepsake you can share and continue evolving
 
 ## Prerequisites
 
@@ -271,7 +271,93 @@ Now that you have both tokens, add the MCP servers to your IDE. **Replace `{heli
 
 ### Step 2: Build a Block Using AI
 
-**TODO**
+Now that you have MCP servers configured, you can use AI to help you build blocks and manage content. Here are some sample workflows and prompts to get you started:
+
+#### Sample Workflow: Replace a Block with Another Block Type
+
+This workflow demonstrates a complete development cycle - from content editing to code generation to publishing.
+
+**Scenario**: Replace a `cards-skills` block with an `accordion` block while preserving the content.
+
+> **Note**: In the prompts below, replace `{org}`, `{site}`, and `{page-path}` with your own DA organization name, site/repository name, and page path. For example, if your DA URL is `https://da.live/edit#/meejain/zeroto100/lab1`, then `{org}` is `meejain`, `{site}` is `zeroto100`, and `{page-path}` is `lab1`.
+
+**Step-by-step prompts:**
+
+1. **Content Edit and Preview** (using Cursor/VS Code):
+   ```
+   Get the page from DA at https://da.live/edit#/{org}/{site}/{page-path}, 
+   replace the cards-skills block with an Accordion block containing the same content, 
+   and preview the page.
+   ```
+   
+   This prompt will:
+   - Fetch the page content from DA
+   - Replace the block structure
+   - Update the content on DA
+   - Provide the page with new content
+
+2. **Code Generation** (if the block doesn't exist yet):
+   ```
+   Write the code for the Accordion block as well.
+   ```
+   
+   This prompt will:
+   - Generate the block's JavaScript (`accordion.js`)
+   - Generate the block's CSS (`accordion.css`)
+   - Follow the project's design system and coding standards
+
+3. **Push Code to Repository** (manual or AI-assisted):
+   ```
+   Push the updated code to the repository
+   ```
+   
+   Or manually:
+   ```bash
+   git add blocks/accordion/
+   git commit -m "Add accordion block"
+   git push origin main
+   ```
+
+4. **Publish the Resource** (using DA or Sidekick):
+   - Use the Publish button in DA.live
+   - Or use the AEM Sidekick extension
+   - Or use this prompt:
+   ```
+   Publish the resource https://da.live/edit#/{da-org}/{da-site}/{page-path}
+   ```
+
+#### More Sample Prompts
+
+> **Note**: In the prompts below, replace placeholders like `{org}`, `{site}`, `{repo}`, and `{path}` with your own values.
+
+**Creating a New Block:**
+```
+Create a hero-banner block with a heading, subtext, background image, 
+and call-to-action button. Match the existing design system.
+```
+
+**Modifying an Existing Block:**
+```
+Update the cards block to add hover animations and ensure it's 
+responsive across mobile, tablet, and desktop breakpoints.
+```
+
+**Debugging a Block:**
+```
+The carousel block isn't working properly. Debug the issue and fix it.
+```
+
+**Content Management:**
+```
+Get the page from DA at https://da.live/edit#/[org]/[repo]/[path] 
+and update the hero section text.
+```
+
+**Performance Optimization:**
+```
+Review all blocks and optimize them for Core Web Vitals. 
+Ensure images are lazy-loaded and CSS is minimal.
+```
 
 **Congratulations!** 🎉 You can now use AI to accelerate your EDS development:
 - MCP servers provide AI with context about your project
