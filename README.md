@@ -336,13 +336,13 @@ This workflow demonstrates a complete development cycle - from content editing t
 
 **Scenario**: Replace a `cards-skills` block with an `accordion` block while preserving the content.
 
-> **Note**: In the prompts below, replace `{org}`, `{site}`, and `{page-path}` with your own DA organization name, site/repository name, and page path. For example, if your DA URL is `https://da.live/edit#/meejain/zeroto100/lab1`, then `{org}` is `meejain`, `{site}` is `zeroto100`, and `{page-path}` is `lab1`.
+> **Note**: In the prompts below, replace `[org]`, `[site]`, and `[page-path]` with your own DA organization name, site/repository name, and page path. For example, if your DA URL is `https://da.live/edit#/meejain/zeroto100/lab1`, then `[org]` is `meejain`, `[site]` is `zeroto100`, and `[page-path]` is `lab1`.
 
 **Step-by-step prompts:**
 
 1. **Content Edit and Preview** (using Cursor/VS Code):
    ```
-   Get the page from DA at https://da.live/edit#/{org}/{site}/{page-path}, 
+   Get the page from DA at https://da.live/edit#/[org]/[site]/[page-path], 
    replace the cards-skills block with an Accordion block containing the same content, 
    and preview the page.
    ```
@@ -393,12 +393,10 @@ This workflow demonstrates a complete development cycle - from content editing t
    - Or use the AEM Sidekick extension
    - Or use this prompt:
    ```
-   Publish the resource https://da.live/edit#/{da-org}/{da-site}/{page-path}
+   Publish the resource https://da.live/edit#/[org]/[site]/[page-path]
    ```
 
 #### More Sample Prompts
-
-> **Note**: In the prompts below, replace placeholders like `{org}`, `{site}`, `{repo}`, and `{path}` with your own values.
 
 **Creating a New Block:**
 ```
