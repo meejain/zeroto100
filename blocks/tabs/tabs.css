@@ -1,0 +1,142 @@
+/* Tabs block styling */
+.tabs {
+  margin: 2rem 0;
+}
+
+.tabs .tabs-container {
+  width: 100%;
+}
+
+/* Tab buttons container */
+.tabs .tabs-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+}
+
+/* Individual tab button */
+.tabs .tabs-button {
+  background: none;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  border-radius: 4px 4px 0 0;
+}
+
+.tabs .tabs-button:hover {
+  color: #111827;
+  background-color: #f9fafb;
+}
+
+.tabs .tabs-button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.tabs .tabs-button.active {
+  color: #3b82f6;
+  background-color: transparent;
+}
+
+.tabs .tabs-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #3b82f6;
+}
+
+/* Tab panels container */
+.tabs .tabs-panels {
+  position: relative;
+}
+
+/* Individual tab panel */
+.tabs .tabs-panel {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tabs .tabs-panel.active {
+  display: block;
+}
+
+.tabs .tabs-panel p {
+  margin: 0 0 1rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.tabs .tabs-panel p:last-child {
+  margin-bottom: 0;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 600px) {
+  .tabs .tabs-button {
+    padding: 1rem 2rem;
+    font-size: 1.0625rem;
+  }
+
+  .tabs .tabs-buttons {
+    gap: 1rem;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 900px) {
+  .tabs {
+    margin: 3rem 0;
+  }
+
+  .tabs .tabs-button {
+    font-size: 1.125rem;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .tabs .tabs-button.active {
+    font-weight: 700;
+  }
+
+  .tabs .tabs-buttons {
+    border-bottom-width: 3px;
+  }
+
+  .tabs .tabs-button.active::after {
+    height: 3px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .tabs .tabs-panel {
+    animation: none;
+  }
+
+  .tabs .tabs-button {
+    transition: none;
+  }
+}
