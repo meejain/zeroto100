@@ -70,7 +70,7 @@ function handleKeyboardNavigation(e, buttonsContainer, panelsContainer) {
 }
 
 /**
- * Decorates the tabs block
+ * Decorates the tabs block with accordion-style theme
  * @param {Element} block The tabs block element
  */
 export default async function decorate(block) {
@@ -83,7 +83,7 @@ export default async function decorate(block) {
 
   // Create tabs container structure
   const tabsContainer = document.createElement('div');
-  tabsContainer.className = 'tabs-container';
+  tabsContainer.className = 'tabs-wrapper';
 
   // Create tab buttons container
   const tabButtons = document.createElement('div');
@@ -153,4 +153,23 @@ export default async function decorate(block) {
   tabsContainer.appendChild(tabButtons);
   tabsContainer.appendChild(tabPanels);
   block.appendChild(tabsContainer);
+
+  // Add scroll animation with Intersection Observer (matching accordion)
+  const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -100px 0px',
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        block.classList.add('animate-in');
+      } else {
+        block.classList.remove('animate-in');
+      }
+    });
+  }, observerOptions);
+
+  // Observe the block container
+  observer.observe(block);
 }
