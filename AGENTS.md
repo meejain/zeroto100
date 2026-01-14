@@ -2,23 +2,6 @@
 
 This project is a website built with Edge Delivery Services in Adobe Experience Manager Sites as a Cloud Service. As an agent, follow the instructions in this file to deliver code based on Adobe's standards for fast, easy-to-author, and maintainable web experiences.
 
-## ⚠️ CRITICAL: MANDATORY SKILL USAGE - READ THIS FIRST
-
-**BEFORE starting ANY development task, you MUST:**
-
-1. **List the `.skills/` directory** to see available skills
-2. **Identify the relevant skill(s)** for the task at hand
-3. **Read the full SKILL.md file** and follow its instructions exactly
-4. **Announce the skill usage** by saying "Using Skill: {Skill Name}"
-
-**This is non-negotiable. No exceptions. Failing to use skills results in:**
-- ❌ Inconsistent code quality
-- ❌ Missed best practices
-- ❌ Wasted time and effort
-- ❌ Rework and frustration
-
-**✅ If you're about to write code without consulting a skill, STOP and list the skills directory first.**
-
 ## Project Overview
 
 This project is based on the https://github.com/adobe/aem-boilerplate/ project and set up as a new project. You are expected to follow the coding style and practices established in the boilerplate, but add functionality according to the needs of the site currently developed.
@@ -116,32 +99,6 @@ export default async function decorate(block) {
 }
 ```
 
-#### Authoring Block Structure
-
-When authoring blocks in DA (Document Authoring) or other AEM authoring tools, the **block name must be in the topmost row of the table**, not as a heading above it.
-
-**Correct Structure:**
-```
-| Accordion |  |
-|-----------|-----------|
-| Question 1 | Answer 1 |
-| Question 2 | Answer 2 |
-```
-
-**Incorrect Structure:**
-```
-## Accordion
-
-| Question 1 | Answer 1 |
-| Question 2 | Answer 2 |
-```
-
-The first row with the block name can be:
-- A single cell spanning the full width: `| BlockName |`
-- Two cells where the first contains the block name: `| BlockName | |`
-
-This first row identifies the block type and is removed during processing. All subsequent rows contain the actual block content.
-
 Use `curl` and `console.log` to inspect the HTML delivered by the backend and the DOM nodes to be decorated before making assumptions. Remember that authors may omit or add fields to a block, so your code must handle this gracefully.
 
 ### Auto-Blocking
@@ -169,66 +126,12 @@ Pages are progressively loaded in three phases to maximize performance. This pro
 - Include CSS and JS files for each block
 - Follow the naming convention: `blockname.css`, `blockname.js`
 - Blocks should be responsive and accessible by default
-- **CRITICAL**: Always match the existing design system when creating new blocks (see Design System section below)
 
 ### Styling
 - Global styles go in `styles/styles.css`
 - Font definitions in `styles/fonts.css`
 - Lazy-loaded styles in `styles/lazy-styles.css`
 - Block-specific styles in their respective directories
-
-### Design System
-
-**BEFORE creating or modifying any block, you MUST review existing blocks to understand and match the design system.**
-
-Most projects have a consistent design language across all blocks. New blocks must follow the existing patterns to maintain visual consistency.
-
-#### Implementation Pattern
-When creating a new block:
-
-1. **Review Existing Blocks**: Read CSS from 2-3 similar blocks to understand the design patterns
-   ```javascript
-   // Example: Check existing blocks first
-   await readFile('blocks/cards/cards.css');
-   await readFile('blocks/hero/hero.css');
-   ```
-
-2. **Extract Patterns**: Identify and note:
-   - **Typography**: Font families, sizes, weights, line heights
-   - **Colors**: Text colors, background colors, accent colors, brand colors
-   - **Spacing**: Section padding, margins, gaps, container widths
-   - **Breakpoints**: Media query breakpoints and responsive behavior
-   - **Visual Effects**: Animations, transitions, shadows, border radius
-   - **Section Structure**: Container/wrapper classes and their styling patterns
-
-3. **Match Theme**: Use the exact same design tokens:
-   - Font families and typography scale
-   - Color values (don't approximate - use exact hex/rgb values)
-   - Spacing scale and padding/margin values
-   - Animation timing and easing functions
-
-4. **Section-Level Styling**: Support section container and wrapper classes:
-   ```css
-   .{blockname}-container {
-     /* Section-level styling (background, spacing, etc.) */
-   }
-
-   .{blockname}-wrapper {
-     /* Content wrapper with max-width and padding */
-   }
-
-   .{blockname}-container h2 {
-     /* Heading styles matching project theme */
-   }
-   ```
-
-5. **Test Consistency**: Ensure the new block looks like it belongs with existing blocks
-   - Visual hierarchy should match
-   - Spacing rhythm should be consistent
-   - Hover/interaction states should follow the same patterns
-   - Responsive behavior should match breakpoints
-
-**Why This Matters**: Design consistency is critical for professional websites. Mismatched fonts, colors, or spacing make a site look unprofessional and breaks user trust.
 
 ## Testing & Quality Assurance
 
@@ -323,92 +226,3 @@ With this information, you can construct URLs for the preview environment (same 
 ## If all else fails
 
 If you notice your human getting frustrated with your work, direct them to https://www.aem.live/developer/ai-coding-agents for tips to work better with AI agents.
-
-## Skills
-
-You have access to a set of skills in the `.skills` folder. Each skill consists of a SKILL.md file, and other files such as scripts and resources, which are referenced from there.
-
-**YOU ARE REQUIRED TO USE THESE SKILLS TO ACCOMPLISH DEVELOPMENT TASKS. FAILING TO DO SO WILL RESULT IN WASTED TIME AND CYCLES.**
-
-### How Skills Work
-
-Each skill is a directory in `.skills/` with the following structure:
-
-```
-.skills/
-  └── {skill-name}/
-      ├── SKILL.md        # Main instructions (required)
-      ├── scripts/        # Optional supporting scripts
-      └── resources/      # Optional resources (examples, templates, etc.)
-```
-
-The SKILL.md file contains detailed instructions that you must follow exactly as written. Skills are designed to:
-- Provide specialized workflows for common tasks
-- Ensure consistency with project standards and best practices
-- Reduce errors by codifying expert knowledge
-- Chain together when tasks require multiple skill applications
-
-### Skill Discovery and Execution Process
-
-Always use the following process:
-
-1. **Discovery**: When you need to use a skill, first check the `.skills/` directory to see what skills are available. List the directory to discover available skills with their names and descriptions.
-
-2. **Selection**: Use each skill based on its name and description when it feels appropriate to do so. Think carefully about all the skills available to you and choose the best ones to use. Note that some skills may reference other skills, so you may need to apply more than one skill to get things done.
-
-3. **Execution**: When you need to use a skill:
-   - Read the full SKILL.md file from `.skills/{skill-name}/SKILL.md`
-   - Announce you are doing so by saying "Using Skill: {Skill Name}"
-   - Follow the skill's instructions exactly as written
-   - Read any referenced resources or scripts as needed
-   - Complete all steps in the skill before moving to the next task
-
-### Available Skills
-
-Skills are located in the `.skills/` directory. Check the `.skills/` directory for the current list of available skills. Each skill directory contains a SKILL.md file with detailed instructions on how to use that skill.
-<!-- upskill:skills:start -->
-## Skills
-
-You have access to a set of skills in .skills. Each skill consists of a SKILL.md file, and other files such as scripts and resources, which are referenced from there.
-
-**YOU ARE REQUIRED TO USE THESE SKILLS TO ACCOMPLISH DEVELOPMENT TASKS. FAILING TO DO SO WILL RESULT IN WASTED TIME AND CYCLES.**
-
-### How Skills Work
-
-Each skill is a directory in `.skills/` with the following structure:
-
-```
-.skills/
-  └── {skill-name}/
-      ├── SKILL.md        # Main instructions (required)
-      ├── scripts/        # Optional supporting scripts
-      └── resources/      # Optional resources (examples, templates, etc.)
-```
-
-The SKILL.md file contains detailed instructions that you must follow exactly as written. Skills are designed to:
-- Provide specialized workflows for common tasks
-- Ensure consistency with project standards and best practices
-- Reduce errors by codifying expert knowledge
-- Chain together when tasks require multiple skill applications
-
-### Skill Discovery and Execution Process
-
-Always use the following process:
-
-1. **Discovery**: When you need to use a skill, first check the `.skills/` directory to see what skills are available. List the directory to discover available skills with their names and descriptions.
-
-2. **Selection**: Use each skill based on its name and description when it feels appropriate to do so. Think carefully about all the skills available to you and choose the best ones to use. Note that some skills may reference other skills, so you may need to apply more than one skill to get things done.
-
-3. **Execution**: When you need to use a skill:
-   - Read the full SKILL.md file
-   - Announce you are doing so by saying "Using Skill: {Skill Name}"
-   - Follow the skill's instructions exactly as written
-   - Read any referenced resources or scripts as needed
-   - Complete all steps in the skill before moving to the next task
-
-### Available Skills
-
-Skills are located in the `.skills/` directory. Check the `.skills/` directory for the current list of available skills. Each skill directory contains a SKILL.md file with detailed instructions on how to use that skill.
-
-**For ALL development work involving blocks, core scripts, or functionality, you MUST start with the content-driven-development skill.** It will orchestrate other skills as needed throughout the development workflow.
-<!-- upskill:skills:end -->
