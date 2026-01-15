@@ -32,12 +32,7 @@ All the above categories must achieve a perfect score of 100.
 
 1. Run your Lighthouse test on PageSpeed Insights: [https://pagespeed.web.dev/](https://pagespeed.web.dev/)
 2. Enter your page URL (e.g., `https://challenge--zeroto100--meejain.aem.live/challenge`)
-3. Copy the PageSpeed result URL (format: `https://pagespeed.web.dev/analysis/https-your-page-url/...`)
-4. Submit the PageSpeed URL in the MS Forms: **[FORMS_LINK_PLACEHOLDER]**
+3. Submit Webpage URL at​: **https://forms.office.com/r/dQT5h39pNF**
 
-**Example PageSpeed URL:**
-```
-https://pagespeed.web.dev/analysis/https-challenge--zeroto100--meejain-aem-live-challenge/svwzuymf9h?form_factor=mobile
-```
 
 Good luck! 🚀
