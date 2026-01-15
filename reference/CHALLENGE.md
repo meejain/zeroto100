@@ -22,17 +22,18 @@ Your implementation will be scored on:
 - **Accessibility**: 100/100
 - **Best Practices**: 100/100
 
-All the above categories must achieve a perfect score of 100.
+**Tiebreaker Score**:​
+`penalty = (fcp * 10)+(lcp * 25)+(tbt * 30)+(cls * 25)+(si * 10); `​
+`tiebreaker = 1000 - penalty`
 
 ## ⏱️ Challenge Time
 
-**8 minutes**
+**7 minutes**
 
 ## 📤 Submission
 
-1. Run your Lighthouse test on PageSpeed Insights: [https://pagespeed.web.dev/](https://pagespeed.web.dev/)
+1. Run your Lighthouse test on [Pagespeed Insights](https://pagespeed.web.dev/)
 2. Enter your page URL (e.g., `https://challenge--zeroto100--meejain.aem.live/challenge`)
-3. Submit Webpage URL at​: **https://forms.office.com/r/dQT5h39pNF**
-
+3. Submit Webpage URL at​: [Dev Day Lab – Zero to 100 Challenge](https://forms.office.com/r/dQT5h39pNF)
 
 Good luck! 🚀
