@@ -454,10 +454,22 @@ Review all blocks and optimize them for Core Web Vitals.
 Ensure images are lazy-loaded and CSS is minimal.
 ```
 
-**Congratulations!** 🎉 You can now use AI to accelerate your EDS development:
-- MCP servers provide AI with context about your project
-- AI assists with code generation following EDS patterns
-- You can iterate faster with AI-powered development
+**Congratulations!** 🎉 You have successfully completed Lab 2 and you have a live personal website on which you have built your own block using AI!
+
+**Check Your Website's Performance:**
+
+After publishing your content, verify your Lighthouse score:
+
+1. Visit [PageSpeed Insights](https://pagespeed.web.dev/)
+2. Enter your live website URL: `https://main--{repo}--{owner}.aem.live/{path}`
+3. Click "Analyze" to see your Core Web Vitals and Lighthouse scores
+4. Aim for a score of 100 on Performance, Accessibility, Best Practices
+
+**What You've Accomplished:**
+- Built and deployed a custom block on AEM - Edge Delivery Services
+- Published a live personal website
+- Learned EDS development patterns and best practices
+- Can now use AI to accelerate your EDS development
 
 ---
 
