@@ -233,8 +233,6 @@ Now that you have both tokens, add the MCP servers to your IDE. **Replace `{heli
 
 1. Open Cursor IDE
 2. Go to **Cusrsor > Setting > Cursor Settings** → **Tools & MCP**
-   <img width="1028" height="378" alt="Screenshot 2026-01-13 at 7 46 55 PM" src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" />
-
 3. Add the following configuration (replace the token placeholders with your actual tokens):
 
 > **Note**: If you already have other MCP servers configured, just add `helix-mcp-server` and `da-live-admin` to your existing `mcpServers` object. Don't replace your entire configuration!
@@ -265,6 +263,8 @@ Now that you have both tokens, add the MCP servers to your IDE. **Replace `{heli
   }
 }
 ```
+4. After successful configuration, you should see the Helix and DA MCP servers available and enabled.
+      <img width="1028" height="378" alt="Screenshot 2026-01-13 at 7 46 55 PM" src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" />
 
 **For Visual Studio Code:**
 
