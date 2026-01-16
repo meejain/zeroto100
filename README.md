@@ -23,6 +23,10 @@ If your version is lower than 20.x.x, you'll need to upgrade:
 - **Mac/Linux**: Use [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm#installing-and-updating) or download from [nodejs.org](https://nodejs.org/)
 - **Windows**: Use [nvm-windows](https://github.com/coreybutler/nvm-windows#installation--upgrades) or download from [nodejs.org](https://nodejs.org/)
 
+```bash
+nvm install 20 # To install Node v20
+node -v # Must now show Node v20.x.y installed
+```
 ---
 
 ## Exercise 1: Bootstrap a Live Personal Site
