@@ -28,12 +28,10 @@ Your implementation will be scored on:
 
 ## ⏱️ Challenge Time
 
-**7 minutes**
+**8 minutes**
 
 ## 📤 Submission
 
-1. Run your Lighthouse test on [Pagespeed Insights](https://pagespeed.web.dev/)
-2. Enter your page URL (e.g., `https://challenge--zeroto100--meejain.aem.live/challenge`)
-3. Submit Webpage URL at​: [Dev Day Lab – Zero to 100 Challenge](https://forms.office.com/r/dQT5h39pNF)
+1. Submit Webpage URL at​: [Dev Day Lab – Zero to 100 Challenge](https://forms.office.com/r/dQT5h39pNF)
 
 Good luck! 🚀
