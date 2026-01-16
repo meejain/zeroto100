@@ -198,7 +198,10 @@ Before adding the MCP server configuration, you need to get the access tokens fi
 - Go to the **Application** tab and **Storage**
 - Under **Cookies**, find `auth_token`
 - Copy the value of the `auth_token` cookie
-- Save this token - you'll need it in the next step as `{helix-token}`
+- Place this token in notepad or similar for now - you'll need it in the next step as `{helix-token}`
+- 
+  <img width="800" alt="image" src="https://github.com/user-attachments/assets/a1dff6e0-ecc2-4e00-bcf3-786ee35948cc" />
+
 
 **b) Get DA Live Admin API Token using Bookmarklet:**
 
@@ -220,7 +223,7 @@ javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken
 - Click on the **Get DA Token** bookmarklet in your bookmarks bar
 - A prompt will appear with your access token
 - Copy the token
-- Save this token - you'll need it in the next step as `{da-token}`
+- Place this token in notepad or similar for now - you'll need it in the next step as `{da-token}`
 
 #### 1.2 Add MCP Server Configuration
 
@@ -229,7 +232,7 @@ Now that you have both tokens, add the MCP servers to your IDE. **Replace `{heli
 **For Cursor IDE:**
 
 1. Open Cursor IDE
-2. Go to **Cursor Settings** → **Tools & MCP**
+2. Go to **Cusrsor > Setting > Cursor Settings** → **Tools & MCP**
    <img width="1028" height="378" alt="Screenshot 2026-01-13 at 7 46 55 PM" src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" />
 
 3. Add the following configuration (replace the token placeholders with your actual tokens):
