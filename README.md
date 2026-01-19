@@ -57,10 +57,10 @@ node -v # Must now show Node v20.x.y installed
 5. Click **"Save"**
 
 Your site is now live at:
-- **Preview**: `https://main--<github-repo>--<github-user>.aem.page/`
-- **Production**: `https://main--<github-repo>--<github-user>.aem.live/`
+- **Preview**: `https://main--<github-repo>--<github-user>.aem.page`
+- **Production**: `https://main--<github-repo>--<github-user>.aem.live`
 > 
-> You may see a 404 page right now, which is OK since we are going to create the page in next steps.
+> You may see a 404 page right now, which is OK since we are going to create the content in next steps.
 
 ### Step 3: Author and Manage Content
 
