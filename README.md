@@ -6,7 +6,7 @@ A hands-on lab where you'll be building your very own personal website from the 
 
 Before starting this lab, ensure you have:
 
-- A personal GitHub account
+- A **personal** GitHub account **(Do not use _Adobe account)**
 - A laptop (Mac, Windows Or Linux) with an installed IDE — preferably an AI-enabled editor (Cursor is strongly recommended; VS Code is also acceptable)
 - Node.js (version 20 or higher) and npm installed on your local system
 
@@ -41,7 +41,7 @@ node -v # Must now show Node v20.x.y installed
 2. Click **"Use this template"** → **"Create a new repository"**
    <img width="1267" height="100" alt="Screenshot 2026-01-13 at 7 28 19 PM" src="https://github.com/user-attachments/assets/04dd7645-7f8b-4294-97eb-0405915cc747" />
 
-3. Choose your GitHub personal user as the owner
+3. Choose your GitHub user as the owner
 4. Provide the repository name
 5. Set the repository to **public** (recommended)
 6. Click **"Create repository"**
@@ -49,7 +49,7 @@ node -v # Must now show Node v20.x.y installed
 ### Step 2: Install AEM Code Sync
 
 1. Visit [AEM Code Sync GitHub App](https://github.com/apps/aem-code-sync/installations/new)
-2. Select the "owner" same as where you create the repo in the previous steps
+2. Select the "github-user" same as where you create the repo in the previous steps
 <img width="300" height="799" alt="image" src="https://github.com/user-attachments/assets/cd43982d-0dcb-4758-a88d-eced776a0276" />
 
 3. IMPORTANT: Under **Repository access**, select **"Only select repositories"**
@@ -57,9 +57,8 @@ node -v # Must now show Node v20.x.y installed
 5. Click **"Save"**
 
 Your site is now live at:
-- **Preview**: `https://main--<repo>--<owner>.aem.page/`
-- **Production**: `https://main--<repo>--<owner>.aem.live/`
-> **Note**: Replace `<repo>` with your repository name and `<owner>` with your GitHub user.
+- **Preview**: `https://main--<github-repo>--<github-user>.aem.page/`
+- **Production**: `https://main--<github-repo>--<github-user>.aem.live/`
 > 
 > You may see a 404 page right now, which is OK since we are going to create the page in next steps.
 
@@ -136,11 +135,9 @@ npm install -g @adobe/aem-cli
 ### Step 2: Clone Your Repository (via SSH or HTTPS)
 
 ```bash
-git clone https://github.com/<owner>/<repo>
-cd <repo>
+git clone https://github.com/<github-user>/<github-repo>
+cd <github-repo>
 ```
-
-> Replace `<owner>` with your GitHub user/org and `<repo>` with your repository name.
 
 ### Step 3: Start Local Development Server
 
@@ -461,7 +458,7 @@ Ensure images are lazy-loaded and CSS is minimal.
 After publishing your content, verify your Lighthouse score:
 
 1. Visit [PageSpeed Insights](https://pagespeed.web.dev/)
-2. Enter your live website URL: `https://main--{repo}--{owner}.aem.live/{path}`
+2. Enter your live website URL: `https://main--{repo}--{github-user}.aem.live/{path}`
 3. Click "Analyze" to see your Core Web Vitals and Lighthouse scores
 4. Aim for a score of 100 on Performance, Accessibility, Best Practices
 
