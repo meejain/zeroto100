@@ -65,30 +65,28 @@ Your site is now live at:
 ### Step 3: Author and Manage Content
 
 1. Navigate to [DA.live](https://da.live/start)
+2. Add your newly created github repository link.
 <img width="700" alt="image" src="https://github.com/user-attachments/assets/67d6b5f5-d036-41bc-a251-6a30518f143a" />
 
-2. Add your newly created github repository link.
 3. Click on **Go** Button.
-4. Select the **No Sample Content** option.
+4. Select the **No Sample Content** option and click **Make something wonderful**.
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/cdb2264d-1150-4516-ae0b-b0a72c366c40" />
 
-4.We should now have an empty content space create for the site.
-
+5. We should now have an empty content space create for the site.
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/5167c77f-67ac-43e4-949e-04b347e43fe3" />
 
-5. Let's import some sample content now. Visit https://da.live/apps/import and import the following pages using the **"By URL"** option:
+6. Let's import some sample content now. Visit https://da.live/apps/import and import the following pages using the **"By URL"** option. Import them as is, without modifying the URLs
    - `https://main--zeroto100--meejain.aem.live`
    - `https://main--zeroto100--meejain.aem.live/nav`
    - `https://main--zeroto100--meejain.aem.live/footer`
-6. In the **Org** field, enter your organization name and in **Site** field, enter your repository name.
-   - For example: If your DA.live URL is `https://da.live/#/meejain/zeroto100`, then:
-     - **Org**: `meejain`
-     - **Site**: `zeroto100`
-       
-    <img width="400" height="796" alt="image" src="https://github.com/user-attachments/assets/5cb9d167-5e45-43b1-9e8c-aa4feaf16635" />
-7. Wait for the content to import successfully. It should take 15-30 secs.
-8. You should now see the content imported for your site at https://da.live/#/[org]/[site]
+7. In the **Org** field, enter your github-user and in **Site** field, enter your github-repo.
+   - For example: If your DA.live URL is `https://da.live/#/sdmcraft/dev-day-lab-3`, then:
+     - **Org**: `sdmcraft`
+     - **Site**: `dev-day-lab-3`
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/5cb9d167-5e45-43b1-9e8c-aa4feaf16635" />
 
+8. Wait for the content to import successfully. It should take 15-30 secs.
+9. You should now see the content imported for your site at https://da.live/#/[github-user]/[github-repo]
 <img width="400" height="450" alt="image" src="https://github.com/user-attachments/assets/df996783-2dad-44d6-a522-1ef35562710d" />
 
 
@@ -96,28 +94,19 @@ Your site is now live at:
 ### Step 4: Preview and Publish Content
 
 
-1. Open up the page`https://main--{github-user}--{github-repo}.aem.live` 
-2. In DA, Click the **Preview** button to preview your changes.
+1. Open up the page `https://da.live/edit#/[github-user]/[github-repo]/index` 
+2. Click the **Preview** button to preview your changes.
   <img width="311" height="88" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
 
 3. Once satisfied with the preview, click the **Publish** button to make your content live.
   <img width="311" height="88" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
   
 4. Your content will now be available on both preview and live URLs.
-5. Feel free to add your own personalized content to the page. Do the same **Preview/Publish** steps to visualize your changes.
+5. Repeat steps 2 to 4 for `https://da.live/edit#/[github-user]/[github-repo]/nav` and `https://da.live/edit#/[github-user]/[github-repo]/footer`
+6. Feel free to add your own personalized content to the page. Do the same **Preview/Publish** steps to visualize your changes.
    > Pro Tip: You can also visualize your changes inline by clicking on the preview button. <img width="57" height="67" alt="image" src="https://github.com/user-attachments/assets/7d6543b7-4dc7-452c-95b1-241978c4ba1c" />
 
 **Congratulations!** 🎉 You have successfully bootstrapped your live personal website with default blocks on AEM Edge Delivery Services. Your site is now live and accessible on the web!
-
-### Optional: Install AEM Sidekick
-
-For easier content preview and publishing workflow:
-
-1. Install the [AEM Sidekick Chrome Extension](https://chrome.google.com/webstore/search/aem%20sidekick)
-2. Pin the extension for easy access
-3. Navigate to your site (preview or live URL)
-4. Click the Sidekick icon in your browser
-5. Use Sidekick to preview and publish content directly from your browser without going to DA.live
 
 ---
 
@@ -127,7 +116,7 @@ For easier content preview and publishing workflow:
 
 **Outcome**: You will understand the local development workflow and see real-time changes reflected in your browser.
 
-### Step 1: Install AEM CLI
+### Step 1: Install AEM CLI (If not already done)
 
 ```bash
 npm install -g @adobe/aem-cli
@@ -197,8 +186,7 @@ Before adding the MCP server configuration, you need to get the access tokens fi
 - Under **Cookies**, find `auth_token`
 - Copy the value of the `auth_token` cookie
 - Place this token in notepad or similar for now - you'll need it in the next step as `{helix-token}`
-- 
-  <img width="800" alt="image" src="https://github.com/user-attachments/assets/a1dff6e0-ecc2-4e00-bcf3-786ee35948cc" />
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/a1dff6e0-ecc2-4e00-bcf3-786ee35948cc" />
 
 
 **b) Get DA Live Admin API Token using Bookmarklet:**
@@ -262,7 +250,7 @@ Now that you have both tokens, add the MCP servers to your IDE. **Replace `{heli
 }
 ```
 4. After successful configuration, you should see the Helix and DA MCP servers available and enabled.
-      <img width="1028" height="378" alt="Screenshot 2026-01-13 at 7 46 55 PM" src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" />
+<img width="1028" height="378" alt="Screenshot 2026-01-13 at 7 46 55 PM" src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" />
 
 **For Visual Studio Code:**
 
@@ -359,13 +347,11 @@ This workflow demonstrates a complete development cycle - from content editing t
 
 **Scenario**: Replace a `cards-skills` block with an `accordion` block while preserving the content.
 
-> **Note**: In the prompts below, replace `[org]`, `[site]`, and `[page-path]` with your own DA organization name, site/repository name, and page path. For example, if your DA URL is `https://da.live/edit#/meejain/zeroto100/lab2`, then `[org]` is `meejain`, `[site]` is `zeroto100`, and `[page-path]` is `lab2`.
-
 **Step-by-step prompts:**
 
 1. **Content Edit and Preview** (using Cursor/VS Code):
    ```
-   Get the page from DA at https://da.live/edit#/[org]/[site]/[page-path], 
+   Get the page from DA at https://da.live/edit#/[github-user]/[github-repo]/[page-path], 
    replace the cards-skills block with an Accordion block containing the same content, 
    and preview the page.
    ```
@@ -411,12 +397,11 @@ This workflow demonstrates a complete development cycle - from content editing t
    git push origin main
    ```
 
-4. **Publish the Resource** (using DA or Sidekick):
+4. **Publish the Resource** (using DA):
    - Use the Publish button in DA.live
-   - Or use the AEM Sidekick extension
    - Or use this prompt:
    ```
-   Publish the resource https://da.live/edit#/[org]/[site]/[page-path]
+   Publish the resource https://da.live/edit#/[github-user]/[github-repo]/[page-path]
    ```
 
 #### More Sample Prompts
