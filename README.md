@@ -67,8 +67,9 @@ Your site is now live at:
 1. Navigate to [DA.live](https://da.live/start)
 <img width="300" height="638" alt="image" src="https://github.com/user-attachments/assets/67d6b5f5-d036-41bc-a251-6a30518f143a" />
 
-2. Add your newly created github repository link
-3. Select the **No Sample Content** option.
+2. Add your newly created github repository link.
+3. Click on **Go** Button.
+4. Select the **No Sample Content** option.
 <img width="300" height="535" alt="image" src="https://github.com/user-attachments/assets/cdb2264d-1150-4516-ae0b-b0a72c366c40" />
 
 4.We should now have an empty content space create for the site.
