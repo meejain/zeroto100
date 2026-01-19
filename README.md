@@ -95,7 +95,7 @@ Your site is now live at:
 ### Step 4: Preview and Publish Content
 
 
-1. Open up the page`https://main--{org}--{repo}.aem.live` 
+1. Open up the page`https://main--{github-user}--{github-repo}.aem.live` 
 2. In DA, Click the **Preview** button to preview your changes.
   <img width="311" height="88" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
 
@@ -337,10 +337,8 @@ gh extension install trieloff/gh-upskill
 Navigate to your project root directory:
 
 ```bash
-cd <repo>
+cd <github-repo>
 ```
-
-> Replace `<repo>` with your repository name (the repo you cloned in Exercise 2).
 
 Then run:
 
@@ -441,7 +439,7 @@ The carousel block isn't working properly. Debug the issue and fix it.
 
 **Content Management:**
 ```
-Get the page from DA at https://da.live/edit#/[org]/[repo]/[path] 
+Get the page from DA at https://da.live/edit#/[github-user]/[github-repo]/[path] 
 and update the hero section text.
 ```
 
@@ -458,7 +456,7 @@ Ensure images are lazy-loaded and CSS is minimal.
 After publishing your content, verify your Lighthouse score:
 
 1. Visit [PageSpeed Insights](https://pagespeed.web.dev/)
-2. Enter your live website URL: `https://main--{repo}--{github-user}.aem.live/{path}`
+2. Enter your live website URL: `https://main--{github-repo}--{github-user}.aem.live/{path}`
 3. Click "Analyze" to see your Core Web Vitals and Lighthouse scores
 4. Aim for a score of 100 on Performance, Accessibility, Best Practices
 
