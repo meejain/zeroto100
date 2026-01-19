@@ -363,7 +363,7 @@ This workflow demonstrates a complete development cycle - from content editing t
 
 **Scenario**: Replace a `cards-skills` block with an `accordion` block while preserving the content.
 
-> **Note**: In the prompts below, replace `[org]`, `[site]`, and `[page-path]` with your own DA organization name, site/repository name, and page path. For example, if your DA URL is `https://da.live/edit#/meejain/zeroto100/lab1`, then `[org]` is `meejain`, `[site]` is `zeroto100`, and `[page-path]` is `lab1`.
+> **Note**: In the prompts below, replace `[org]`, `[site]`, and `[page-path]` with your own DA organization name, site/repository name, and page path. For example, if your DA URL is `https://da.live/edit#/meejain/zeroto100/lab2`, then `[org]` is `meejain`, `[site]` is `zeroto100`, and `[page-path]` is `lab2`.
 
 **Step-by-step prompts:**
 
