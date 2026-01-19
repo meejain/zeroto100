@@ -86,7 +86,7 @@ Your site is now live at:
 <img width="700" alt="image" src="https://github.com/user-attachments/assets/5cb9d167-5e45-43b1-9e8c-aa4feaf16635" />
 
 8. Wait for the content to import successfully. It should take 15-30 secs.
-9. You should now see the content imported for your site at https://da.live/#/[github-user]/[github-repo]
+9. You should now see the content imported for your site at https://da.live/#/<github-user>/<github-repo>
 <img width="400" height="450" alt="image" src="https://github.com/user-attachments/assets/df996783-2dad-44d6-a522-1ef35562710d" />
 
 
@@ -94,7 +94,7 @@ Your site is now live at:
 ### Step 4: Preview and Publish Content
 
 
-1. Open up the page `https://da.live/edit#/[github-user]/[github-repo]/index` 
+1. Open up the page `https://da.live/edit#/<github-user>/<github-repo>/index` 
 2. Click the **Preview** button to preview your changes.
   <img width="311" height="88" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
 
@@ -102,7 +102,7 @@ Your site is now live at:
   <img width="311" height="88" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
   
 4. Your content will now be available on both preview and live URLs.
-5. Repeat steps 2 to 4 for `https://da.live/edit#/[github-user]/[github-repo]/nav` and `https://da.live/edit#/[github-user]/[github-repo]/footer`
+5. Repeat steps 2 to 4 for `https://da.live/edit#/<github-user>/<github-repo>/nav` and `https://da.live/edit#/<github-user>/<github-repo>/footer`
 6. Feel free to add your own personalized content to the page. Do the same **Preview/Publish** steps to visualize your changes.
    > Pro Tip: You can also visualize your changes inline by clicking on the preview button. <img width="57" height="67" alt="image" src="https://github.com/user-attachments/assets/7d6543b7-4dc7-452c-95b1-241978c4ba1c" />
 
@@ -351,7 +351,7 @@ This workflow demonstrates a complete development cycle - from content editing t
 
 1. **Content Edit and Preview** (using Cursor/VS Code):
    ```
-   Get the page from DA at https://da.live/edit#/[github-user]/[github-repo]/[path], 
+   Get the page from DA at https://da.live/edit#/<github-user>/<github-repo>/<path>, 
    replace the cards-skills block with an Accordion block containing the same content, 
    and preview the page.
    ```
@@ -401,7 +401,7 @@ This workflow demonstrates a complete development cycle - from content editing t
    - Use the Publish button in DA.live
    - Or use this prompt:
    ```
-   Publish the resource https://da.live/edit#/[github-user]/[github-repo]/[path]
+   Publish the resource https://da.live/edit#/<github-user>/<github-repo>/<path>
    ```
 
 #### More Sample Prompts
@@ -425,7 +425,7 @@ The carousel block isn't working properly. Debug the issue and fix it.
 
 **Content Management:**
 ```
-Get the page from DA at https://da.live/edit#/[github-user]/[github-repo]/[path] 
+Get the page from DA at https://da.live/edit#/<github-user>/<github-repo>/<path>
 and update the hero section text.
 ```
 
@@ -442,7 +442,7 @@ Ensure images are lazy-loaded and CSS is minimal.
 After publishing your content, verify your Lighthouse score:
 
 1. Visit [PageSpeed Insights](https://pagespeed.web.dev/)
-2. Enter your live website URL: `https://main--{github-repo}--{github-user}.aem.live/{path}`
+2. Enter your live website URL: `https://main--<github-repo>--<github-user>.aem.live/<path>`
 3. Click "Analyze" to see your Core Web Vitals and Lighthouse scores
 4. Aim for a score of 100 on Performance, Accessibility, Best Practices
 
