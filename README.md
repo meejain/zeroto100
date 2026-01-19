@@ -6,7 +6,7 @@ A hands-on lab where you'll be building your very own personal website from the 
 
 Before starting this lab, ensure you have:
 
-- A **personal** GitHub account **(Do not use _Adobe account)**
+- A **personal** GitHub account **(Do not use _adobe account)**
 - A laptop (Mac, Windows Or Linux) with an installed IDE — preferably an AI-enabled editor (Cursor is strongly recommended; VS Code is also acceptable)
 - Node.js (version 20 or higher) and npm installed on your local system
 
