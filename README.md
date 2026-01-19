@@ -39,7 +39,7 @@ node -v # Must now show Node v20.x.y installed
 
 1. Visit the [Dev Day Boilerplate repository](https://github.com/meejain/zeroto100)
 2. Click **"Use this template"** → **"Create a new repository"**
-   <img width="700" alt="Screenshot 2026-01-13 at 7 28 19 PM" src="https://github.com/user-attachments/assets/04dd7645-7f8b-4294-97eb-0405915cc747" />
+<img width="700" alt="Screenshot 2026-01-13 at 7 28 19 PM" src="https://github.com/user-attachments/assets/04dd7645-7f8b-4294-97eb-0405915cc747" />
 
 3. Choose your GitHub user as the owner
 4. Provide the repository name
@@ -50,7 +50,7 @@ node -v # Must now show Node v20.x.y installed
 
 1. Visit [AEM Code Sync GitHub App](https://github.com/apps/aem-code-sync/installations/new)
 2. Select the "github-user" same as where you create the repo in the previous steps
-<img width="700" alt="image" src="https://github.com/user-attachments/assets/cd43982d-0dcb-4758-a88d-eced776a0276" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/cd43982d-0dcb-4758-a88d-eced776a0276" />
 
 3. IMPORTANT: Under **Repository access**, select **"Only select repositories"**
 4. Choose your newly created repository
