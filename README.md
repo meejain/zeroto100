@@ -65,16 +65,16 @@ Your site is now live at:
 ### Step 3: Author and Manage Content
 
 1. Navigate to [DA.live](https://da.live/start)
-<img width="300" height="638" alt="image" src="https://github.com/user-attachments/assets/67d6b5f5-d036-41bc-a251-6a30518f143a" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/67d6b5f5-d036-41bc-a251-6a30518f143a" />
 
 2. Add your newly created github repository link.
 3. Click on **Go** Button.
 4. Select the **No Sample Content** option.
-<img width="300" height="535" alt="image" src="https://github.com/user-attachments/assets/cdb2264d-1150-4516-ae0b-b0a72c366c40" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/cdb2264d-1150-4516-ae0b-b0a72c366c40" />
 
 4.We should now have an empty content space create for the site.
 
-<img width="300" height="630" alt="image" src="https://github.com/user-attachments/assets/5167c77f-67ac-43e4-949e-04b347e43fe3" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/5167c77f-67ac-43e4-949e-04b347e43fe3" />
 
 5. Let's import some sample content now. Visit https://da.live/apps/import and import the following pages using the **"By URL"** option:
    - `https://main--zeroto100--meejain.aem.live`
