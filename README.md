@@ -59,7 +59,7 @@ node -v # Must now show Node v20.x.y installed
 Your site is now live at:
 - **Preview**: `https://main--<repo>--<owner>.aem.page/`
 - **Production**: `https://main--<repo>--<owner>.aem.live/`
-> **Note**: Replace `<repo>` with your repository name and `<owner>` with your GitHub user/org.
+> **Note**: Replace `<repo>` with your repository name and `<owner>` with your GitHub user.
 > 
 > You may see a 404 page right now, which is OK since we are going to create the page in next steps.
 
@@ -77,7 +77,7 @@ Your site is now live at:
 <img width="300" height="630" alt="image" src="https://github.com/user-attachments/assets/5167c77f-67ac-43e4-949e-04b347e43fe3" />
 
 5. Let's import some sample content now. Visit https://da.live/apps/import and import the following pages using the **"By URL"** option:
-   - `https://main--zeroto100--meejain.aem.live/lab1`
+   - `https://main--zeroto100--meejain.aem.live`
    - `https://main--zeroto100--meejain.aem.live/nav`
    - `https://main--zeroto100--meejain.aem.live/footer`
 6. In the **Org** field, enter your organization name and in **Site** field, enter your repository name.
@@ -96,7 +96,7 @@ Your site is now live at:
 ### Step 4: Preview and Publish Content
 
 
-1. Open up the page`lab1` 
+1. Open up the page`https://main--{org}--{repo}.aem.live` 
 2. In DA, Click the **Preview** button to preview your changes.
   <img width="311" height="88" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
 
