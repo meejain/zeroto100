@@ -351,7 +351,7 @@ This workflow demonstrates a complete development cycle - from content editing t
 
 1. **Content Edit and Preview** (using Cursor/VS Code):
    ```
-   Get the page from DA at https://da.live/edit#/[github-user]/[github-repo]/[page-path], 
+   Get the page from DA at https://da.live/edit#/[github-user]/[github-repo]/[path], 
    replace the cards-skills block with an Accordion block containing the same content, 
    and preview the page.
    ```
@@ -401,7 +401,7 @@ This workflow demonstrates a complete development cycle - from content editing t
    - Use the Publish button in DA.live
    - Or use this prompt:
    ```
-   Publish the resource https://da.live/edit#/[github-user]/[github-repo]/[page-path]
+   Publish the resource https://da.live/edit#/[github-user]/[github-repo]/[path]
    ```
 
 #### More Sample Prompts
