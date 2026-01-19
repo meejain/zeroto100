@@ -50,7 +50,7 @@ node -v # Must now show Node v20.x.y installed
 
 1. Visit [AEM Code Sync GitHub App](https://github.com/apps/aem-code-sync/installations/new)
 2. Select the "github-user" same as where you create the repo in the previous steps
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/cd43982d-0dcb-4758-a88d-eced776a0276" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/cd43982d-0dcb-4758-a88d-eced776a0276" />
 
 3. IMPORTANT: Under **Repository access**, select **"Only select repositories"**
 4. Choose your newly created repository
