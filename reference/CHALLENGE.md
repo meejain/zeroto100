@@ -1,37 +1,14 @@
-# Challenge: Build a Tabs Block
+# Quiz: Test Your AEM - Edge Delivery Services Knowledge and Win Exciting Goodies
 
-Create a **tabs block** to replace the accordion in the "Expertise" section. Your implementation should display content in interactive tabs.
+Now that you have completed both the labs, it's time to test your knowledge!
 
-**Reference**: [https://challenge--zeroto100--meejain.aem.live/challenge](https://challenge--zeroto100--meejain.aem.live/challenge)
+## 📝 Take the Quiz
 
-## 📋 Requirements
+Complete the quiz to validate your understanding of the concepts covered in this lab:
 
-### Functionality
-- Tab buttons to switch content
-- First tab active by default
+**[Click here to take the quiz](https://forms.office.com/r/MyQVJNrt4s)**
 
-### Styling
-- Match styling from reference
-- Responsive design
-
-## ✅ Judging Criteria
-
-Your implementation will be scored on:
-
-- **Lighthouse Score (Performance)**: 100/100
-- **Accessibility**: 100/100
-- **Best Practices**: 100/100
-
-**Tiebreaker Score**:​
-`penalty = (fcp * 10)+(lcp * 25)+(tbt * 30)+(cls * 25)+(si * 10); `​
-`tiebreaker = 1000 - penalty`
-
-## ⏱️ Challenge Time
-
-**8 minutes**
-
-## 📤 Submission
-
-1. Submit Webpage URL at​: [Dev Day Lab – Zero to 100 Challenge](https://forms.office.com/r/dQT5h39pNF)
+## ⏱️ Time Limit
+5 mins
 
 Good luck! 🚀
