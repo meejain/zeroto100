@@ -287,7 +287,8 @@ javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. After successful configuration, you should see the EDS and DA MCP servers available and enabled.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="1028" height="378" alt="Screenshot 2026-01-13 at 7 46 55 PM" src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="1041" height="449" alt="Screenshot 2026-01-20 at 3 16 05 PM" src="https://github.com/user-attachments/assets/4b9dc252-2b9d-4478-befc-4f91ea12cc3f" />
+
 
 ---
 
