@@ -682,6 +682,7 @@ failed to run git: exit status 128</code></pre>
         // Highlight current section in navigation and auto-expand
         const allSections = document.querySelectorAll('.section, .step, .subsection');
         const navLinks = document.querySelectorAll('.table-of-contents a');
+        let scrollTimeout;
         
         window.addEventListener('scroll', () => {
             let current = '';
@@ -695,17 +696,29 @@ failed to run git: exit status 128</code></pre>
                 }
             });
             
+            // Update active highlighting immediately
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === '#' + current) {
                     link.classList.add('active');
-                    // Only expand if not already visible
-                    if (!link.closest('li').offsetParent) {
-                        collapseAllSections();
-                        expandPathTo(link);
-                    }
                 }
             });
+            
+            // Clear previous timeout
+            clearTimeout(scrollTimeout);
+            
+            // Wait for scrolling to settle before expanding accordions
+            scrollTimeout = setTimeout(() => {
+                navLinks.forEach(link => {
+                    if (link.classList.contains('active')) {
+                        // Only expand if not already visible
+                        if (!link.closest('li').offsetParent) {
+                            collapseAllSections();
+                            expandPathTo(link);
+                        }
+                    }
+                });
+            }, 300); // Wait 300ms after scrolling stops
         });
     </script>
 </body>
