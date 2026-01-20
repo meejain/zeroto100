@@ -326,7 +326,8 @@ javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken
       }
     }
   }
-}```
+}
+```
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Click on "Configure Tools" icon at the bottom of AI Chat window in VSCode.
 
