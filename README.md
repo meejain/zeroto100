@@ -155,16 +155,16 @@ Your site is now live at:
 1. Open up the page `https://da.live/edit#/<github-user>/<github-repo>/index` 
 
 2. Click the **Preview** button to preview your changes.
-   <img width="311" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
+<img width="311" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
 
-3. Once satisfied with the preview, click the **Publish** button to make your content live.
-   <img width="311" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
+4. Once satisfied with the preview, click the **Publish** button to make your content live.
+<img width="311" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
   
-4. Your content will now be available on both preview and live URLs.
+6. Your content will now be available on both preview and live URLs.
 
-5. Repeat steps 2 to 4 for `https://da.live/edit#/<github-user>/<github-repo>/nav` and `https://da.live/edit#/<github-user>/<github-repo>/footer`
+7. Repeat steps 2 to 4 for `https://da.live/edit#/<github-user>/<github-repo>/nav` and `https://da.live/edit#/<github-user>/<github-repo>/footer`
 
-6. Feel free to add your own personalized content to the page. Do the same **Preview/Publish** steps to visualize your changes.
+8. Feel free to add your own personalized content to the page. Do the same **Preview/Publish** steps to visualize your changes.
 
 > **Pro Tip:** You can also visualize your changes inline by clicking on the preview button. <img width="57" alt="image" src="https://github.com/user-attachments/assets/7d6543b7-4dc7-452c-95b1-241978c4ba1c" /> 
 
