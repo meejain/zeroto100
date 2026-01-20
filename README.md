@@ -522,8 +522,8 @@ Example output:
 You're unable to install the `gh` extension and see this error:
 
 ```bash
-~/Documents/dev-day ❯ gh extension install trieloff/gh-upskill
-⡿fatal: could not create leading directories of '/Users/akshits/.local/share/gh/extensions/gh-upskill': Permission denied
+gh extension install trieloff/gh-upskill
+fatal: could not create leading directories of '/Users/akshits/.local/share/gh/extensions/gh-upskill': Permission denied
 failed to run git: exit status 128
 ```
 
