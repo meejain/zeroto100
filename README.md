@@ -2,22 +2,22 @@
 
 A hands-on lab where you'll be building your very own personal website from the ground up with ease. You'll be using Adobe Experience Manager with AI tools like Cursor, and by the end, you'll be walking away with your own live site — a keepsake you can share and continue evolving
 
-## Table of Contents
+## **Table of Contents**
 
-- [Prerequisites](#prerequisites)
+- [**Prerequisites**](#prerequisites)
   - [Checking and Upgrading Node.js](#checking-and-upgrading-nodejs)
-- [Lab 1](#lab-1)
-  - [Exercise 1: Bootstrap a Live Personal Site](#exercise-1-bootstrap-a-live-personal-site)
+- [**Lab 1**](#lab-1)
+  - [**Exercise 1: Bootstrap a Live Personal Site**](#exercise-1-bootstrap-a-live-personal-site)
     - [Step 1: Create Your Repository from Boilerplate](#step-1-create-your-repository-from-boilerplate)
     - [Step 2: Install AEM Code Sync](#step-2-install-aem-code-sync)
     - [Step 3: Author and Manage Content](#step-3-author-and-manage-content)
     - [Step 4: Preview and Publish Content](#step-4-preview-and-publish-content)
-  - [Exercise 2: Know the Development Flow for EDS](#exercise-2-know-the-development-flow-for-eds)
+  - [**Exercise 2: Know the Development Flow for EDS**](#exercise-2-know-the-development-flow-for-eds)
     - [Step 1: Install AEM CLI](#step-1-install-aem-cli-if-not-already-done)
     - [Step 2: Clone Your Repository](#step-2-clone-your-repository-via-ssh-or-https)
     - [Step 3: Start Local Development Server](#step-3-start-local-development-server)
-- [Lab 2](#lab-2)
-  - [Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI](#exercise-3-setup-ai-tooling-configure-mcp-build-a-block-using-ai)
+- [**Lab 2**](#lab-2)
+  - [**Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI**](#exercise-3-setup-ai-tooling-configure-mcp-build-a-block-using-ai)
     - [Step 1: Configure MCP Servers](#step-1-configure-mcp-servers)
       - [1.1 Get Access Tokens](#11-get-access-tokens)
       - [1.2 Add MCP Server Configuration](#12-add-mcp-server-configuration)
@@ -42,7 +42,7 @@ A hands-on lab where you'll be building your very own personal website from the 
 
 ---
 
-## Prerequisites
+## **Prerequisites**
 
 Before starting this lab, ensure you have:
 
@@ -67,11 +67,13 @@ If your version is lower than 20.x.x, you'll need to upgrade:
 nvm install 20 # To install Node v20
 node -v # Must now show Node v20.x.y installed
 ```
+
+---
 ---
 
-## Lab 1
+## **Lab 1**
 
-### Exercise 1: Bootstrap a Live Personal Site
+### **Exercise 1: Bootstrap a Live Personal Site**
 
   **Objective**: Set up your GitHub repository, configure DA (Document Authoring), add your personal content, and publish your site.
 
@@ -179,7 +181,7 @@ Your site is now live at:
 
 ---
 
-### Exercise 2: Know the Development Flow for EDS
+### **Exercise 2: Know the Development Flow for EDS**
 
   **Objective**: Set up local development environment, make changes to code, and experience live reload.
 
@@ -218,10 +220,11 @@ Your browser should automatically open. If not, navigate to http://localhost:300
 - Iterate quickly without waiting for builds or deployments
 
 ---
+---
 
-## Lab 2
+## **Lab 2**
 
-### Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI
+### **Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI**
 
   **Objective**: Configure AI tooling (MCP servers) and build a block using AI assistance.
 
@@ -233,42 +236,42 @@ Before adding the MCP server configuration, you need to get the access tokens fi
 
 #### 1.1 Get Access Tokens
 
-##### a) Get Edge Delivery Services Admin API Token:
+  ##### a) Get Edge Delivery Services Admin API Token:
 
-- Go to https://admin.hlx.page/login
-- Use the `login_adobe` address to login with the Adobe identity provider
-- You will be forwarded to https://admin.hlx.page/profile
-- Open your browser's **Developer Tools** (F12)
-- Go to the **Application** tab and **Storage**
-- Under **Cookies**, find `auth_token`
-- Copy the value of the `auth_token` cookie
-- Place this token in notepad or similar for now - you'll need it in the next step as `<eds-token>`
+  - Go to https://admin.hlx.page/login
+  - Use the `login_adobe` address to login with the Adobe identity provider
+  - You will be forwarded to https://admin.hlx.page/profile
+  - Open your browser's **Developer Tools** (F12)
+  - Go to the **Application** tab and **Storage**
+  - Under **Cookies**, find `auth_token`
+  - Copy the value of the `auth_token` cookie
+  - Place this token in notepad or similar for now - you'll need it in the next step as `<eds-token>`
 
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/a1dff6e0-ecc2-4e00-bcf3-786ee35948cc" />
+  <img width="800" alt="image" src="https://github.com/user-attachments/assets/a1dff6e0-ecc2-4e00-bcf3-786ee35948cc" />
 
 ---
 
-##### b) Get DA Live Admin API Token using Bookmarklet:
+  ##### b) Get DA Live Admin API Token using Bookmarklet:
 
-**Step 1: Create the Bookmarklet**
+  **Step 1: Create the Bookmarklet**
 
-- In your browser, create a new bookmark (Right-click bookmarks bar → Add Page)
-- Name: `Get DA Token`
-- In the URL/Location field, paste the following code:
+  - In your browser, create a new bookmark (Right-click bookmarks bar → Add Page)
+  - Name: `Get DA Token`
+  - In the URL/Location field, paste the following code:
 
-```javascript
-javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken!=='function'){alert('adobeIMS not available on this page');return;}try{const r=await adobeIMS.getAccessToken();if(!r||!r.token){alert('Token not found in response');console.log(r);return;}prompt('Adobe IMS Access Token (Ctrl/Cmd + C to copy):',r.token);}catch(e){console.error(e);alert('Failed to get access token');}})();
-```
+  ```javascript
+  javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken!=='function'){alert('adobeIMS not available on this page');return;}try{const r=await adobeIMS.getAccessToken();if(!r||!r.token){alert('Token not found in response');console.log(r);return;}prompt('Adobe IMS Access Token (Ctrl/Cmd + C to copy):',r.token);}catch(e){console.error(e);alert('Failed to get access token');}})();
+  ```
 
-- Save the bookmark
+  - Save the bookmark
 
-**Step 2: Use the Bookmarklet**
+  **Step 2: Use the Bookmarklet**
 
-- Navigate to https://da.live
-- Click on the **Get DA Token** bookmarklet in your bookmarks bar
-- A prompt will appear with your access token
-- Copy the token
-- Place this token in notepad or similar for now - you'll need it in the next step as `<da-token>`
+  - Navigate to https://da.live
+  - Click on the **Get DA Token** bookmarklet in your bookmarks bar
+  - A prompt will appear with your access token
+  - Copy the token
+  - Place this token in notepad or similar for now - you'll need it in the next step as `<da-token>`
 
 ---
 
