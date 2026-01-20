@@ -2,6 +2,44 @@
 
 A hands-on lab where you'll be building your very own personal website from the ground up with ease. You'll be using Adobe Experience Manager with AI tools like Cursor, and by the end, you'll be walking away with your own live site — a keepsake you can share and continue evolving
 
+## Table of Contents
+
+- [Prerequisites](#prerequisites)
+  - [Checking and Upgrading Node.js](#checking-and-upgrading-nodejs)
+- [Exercise 1: Bootstrap a Live Personal Site](#exercise-1-bootstrap-a-live-personal-site)
+  - [Step 1: Create Your Repository from Boilerplate](#step-1-create-your-repository-from-boilerplate)
+  - [Step 2: Install AEM Code Sync](#step-2-install-aem-code-sync)
+  - [Step 3: Author and Manage Content](#step-3-author-and-manage-content)
+  - [Step 4: Preview and Publish Content](#step-4-preview-and-publish-content)
+- [Exercise 2: Know the Development Flow for EDS](#exercise-2-know-the-development-flow-for-eds)
+  - [Step 1: Install AEM CLI](#step-1-install-aem-cli-if-not-already-done)
+  - [Step 2: Clone Your Repository](#step-2-clone-your-repository-via-ssh-or-https)
+  - [Step 3: Start Local Development Server](#step-3-start-local-development-server)
+- [Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI](#exercise-3-setup-ai-tooling-configure-mcp-build-a-block-using-ai)
+  - [Step 1: Configure MCP Servers](#step-1-configure-mcp-servers)
+    - [1.1 Get Access Tokens](#11-get-access-tokens)
+    - [1.2 Add MCP Server Configuration](#12-add-mcp-server-configuration)
+  - [Step 2: Install GitHub CLI and Add Agent Skills](#step-2-install-github-cli-and-add-agent-skills)
+    - [2.1 Install GitHub CLI](#21-install-github-cli-if-not-present)
+    - [2.2 Install gh-upskill Extension](#22-install-gh-upskill-extension)
+    - [2.3 Add AEM Skills to Your Project](#23-add-aem-skills-to-your-project)
+  - [Step 3: Build a Block Using AI](#step-3-build-a-block-using-ai)
+    - [Sample Workflow: Replace a Block with Another Block Type](#sample-workflow-replace-a-block-with-another-block-type)
+      - [1. Content Edit and Preview](#1-content-edit-and-preview-using-cursorvs-code)
+      - [2. Code Generation](#2-code-generation-if-the-block-doesnt-exist-yet)
+      - [3. Push Code to Repository](#3-push-code-to-repository-manual-or-ai-assisted)
+      - [4. Publish the Resource](#4-publish-the-resource-using-da)
+      - [5. Check Your Website's Performance](#5-check-your-websites-performance)
+    - [More Sample Prompts](#more-sample-prompts-to-experiment-with-later)
+- [Troubleshooting](#troubleshooting)
+  - [MCP Server Issues](#mcp-server-issues)
+    - [Issue 1: MCP Server Installation or Connection Problems](#issue-1-mcp-server-installation-or-connection-problems)
+    - [Issue 2: MCP Server Works in Terminal but Fails in Cursor](#issue-2-mcp-server-works-in-terminal-but-fails-in-cursor-settings)
+  - [GitHub Extension Installation Issues](#github-extension-installation-issues)
+    - [Issue 3: Permission Denied When Installing gh Extension](#issue-3-permission-denied-when-installing-gh-extension)
+
+---
+
 ## Prerequisites
 
 Before starting this lab, ensure you have:
@@ -331,61 +369,68 @@ This workflow demonstrates a complete development cycle - from content editing t
 
 **Step-by-step prompts:**
 
-1. **Content Edit and Preview** (using Cursor/VS Code):
-   ```
-   Get the page from DA at https://da.live/edit#/<github-user>/<github-repo>/<path>, 
-   replace the cards-skills block with an Accordion block containing the same content, 
-   and preview the page.
-   ```
-   
-   This prompt will:
-   - Fetch the page content from DA
-   - Replace the block structure
-   - Update the content on DA
-   - Provide the page with new content
+##### 1. Content Edit and Preview (using Cursor/VS Code)
 
-2. **Code Generation** (if the block doesn't exist yet):
-   ```
-   Write the code for the Accordion block as well.
-   ```
-   
-   This prompt will:
-   - Generate the block's JavaScript (`accordion.js`)
-   - Generate the block's CSS (`accordion.css`)
-   - Follow the project's coding standards
-   
-   **Follow-up: Adapt Styling from Existing Design**
-   
-   After the basic accordion block is generated, you can adapt styling from an existing design:
-   ```
-   Can you check accordion designed on the page - https://lab2--zeroto100--meejain.aem.live/lab2 
-   and convert the styling as is
-   ```
-   
-   This will:
-   - Inspect the accordion design
-   - Extract the visual styling
-   - Apply the same design to your accordion block
+```
+Get the page from DA at https://da.live/edit#/<github-user>/<github-repo>/<path>, 
+replace the cards-skills block with an Accordion block containing the same content, 
+and preview the page.
+```
 
-3. **Push Code to Repository** (manual or AI-assisted):
-   ```
-   Push the updated code to the repository
-   ```
-   
-   Or manually:
-   ```bash
-   git add blocks/accordion/
-   git commit -m "Add accordion block"
-   git push origin main
-   ```
+This prompt will:
+- Fetch the page content from DA
+- Replace the block structure
+- Update the content on DA
+- Provide the page with new content
 
-4. **Publish the Resource** (using DA):
-   - Use the Publish button in DA.live
-   - Or use this prompt:
-   ```
-   Publish the resource https://da.live/edit#/<github-user>/<github-repo>/<path>
-   ```
-5. **Check Your Website's Performance:**
+##### 2. Code Generation (if the block doesn't exist yet)
+
+```
+Write the code for the Accordion block as well.
+```
+
+This prompt will:
+- Generate the block's JavaScript (`accordion.js`)
+- Generate the block's CSS (`accordion.css`)
+- Follow the project's coding standards
+
+**Follow-up: Adapt Styling from Existing Design**
+
+After the basic accordion block is generated, you can adapt styling from an existing design:
+
+```
+Can you check accordion designed on the page - https://lab2--zeroto100--meejain.aem.live/lab2 
+and convert the styling as is
+```
+
+This will:
+- Inspect the accordion design
+- Extract the visual styling
+- Apply the same design to your accordion block
+
+##### 3. Push Code to Repository (manual or AI-assisted)
+
+```
+Push the updated code to the repository
+```
+
+Or manually:
+
+```bash
+git add blocks/accordion/
+git commit -m "Add accordion block"
+git push origin main
+```
+
+##### 4. Publish the Resource (using DA)
+
+Use the Publish button in DA.live, or use this prompt:
+
+```
+Publish the resource https://da.live/edit#/<github-user>/<github-repo>/<path>
+```
+
+##### 5. Check Your Website's Performance
 
 After publishing your content, verify your Lighthouse score:
 
@@ -513,7 +558,7 @@ Example output:
 
 ---
 
-### GitHub CLI Issues
+### GitHub Extension Installation Issues
 
 #### Issue 3: Permission Denied When Installing gh Extension
 
