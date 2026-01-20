@@ -477,7 +477,19 @@ Likely Cursor is not able to find the location of the `npx` executable. Do the f
    $ which npx
    /Users/satyam/.nvm/versions/node/v20.14.0/bin/npx
    ```
-3. Update the `npx` path to `/Users/satyam/.nvm/versions/node/v20.14.0/bin/npx` to `.cusrsor/mcp.json` in Cursor.
+3. Update the `npx` path to `/Users/satyam/.nvm/versions/node/v20.14.0/bin/npx` to `.cursor/mcp.json` in Cursor.
 4. Restart Cursor.
    
-   
+**Problem:**
+You are unable to install `gh` extension.
+```
+~/Documents/dev-day ❯ gh extension install trieloff/gh-upskill                              12:26:53
+⡿fatal: could not create leading directories of '/Users/akshits/.local/share/gh/extensions/gh-upskill': Permission denied
+failed to run git: exit status 128
+```
+**Solution**
+Your user does not have sufficient permissions to install `gh`. Update the permsision as follows:
+```
+sudo chown -R "$USER":staff ~/.local
+```
+```
