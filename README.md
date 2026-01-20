@@ -256,12 +256,12 @@ javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Go to **Cusrsor > Setting > Cursor Settings** → **Tools & MCP**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Add the following configuration (replace the token placeholders with your actual tokens):
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> **Note**: If you already have other MCP servers configured, just add `helix-mcp-server` and `da-live-admin` to your existing `mcpServers` object. Don't replace your entire configuration!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> **Note**: If you already have other MCP servers configured, just add `eds-mcp-server` and `da-live-admin` to your existing `mcpServers` object. Don't replace your entire configuration!
 
 ```json
 {
   "mcpServers": {
-    "helix-mcp-server": {
+    "eds-mcp-server": {
       "command": "npx",
       "args": [
         "-y",
@@ -296,12 +296,12 @@ javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Open VS Code  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Add the following configuration (replace the token placeholders with your actual tokens):
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> **Note**: If you already have other MCP servers configured, just add `helix-mcp-server` and `da-live-admin` to your existing `mcpServers` object. Don't replace your entire configuration!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> **Note**: If you already have other MCP servers configured, just add `eds-mcp-server` and `da-live-admin` to your existing `mcpServers` object. Don't replace your entire configuration!
 
 ```json
 {
   "mcpServers": {
-    "helix-mcp-server": {
+    "eds-mcp-server": {
       "command": "npx",
       "args": [
         "-y",
@@ -329,7 +329,7 @@ javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="300" alt="image" src="https://github.com/user-attachments/assets/c3107dec-0018-4850-9ac2-e2914e4f23a6" />
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Enable `da-live-admin` and `helix-mcp-server`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Enable `da-live-admin` and `eds-mcp-server`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="610" height="501" alt="image" src="https://github.com/user-attachments/assets/8baa6d3a-b2b3-4868-b5b8-281faf2180f7" />
 
@@ -583,7 +583,7 @@ Example output:
 ```json
 {
   "mcpServers": {
-    "helix-mcp-server": {
+    "eds-mcp-server": {
       "command": "/Users/satyam/.nvm/versions/node/v20.14.0/bin/npx",
       "args": [
         "-y",
