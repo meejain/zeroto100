@@ -25,28 +25,34 @@
                         <li><a href="#checking-nodejs">Checking and Upgrading Node.js</a></li>
                     </ul>
                 </li>
-                <li><a href="#exercise-1">Exercise 1: Bootstrap a Live Personal Site</a>
+                <li><a href="#lab-1">Lab 1</a>
                     <ul>
-                        <li><a href="#step-1-create">Step 1: Create Your Repository</a></li>
-                        <li><a href="#step-2-aem-sync">Step 2: Install AEM Code Sync</a></li>
-                        <li><a href="#step-3-author">Step 3: Author and Manage Content</a></li>
-                        <li><a href="#step-4-preview">Step 4: Preview and Publish</a></li>
-                        <li><a href="#optional-sidekick">Optional: Install AEM Sidekick</a></li>
+                        <li><a href="#exercise-1">Exercise 1: Bootstrap a Live Personal Site</a>
+                            <ul>
+                                <li><a href="#step-1-create">Step 1: Create Your Repository</a></li>
+                                <li><a href="#step-2-aem-sync">Step 2: Install AEM Code Sync</a></li>
+                                <li><a href="#step-3-author">Step 3: Author and Manage Content</a></li>
+                                <li><a href="#step-4-preview">Step 4: Preview and Publish</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#exercise-2">Exercise 2: Know the Development Flow for EDS</a>
+                            <ul>
+                                <li><a href="#step-1-cli">Step 1: Install AEM CLI</a></li>
+                                <li><a href="#step-2-clone">Step 2: Clone Your Repository</a></li>
+                                <li><a href="#step-3-dev-server">Step 3: Start Local Development Server</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
-                <li><a href="#exercise-2">Exercise 2: Know the Development Flow for EDS</a>
+                <li><a href="#lab-2">Lab 2</a>
                     <ul>
-                        <li><a href="#step-1-cli">Step 1: Install AEM CLI</a></li>
-                        <li><a href="#step-2-clone">Step 2: Clone Your Repository</a></li>
-                        <li><a href="#step-3-dev-server">Step 3: Start Local Development Server</a></li>
-                        <li><a href="#step-4-change">Step 4: Make a Minor Change</a></li>
-                    </ul>
-                </li>
-                <li><a href="#exercise-3">Exercise 3: Setup AI Tooling & Build a Block</a>
-                    <ul>
-                        <li><a href="#step-1-mcp">Step 1: Configure MCP Servers</a></li>
-                        <li><a href="#step-2-gh-cli">Step 2: Install GitHub CLI and Add Agent Skills</a></li>
-                        <li><a href="#step-3-build-block">Step 3: Build a Block Using AI</a></li>
+                        <li><a href="#exercise-3">Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI</a>
+                            <ul>
+                                <li><a href="#step-1-mcp">Step 1: Configure MCP Servers</a></li>
+                                <li><a href="#step-2-gh-cli">Step 2: Install GitHub CLI and Add Agent Skills</a></li>
+                                <li><a href="#step-3-build-block">Step 3: Build a Block Using AI</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li><a href="#troubleshooting">Troubleshooting</a></li>
@@ -81,15 +87,19 @@ node -v # Must now show Node v20.x.y installed</code></pre>
                 </div>
             </section>
 
+            <section id="lab-1" class="section">
+                <h2>Lab 1</h2>
+            </section>
+
             <section id="exercise-1" class="section">
-                <h2>Exercise 1: Bootstrap a Live Personal Site</h2>
+                <h3>Exercise 1: Bootstrap a Live Personal Site</h3>
                 <div class="exercise-objective">
                     <p><strong>Objective:</strong> Set up your GitHub repository, configure DA (Document Authoring), add your personal content, and publish your site.</p>
                     <p><strong>Outcome:</strong> You will have a live personal website running on AEM Edge Delivery Services.</p>
                 </div>
 
                 <div id="step-1-create" class="step">
-                    <h3>Step 1: Create Your Repository from Boilerplate</h3>
+                    <h4>Step 1: Create Your Repository from Boilerplate</h4>
                     <ol>
                         <li>Visit the <a href="https://github.com/meejain/zeroto100" target="_blank">Dev Day Boilerplate repository</a></li>
                         <li>Click <strong>"Use this template"</strong> → <strong>"Create a new repository"</strong>
@@ -103,7 +113,7 @@ node -v # Must now show Node v20.x.y installed</code></pre>
                 </div>
 
                 <div id="step-2-aem-sync" class="step">
-                    <h3>Step 2: Install AEM Code Sync</h3>
+                    <h4>Step 2: Install AEM Code Sync</h4>
                     <ol>
                         <li>Visit <a href="https://github.com/apps/aem-code-sync/installations/new" target="_blank">AEM Code Sync GitHub App</a></li>
                         <li>Select the "owner" same as where you create the repo in the previous steps
@@ -125,7 +135,7 @@ node -v # Must now show Node v20.x.y installed</code></pre>
                 </div>
 
                 <div id="step-3-author" class="step">
-                    <h3>Step 3: Author and Manage Content</h3>
+                    <h4>Step 3: Author and Manage Content</h4>
                     <ol>
                         <li>Navigate to <a href="https://da.live/start" target="_blank">DA.live</a>
                             <img src="https://github.com/user-attachments/assets/67d6b5f5-d036-41bc-a251-6a30518f143a" alt="DA.live start screenshot" class="screenshot">
@@ -160,7 +170,7 @@ node -v # Must now show Node v20.x.y installed</code></pre>
                 </div>
 
                 <div id="step-4-preview" class="step">
-                    <h3>Step 4: Preview and Publish Content</h3>
+                    <h4>Step 4: Preview and Publish Content</h4>
                     <ol>
                         <li>Open up the page <code>lab1</code></li>
                         <li>In DA, Click the <strong>Preview</strong> button to preview your changes.
@@ -178,34 +188,22 @@ node -v # Must now show Node v20.x.y installed</code></pre>
                 <div class="success">
                     <p><strong>Congratulations!</strong> 🎉 You have successfully bootstrapped your live personal website with default blocks on AEM Edge Delivery Services. Your site is now live and accessible on the web!</p>
                 </div>
-
-                <div id="optional-sidekick" class="step">
-                    <h3>Optional: Install AEM Sidekick</h3>
-                    <p>For easier content preview and publishing workflow:</p>
-                    <ol>
-                        <li>Install the <a href="https://chrome.google.com/webstore/search/aem%20sidekick" target="_blank">AEM Sidekick Chrome Extension</a></li>
-                        <li>Pin the extension for easy access</li>
-                        <li>Navigate to your site (preview or live URL)</li>
-                        <li>Click the Sidekick icon in your browser</li>
-                        <li>Use Sidekick to preview and publish content directly from your browser without going to DA.live</li>
-                    </ol>
-                </div>
             </section>
 
             <section id="exercise-2" class="section">
-                <h2>Exercise 2: Know the Development Flow for EDS</h2>
+                <h3>Exercise 2: Know the Development Flow for EDS</h3>
                 <div class="exercise-objective">
                     <p><strong>Objective:</strong> Set up local development environment, make changes to code, and experience live reload.</p>
                     <p><strong>Outcome:</strong> You will understand the local development workflow and see real-time changes reflected in your browser.</p>
                 </div>
 
                 <div id="step-1-cli" class="step">
-                    <h3>Step 1: Install AEM CLI</h3>
+                    <h4>Step 1: Install AEM CLI (If not already done)</h4>
                     <pre><code>npm install -g @adobe/aem-cli</code></pre>
                 </div>
 
                 <div id="step-2-clone" class="step">
-                    <h3>Step 2: Clone Your Repository (via SSH or HTTPS)</h3>
+                    <h4>Step 2: Clone Your Repository (via SSH or HTTPS)</h4>
                     <pre><code>git clone https://github.com/&lt;owner&gt;/&lt;repo&gt;
 cd &lt;repo&gt;</code></pre>
                     <div class="note">
@@ -214,49 +212,30 @@ cd &lt;repo&gt;</code></pre>
                 </div>
 
                 <div id="step-3-dev-server" class="step">
-                    <h3>Step 3: Start Local Development Server</h3>
+                    <h4>Step 3: Start Local Development Server</h4>
                     <pre><code>aem up</code></pre>
                     <p>This starts a local server at <code>http://localhost:3000/</code></p>
                     <p>Your browser should automatically open. If not, navigate to <code>http://localhost:3000/</code> manually.</p>
                 </div>
 
-                <div id="step-4-change" class="step">
-                    <h3>Step 4: Make a Minor Change and See Live Reload</h3>
-                    <p>Let's make a simple CSS change to see live reload in action:</p>
-                    <ol>
-                        <li>Open your project in your IDE (Cursor or VS Code)</li>
-                        <li>Navigate to <code>styles/styles.css</code></li>
-                        <li>Find the <code>body</code> selector and modify a style property. For example, change the background color:</li>
-                    </ol>
-                    <pre><code>body {
-  /* Add or modify this line */
-  background-color: black;
-}</code></pre>
-                    <ol start="4">
-                        <li>Save the file (Ctrl/Cmd + S)</li>
-                        <li>Watch your browser automatically reload and display the change!</li>
-                    </ol>
-                </div>
-
                 <div class="success">
-                    <p><strong>Congratulations!</strong> 🎉 You now understand the EDS development flow:</p>
-                    <ul>
-                        <li>Make changes locally</li>
-                        <li>See instant feedback in the browser</li>
-                        <li>Iterate quickly without waiting for builds or deployments</li>
-                    </ul>
+                    <p><strong>Congratulations!</strong> 🎉 You now understand the EDS development flow</p>
                 </div>
             </section>
 
+            <section id="lab-2" class="section">
+                <h2>Lab 2</h2>
+            </section>
+
             <section id="exercise-3" class="section">
-                <h2>Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI</h2>
+                <h3>Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI</h3>
                 <div class="exercise-objective">
                     <p><strong>Objective:</strong> Configure AI tooling (MCP servers) and build a block using AI assistance.</p>
                     <p><strong>Outcome:</strong> You will be able to leverage AI to accelerate your development work in EDS.</p>
                 </div>
 
                 <div id="step-1-mcp" class="step">
-                    <h3>Step 1: Configure MCP Servers</h3>
+                    <h4>Step 1: Configure MCP Servers</h4>
                     <p>Before adding the MCP server configuration, you need to get the access tokens first.</p>
                     
                     <div class="substep">
@@ -352,18 +331,18 @@ cd &lt;repo&gt;</code></pre>
                                 <li>Add the following configuration (replace the token placeholders with your actual tokens):</li>
                             </ol>
                             <div class="note">
-                                <p><strong>Note:</strong> If you already have other MCP servers configured, just add <code>helix-mcp-server</code> and <code>da-live-admin</code> to your existing <code>mcpServers</code> object. Don't replace your entire configuration!</p>
+                                <p><strong>Note:</strong> If you already have other MCP servers configured, just add <code>eds-mcp-server</code> and <code>da-live-admin</code> to your existing <code>servers</code> object. Don't replace your entire configuration!</p>
                             </div>
                             <pre><code>{
-  "mcpServers": {
-    "helix-mcp-server": {
+  "servers": {
+    "eds-mcp-server": {
       "command": "npx",
       "args": [
         "-y",
         "github:jindaliiita/eds-mcp"
       ],
       "env": {
-        "HELIX_ADMIN_API_TOKEN": "{helix-token}"
+        "HELIX_ADMIN_API_TOKEN": "&lt;eds-token&gt;"
       }
     },
     "da-live-admin": {
@@ -373,7 +352,7 @@ cd &lt;repo&gt;</code></pre>
         "github:meejain/mcp-da-live-admin"
       ],
       "env": {
-        "DA_ADMIN_API_TOKEN": "{da-token}"
+        "DA_ADMIN_API_TOKEN": "&lt;da-token&gt;"
       }
     }
   }
@@ -392,7 +371,7 @@ cd &lt;repo&gt;</code></pre>
                 </div>
 
                 <div id="step-2-gh-cli" class="step">
-                    <h3>Step 2: Install GitHub CLI and Add Agent Skills</h3>
+                    <h4>Step 2: Install GitHub CLI and Add Agent Skills</h4>
                     
                     <div class="substep">
                         <h4>2.1 Install GitHub CLI (If not present)</h4>
@@ -424,7 +403,7 @@ cd &lt;repo&gt;</code></pre>
                 </div>
 
                 <div id="step-3-build-block" class="step">
-                    <h3>Step 3: Build a Block Using AI</h3>
+                    <h4>Step 3: Build a Block Using AI</h4>
                     <p>Now that you have MCP servers configured, you can use AI to help you build blocks and manage content. Here are some sample workflows and prompts to get you started:</p>
                     
                     <div class="workflow">
