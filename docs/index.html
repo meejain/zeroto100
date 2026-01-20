@@ -654,16 +654,18 @@ failed to run git: exit status 128</code></pre>
         });
 
         // Highlight current section in navigation and auto-expand
-        const sections = document.querySelectorAll('.section');
+        const allSections = document.querySelectorAll('.section, .step, .subsection');
         const navLinks = document.querySelectorAll('.table-of-contents a');
         
         window.addEventListener('scroll', () => {
             let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
+            allSections.forEach(section => {
+                if (section.id) {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop - 150) {
+                        current = section.getAttribute('id');
+                    }
                 }
             });
             
@@ -673,13 +675,14 @@ failed to run git: exit status 128</code></pre>
                     link.classList.add('active');
 
                     // Auto-expand parent items
-                    const parentLi = link.closest('li').parentElement.closest('li');
-                    if (parentLi) {
+                    let parentLi = link.closest('li').parentElement.closest('li');
+                    while (parentLi) {
                         parentLi.classList.add('expanded');
                         const subList = parentLi.querySelector('ul');
                         if (subList) {
                             subList.classList.add('show');
                         }
+                        parentLi = parentLi.parentElement.closest('li');
                     }
                 }
             });
