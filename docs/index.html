@@ -68,7 +68,7 @@
                 <h2>Prerequisites</h2>
                 <p>Before starting this lab, ensure you have:</p>
                 <ul>
-                    <li>A personal GitHub account</li>
+                    <li>A <strong>personal</strong> GitHub account <strong>(Do not use <em>adobe account</em>)</strong></li>
                     <li>A laptop (Mac, Windows Or Linux) with an installed IDE — preferably an AI-enabled editor (Cursor is strongly recommended; VS Code is also acceptable)</li>
                     <li>Node.js (version 20 or higher) and npm installed on your local system</li>
                 </ul>
@@ -105,7 +105,7 @@ node -v # Must now show Node v20.x.y installed</code></pre>
                         <li>Click <strong>"Use this template"</strong> → <strong>"Create a new repository"</strong>
                             <img src="https://github.com/user-attachments/assets/04dd7645-7f8b-4294-97eb-0405915cc747" alt="Use template screenshot" class="screenshot">
                         </li>
-                        <li>Choose your GitHub personal user as the owner</li>
+                        <li>Choose your GitHub user as the owner</li>
                         <li>Provide the repository name</li>
                         <li>Set the repository to <strong>public</strong> (recommended)</li>
                         <li>Click <strong>"Create repository"</strong></li>
@@ -116,7 +116,7 @@ node -v # Must now show Node v20.x.y installed</code></pre>
                     <h4>Step 2: Install AEM Code Sync</h4>
                     <ol>
                         <li>Visit <a href="https://github.com/apps/aem-code-sync/installations/new" target="_blank">AEM Code Sync GitHub App</a></li>
-                        <li>Select the "owner" same as where you create the repo in the previous steps
+                        <li>Select the "github-user" same as where you create the repo in the previous steps
                             <img src="https://github.com/user-attachments/assets/cd43982d-0dcb-4758-a88d-eced776a0276" alt="Select owner screenshot" class="screenshot">
                         </li>
                         <li><strong>IMPORTANT:</strong> Under <strong>Repository access</strong>, select <strong>"Only select repositories"</strong></li>
@@ -126,44 +126,49 @@ node -v # Must now show Node v20.x.y installed</code></pre>
                     <div class="note">
                         <p>Your site is now live at:</p>
                         <ul>
-                            <li><strong>Preview:</strong> <code>https://main--&lt;repo&gt;--&lt;owner&gt;.aem.page/</code></li>
-                            <li><strong>Production:</strong> <code>https://main--&lt;repo&gt;--&lt;owner&gt;.aem.live/</code></li>
+                            <li><strong>Preview:</strong> <code>https://main--&lt;github-repo&gt;--&lt;github-user&gt;.aem.page</code></li>
+                            <li><strong>Production:</strong> <code>https://main--&lt;github-repo&gt;--&lt;github-user&gt;.aem.live</code></li>
                         </ul>
-                        <p><strong>Note:</strong> Replace <code>&lt;repo&gt;</code> with your repository name and <code>&lt;owner&gt;</code> with your GitHub user/org.</p>
-                        <p>You may see a 404 page right now, which is OK since we are going to create the page in next steps.</p>
+                        <blockquote>
+                            <p><strong>Note:</strong> You may see a 404 page right now, which is OK since we are going to create the content in next steps.</p>
+                        </blockquote>
                     </div>
                 </div>
 
                 <div id="step-3-author" class="step">
                     <h4>Step 3: Author and Manage Content</h4>
                     <ol>
-                        <li>Navigate to <a href="https://da.live/start" target="_blank">DA.live</a>
+                        <li>Navigate to <a href="https://da.live/start" target="_blank">DA.live</a></li>
+                        <li>Add your newly created github repository link.
                             <img src="https://github.com/user-attachments/assets/67d6b5f5-d036-41bc-a251-6a30518f143a" alt="DA.live start screenshot" class="screenshot">
                         </li>
-                        <li>Add your newly created github repository link</li>
-                        <li>Select the <strong>No Sample Content</strong> option.
+                        <li>Click on <strong>Go</strong> Button.</li>
+                        <li>Select the <strong>No Sample Content</strong> option and click <strong>Make something wonderful</strong>.
                             <img src="https://github.com/user-attachments/assets/cdb2264d-1150-4516-ae0b-b0a72c366c40" alt="No sample content screenshot" class="screenshot">
                         </li>
                         <li>We should now have an empty content space create for the site.
                             <img src="https://github.com/user-attachments/assets/5167c77f-67ac-43e4-949e-04b347e43fe3" alt="Empty content space screenshot" class="screenshot">
                         </li>
-                        <li>Let's import some sample content now. Visit <a href="https://da.live/apps/import" target="_blank">https://da.live/apps/import</a> and import the following pages using the <strong>"By URL"</strong> option:
+                        <li>Let's import some sample content now. Visit <a href="https://da.live/apps/import" target="_blank">https://da.live/apps/import</a> and import the following pages using the <strong>"By URL"</strong> option. Import them as is, without modifying the URLs
                             <ul>
-                                <li><code>https://main--zeroto100--meejain.aem.live/lab1</code></li>
+                                <li><code>https://main--zeroto100--meejain.aem.live</code></li>
                                 <li><code>https://main--zeroto100--meejain.aem.live/nav</code></li>
                                 <li><code>https://main--zeroto100--meejain.aem.live/footer</code></li>
                             </ul>
                         </li>
-                        <li>In the <strong>Org</strong> field, enter your organization name and in <strong>Site</strong> field, enter your repository name.
-                            <p>For example: If your DA.live URL is <code>https://da.live/#/meejain/zeroto100</code>, then:</p>
+                        <li>In the <strong>Org</strong> field, enter your github-user and in <strong>Site</strong> field, enter your github-repo.
                             <ul>
-                                <li><strong>Org:</strong> <code>meejain</code></li>
-                                <li><strong>Site:</strong> <code>zeroto100</code></li>
+                                <li>For example: If your DA.live URL is <code>https://da.live/#/sdmcraft/dev-day-lab-3</code>, then:
+                                    <ul>
+                                        <li><strong>Org</strong>: <code>sdmcraft</code></li>
+                                        <li><strong>Site</strong>: <code>dev-day-lab-3</code></li>
+                                    </ul>
+                                </li>
                             </ul>
                             <img src="https://github.com/user-attachments/assets/5cb9d167-5e45-43b1-9e8c-aa4feaf16635" alt="Org and site screenshot" class="screenshot">
                         </li>
                         <li>Wait for the content to import successfully. It should take 15-30 secs.</li>
-                        <li>You should now see the content imported for your site at <code>https://da.live/#/&lt;org&gt;/&lt;repo&gt;</code>
+                        <li>You should now see the content imported for your site at <code>https://da.live/#/&lt;github-user&gt;/&lt;github-repo&gt;</code>
                             <img src="https://github.com/user-attachments/assets/df996783-2dad-44d6-a522-1ef35562710d" alt="Content imported screenshot" class="screenshot">
                         </li>
                     </ol>
@@ -172,16 +177,21 @@ node -v # Must now show Node v20.x.y installed</code></pre>
                 <div id="step-4-preview" class="step">
                     <h4>Step 4: Preview and Publish Content</h4>
                     <ol>
-                        <li>Open up the page <code>lab1</code></li>
-                        <li>In DA, Click the <strong>Preview</strong> button to preview your changes.
+                        <li>Open up the page <code>https://da.live/edit#/&lt;github-user&gt;/&lt;github-repo&gt;/index</code></li>
+                        <li>Click the <strong>Preview</strong> button to preview your changes.
                             <img src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" alt="Preview button screenshot" class="screenshot">
                         </li>
-                        <li>Once satisfied with the preview, click the <strong>Publish</strong> button to make your content live.</li>
+                        <li>Once satisfied with the preview, click the <strong>Publish</strong> button to make your content live.
+                            <img src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" alt="Preview button screenshot" class="screenshot">
+                        </li>
                         <li>Your content will now be available on both preview and live URLs.</li>
+                        <li>Repeat steps 2 to 4 for <code>https://da.live/edit#/&lt;github-user&gt;/&lt;github-repo&gt;/nav</code> and <code>https://da.live/edit#/&lt;github-user&gt;/&lt;github-repo&gt;/footer</code></li>
                         <li>Feel free to add your own personalized content to the page. Do the same <strong>Preview/Publish</strong> steps to visualize your changes.</li>
                     </ol>
                     <div class="tip">
-                        <p><strong>Pro Tip:</strong> You can also visualize your changes inline by clicking on the preview button. <img src="https://github.com/user-attachments/assets/7d6543b7-4dc7-452c-95b1-241978c4ba1c" alt="Inline preview" style="height: 24px; vertical-align: middle;"></p>
+                        <blockquote>
+                            <p><strong>Pro Tip:</strong> You can also visualize your changes inline by clicking on the preview button. <img src="https://github.com/user-attachments/assets/7d6543b7-4dc7-452c-95b1-241978c4ba1c" alt="Inline preview" style="height: 24px; vertical-align: middle;"></p>
+                        </blockquote>
                     </div>
                 </div>
 
@@ -204,11 +214,8 @@ node -v # Must now show Node v20.x.y installed</code></pre>
 
                 <div id="step-2-clone" class="step">
                     <h4>Step 2: Clone Your Repository (via SSH or HTTPS)</h4>
-                    <pre><code>git clone https://github.com/&lt;owner&gt;/&lt;repo&gt;
-cd &lt;repo&gt;</code></pre>
-                    <div class="note">
-                        <p>Replace <code>&lt;owner&gt;</code> with your GitHub user/org and <code>&lt;repo&gt;</code> with your repository name.</p>
-                    </div>
+                    <pre><code>git clone https://github.com/&lt;github-user&gt;/&lt;github-repo&gt;
+cd &lt;github-repo&gt;</code></pre>
                 </div>
 
                 <div id="step-3-dev-server" class="step">
@@ -242,7 +249,7 @@ cd &lt;repo&gt;</code></pre>
                         <h4>1.1 Get Access Tokens</h4>
                         
                         <div class="token-section">
-                            <h5>a) Get Helix Admin API Token:</h5>
+                            <h5>a) Get Edge Delivery Services Admin API Token:</h5>
                             <ol>
                                 <li>Go to <a href="https://admin.hlx.page/login" target="_blank">https://admin.hlx.page/login</a></li>
                                 <li>Use the <code>login_adobe</code> address to login with the Adobe identity provider</li>
@@ -251,7 +258,7 @@ cd &lt;repo&gt;</code></pre>
                                 <li>Go to the <strong>Application</strong> tab and <strong>Storage</strong></li>
                                 <li>Under <strong>Cookies</strong>, find <code>auth_token</code></li>
                                 <li>Copy the value of the <code>auth_token</code> cookie</li>
-                                <li>Place this token in notepad or similar for now - you'll need it in the next step as <code>{helix-token}</code></li>
+                                <li>Place this token in notepad or similar for now - you'll need it in the next step as <code>&lt;eds-token&gt;</code></li>
                             </ol>
                             <img src="https://github.com/user-attachments/assets/a1dff6e0-ecc2-4e00-bcf3-786ee35948cc" alt="Auth token screenshot" class="screenshot">
                         </div>
@@ -275,35 +282,35 @@ cd &lt;repo&gt;</code></pre>
                                 <li>Click on the <strong>Get DA Token</strong> bookmarklet in your bookmarks bar</li>
                                 <li>A prompt will appear with your access token</li>
                                 <li>Copy the token</li>
-                                <li>Place this token in notepad or similar for now - you'll need it in the next step as <code>{da-token}</code></li>
+                                <li>Place this token in notepad or similar for now - you'll need it in the next step as <code>&lt;da-token&gt;</code></li>
                             </ol>
                         </div>
                     </div>
 
                     <div class="substep">
                         <h4>1.2 Add MCP Server Configuration</h4>
-                        <p>Now that you have both tokens, add the MCP servers to your IDE. <strong>Replace <code>{helix-token}</code> and <code>{da-token}</code> with your actual tokens from step 1.1.</strong></p>
+                        <p>Now that you have both tokens, add the MCP servers to your IDE. <strong>Replace <code>&lt;eds-token&gt;</code> and <code>&lt;da-token&gt;</code> with your actual tokens from step 1.1.</strong></p>
                         
                         <div class="ide-config">
                             <h5>For Cursor IDE:</h5>
                             <ol>
                                 <li>Open Cursor IDE</li>
-                                <li>Go to <strong>Cursor > Setting > Cursor Settings</strong> → <strong>Tools & MCP</strong></li>
+                                <li>Go to <strong>Cusrsor > Setting > Cursor Settings</strong> → <strong>Tools & MCP</strong></li>
                                 <li>Add the following configuration (replace the token placeholders with your actual tokens):</li>
                             </ol>
                             <div class="note">
-                                <p><strong>Note:</strong> If you already have other MCP servers configured, just add <code>helix-mcp-server</code> and <code>da-live-admin</code> to your existing <code>mcpServers</code> object. Don't replace your entire configuration!</p>
+                                <p><strong>Note:</strong> If you already have other MCP servers configured, just add <code>eds-mcp-server</code> and <code>da-live-admin</code> to your existing <code>mcpServers</code> object. Don't replace your entire configuration!</p>
                             </div>
                             <pre><code>{
   "mcpServers": {
-    "helix-mcp-server": {
+    "eds-mcp-server": {
       "command": "npx",
       "args": [
         "-y",
         "github:jindaliiita/eds-mcp"
       ],
       "env": {
-        "HELIX_ADMIN_API_TOKEN": "{helix-token}"
+        "HELIX_ADMIN_API_TOKEN": "&lt;eds-token&gt;"
       }
     },
     "da-live-admin": {
@@ -313,15 +320,15 @@ cd &lt;repo&gt;</code></pre>
         "github:meejain/mcp-da-live-admin"
       ],
       "env": {
-        "DA_ADMIN_API_TOKEN": "{da-token}"
+        "DA_ADMIN_API_TOKEN": "&lt;da-token&gt;"
       }
     }
   }
 }</code></pre>
                             <ol start="4">
-                                <li>After successful configuration, you should see the Helix and DA MCP servers available and enabled.</li>
+                                <li>After successful configuration, you should see the EDS and DA MCP servers available and enabled.</li>
                             </ol>
-                            <img src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" alt="MCP servers enabled screenshot" class="screenshot">
+                            <img src="https://github.com/user-attachments/assets/4b9dc252-2b9d-4478-befc-4f91ea12cc3f" alt="MCP servers enabled screenshot" class="screenshot">
                         </div>
 
                         <div class="ide-config">
@@ -361,7 +368,7 @@ cd &lt;repo&gt;</code></pre>
                                 <li>Click on "Configure Tools" icon at the bottom of AI Chat window in VSCode.
                                     <img src="https://github.com/user-attachments/assets/c3107dec-0018-4850-9ac2-e2914e4f23a6" alt="Configure tools icon" class="screenshot-small">
                                 </li>
-                                <li>Enable <code>da-live-admin</code> and <code>helix-mcp-server</code>
+                                <li>Enable <code>da-live-admin</code> and <code>eds-mcp-server</code>
                                     <img src="https://github.com/user-attachments/assets/8baa6d3a-b2b3-4868-b5b8-281faf2180f7" alt="Enable servers screenshot" class="screenshot">
                                 </li>
                                 <li>Once enabled successfully, the list of tools should appear.</li>
@@ -394,8 +401,7 @@ cd &lt;repo&gt;</code></pre>
                     <div class="substep">
                         <h4>2.3 Add AEM Skills to Your Project</h4>
                         <p>Navigate to your project root directory:</p>
-                        <pre><code>cd &lt;repo&gt;</code></pre>
-                        <p class="note">Replace <code>&lt;repo&gt;</code> with your repository name (the repo you cloned in Exercise 2).</p>
+                        <pre><code>cd &lt;github-repo&gt;</code></pre>
                         <p>Then run:</p>
                         <pre><code>gh upskill adobe/helix-website --dest-path .claude/skills --all</code></pre>
                         <p>This command will add AEM-specific skills to your project, enabling AI agents to better understand and work with AEM Edge Delivery Services patterns and best practices.</p>
@@ -410,15 +416,15 @@ cd &lt;repo&gt;</code></pre>
                         <h4>Sample Workflow: Replace a Block with Another Block Type</h4>
                         <p>This workflow demonstrates a complete development cycle - from content editing to code generation to publishing.</p>
                         <p><strong>Scenario:</strong> Replace a <code>cards-skills</code> block with an <code>accordion</code> block while preserving the content.</p>
-                        <div class="note">
-                            <p><strong>Note:</strong> In the prompts below, replace <code>[org]</code>, <code>[site]</code>, and <code>[page-path]</code> with your own DA organization name, site/repository name, and page path. For example, if your DA URL is <code>https://da.live/edit#/meejain/zeroto100/lab1</code>, then <code>[org]</code> is <code>meejain</code>, <code>[site]</code> is <code>zeroto100</code>, and <code>[page-path]</code> is <code>lab1</code>.</p>
-                        </div>
+                        <blockquote>
+                            <p><strong>Note:</strong> In the prompts below, replace <code>&lt;github-user&gt;</code>, <code>&lt;github-repo&gt;</code>, and <code>&lt;path&gt;</code> with your own DA organization name, site/repository name, and page path. For example, if your DA URL is <code>https://da.live/edit#/meejain/zeroto100/lab1</code>, then <code>&lt;github-user&gt;</code> is <code>meejain</code>, <code>&lt;github-repo&gt;</code> is <code>zeroto100</code>, and <code>&lt;path&gt;</code> is <code>lab1</code>.</p>
+                        </blockquote>
                         
                         <div class="workflow-steps">
                             <div class="workflow-step">
                                 <h5>1. Content Edit and Preview (using Cursor/VS Code)</h5>
                                 <div class="prompt-box">
-                                    <pre><code>Get the page from DA at https://da.live/edit#/[org]/[site]/[page-path], 
+                                    <pre><code>Get the page from DA at https://da.live/edit#/&lt;github-user&gt;/&lt;github-repo&gt;/&lt;path&gt;, 
 replace the cards-skills block with an Accordion block containing the same content, 
 and preview the page.</code></pre>
                                 </div>
@@ -443,7 +449,7 @@ and preview the page.</code></pre>
                                     <li>Follow the project's coding standards</li>
                                 </ul>
                                 
-                                <p><strong>Follow-up: Adapt Styling from Existing Design</strong></p>
+                                <p><strong>Optional: Adapt Styling from Existing Design</strong></p>
                                 <p>After the basic accordion block is generated, you can adapt styling from an existing design:</p>
                                 <div class="prompt-box">
                                     <pre><code>Can you check accordion designed on the page - https://lab2--zeroto100--meejain.aem.live/lab2 
@@ -469,21 +475,17 @@ git push origin main</code></pre>
                             </div>
 
                             <div class="workflow-step">
-                                <h5>4. Publish the Resource (using DA or Sidekick)</h5>
-                                <ul>
-                                    <li>Use the Publish button in DA.live</li>
-                                    <li>Or use the AEM Sidekick extension</li>
-                                    <li>Or use this prompt:</li>
-                                </ul>
+                                <h5>4. Publish the Resource (using DA)</h5>
+                                <p>Use the Publish button in DA.live, or use this prompt:</p>
                                 <div class="prompt-box">
-                                    <pre><code>Publish the resource https://da.live/edit#/[org]/[site]/[page-path]</code></pre>
+                                    <pre><code>Publish the resource https://da.live/edit#/&lt;github-user&gt;/&lt;github-repo&gt;/&lt;path&gt;</code></pre>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="sample-prompts">
-                        <h4>More Sample Prompts</h4>
+                        <h4>More Sample Prompts (to experiment with later)</h4>
                         
                         <div class="prompt-category">
                             <h5>Creating a New Block:</h5>
@@ -511,7 +513,7 @@ responsive across mobile, tablet, and desktop breakpoints.</code></pre>
                         <div class="prompt-category">
                             <h5>Content Management:</h5>
                             <div class="prompt-box">
-                                <pre><code>Get the page from DA at https://da.live/edit#/[org]/[repo]/[path] 
+                                <pre><code>Get the page from DA at https://da.live/edit#/&lt;github-user&gt;/&lt;github-repo&gt;/&lt;path&gt;
 and update the hero section text.</code></pre>
                             </div>
                         </div>
@@ -526,27 +528,28 @@ Ensure images are lazy-loaded and CSS is minimal.</code></pre>
                     </div>
                 </div>
 
-                <div class="success">
-                    <p><strong>Congratulations!</strong> 🎉 You have successfully completed Exercise 3 and you have a live personal website on which you have built your own block using AI!</p>
+                    <div class="accomplishments">
+                        <h4>5. Check Your Website's Performance</h4>
+                        <p>After publishing your content, verify your Lighthouse score:</p>
+                        <ol>
+                            <li>Visit <a href="https://pagespeed.web.dev/" target="_blank">PageSpeed Insights</a></li>
+                            <li>Enter your live website URL: <code>https://main--&lt;github-repo&gt;--&lt;github-user&gt;.aem.live/&lt;path&gt;</code></li>
+                            <li>Click "Analyze" to see your Core Web Vitals and Lighthouse scores</li>
+                            <li>Aim for a score of 100 on Performance, Accessibility, Best Practices</li>
+                        </ol>
+
+                        <p><strong>What You've Accomplished:</strong></p>
+                        <ul>
+                            <li>Built and deployed a custom block on AEM - Edge Delivery Services</li>
+                            <li>Published a live personal website</li>
+                            <li>Learned EDS development patterns and best practices</li>
+                            <li>Can now use AI to accelerate your EDS development</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="accomplishments">
-                    <h4>Check Your Website's Performance</h4>
-                    <p>After publishing your content, verify your Lighthouse score:</p>
-                    <ol>
-                        <li>Visit <a href="https://pagespeed.web.dev/" target="_blank">PageSpeed Insights</a></li>
-                        <li>Enter your live website URL: <code>https://main--{repo}--{owner}.aem.live/{path}</code></li>
-                        <li>Click "Analyze" to see your Core Web Vitals and Lighthouse scores</li>
-                        <li>Aim for a score of 100 on Performance, Accessibility, Best Practices</li>
-                    </ol>
-
-                    <h4>What You've Accomplished:</h4>
-                    <ul>
-                        <li>Built and deployed a custom block on AEM - Edge Delivery Services</li>
-                        <li>Published a live personal website</li>
-                        <li>Learned EDS development patterns and best practices</li>
-                        <li>Can now use AI to accelerate your EDS development</li>
-                    </ul>
+                <div class="success">
+                    <p><strong>Congratulations!</strong> 🎉 You have successfully completed Lab 2 and you have a live personal website on which you have built your own block using AI!</p>
                 </div>
             </section>
 
@@ -554,14 +557,72 @@ Ensure images are lazy-loaded and CSS is minimal.</code></pre>
                 <h2>Troubleshooting</h2>
                 
                 <div class="troubleshoot-section">
-                    <h3>MCP Installation Issues with npx</h3>
+                    <h3>MCP Server Issues</h3>
+                    
                     <div class="issue">
+                        <h4>Issue 1: MCP Server Installation or Connection Problems</h4>
                         <p><strong>Problem:</strong></p>
-                        <p>If you're facing issues with MCP server installation or the servers are not connecting properly.</p>
+                        <p>If you're facing issues with MCP server installation or the servers are not connecting properly, this may be due to corrupted npx cache.</p>
                         <p><strong>Solution:</strong></p>
-                        <p>Try clearing the npx cache:</p>
+                        <p>Clear the npx cache by running:</p>
                         <pre><code>rm -rf ~/.npm/_npx</code></pre>
                         <p>After clearing the cache, restart your IDE and try reconnecting the MCP servers.</p>
+                    </div>
+
+                    <div class="issue">
+                        <h4>Issue 2: MCP Server Works in Terminal but Fails in Cursor Settings</h4>
+                        <p><strong>Problem:</strong></p>
+                        <p>You can connect to the MCP server via terminal using:</p>
+                        <pre><code>npx -y github:jindaliiita/eds-mcp</code></pre>
+                        <p>However, in Cursor settings you're getting the error:</p>
+                        <pre><code>[error] Client error for command A system error occurred (spawn npx ENOENT)</code></pre>
+                        <p><strong>Solution:</strong></p>
+                        <p>Cursor is unable to find the location of the <code>npx</code> executable. Follow these steps:</p>
+                        <ol>
+                            <li>Open your terminal</li>
+                            <li>Find the full path to your <code>npx</code> installation:</li>
+                        </ol>
+                        <pre><code>which npx</code></pre>
+                        <p>Example output:</p>
+                        <pre><code>/Users/satyam/.nvm/versions/node/v20.14.0/bin/npx</code></pre>
+                        <ol start="3">
+                            <li>Update your Cursor MCP configuration (<code>.cursor/mcp.json</code>) to use the full path instead of just <code>npx</code>:</li>
+                        </ol>
+                        <pre><code>{
+  "mcpServers": {
+    "eds-mcp-server": {
+      "command": "/Users/satyam/.nvm/versions/node/v20.14.0/bin/npx",
+      "args": [
+        "-y",
+        "github:jindaliiita/eds-mcp"
+      ],
+      "env": {
+        "HELIX_ADMIN_API_TOKEN": "&lt;eds-token&gt;"
+      }
+    }
+  }
+}</code></pre>
+                        <ol start="4">
+                            <li>Restart Cursor</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="troubleshoot-section">
+                    <h3>GitHub Extension Installation Issues</h3>
+                    
+                    <div class="issue">
+                        <h4>Issue 3: Permission Denied When Installing gh Extension</h4>
+                        <p><strong>Problem:</strong></p>
+                        <p>You're unable to install the <code>gh</code> extension and see this error:</p>
+                        <pre><code>gh extension install trieloff/gh-upskill
+fatal: could not create leading directories of '/Users/akshits/.local/share/gh/extensions/gh-upskill': Permission denied
+failed to run git: exit status 128</code></pre>
+                        <p><strong>Solution:</strong></p>
+                        <p>Your user account doesn't have sufficient permissions for the <code>.local</code> directory. Update the permissions:</p>
+                        <pre><code>sudo chown -R "$USER":staff ~/.local</code></pre>
+                        <p>After updating permissions, try installing the extension again:</p>
+                        <pre><code>gh extension install trieloff/gh-upskill</code></pre>
                     </div>
                 </div>
             </section>
