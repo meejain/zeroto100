@@ -12,11 +12,11 @@ A hands-on lab where you'll be building your very own personal website from the 
     - [Step 2: Install AEM Code Sync](#step-2-install-aem-code-sync)
     - [Step 3: Author and Manage Content](#step-3-author-and-manage-content)
     - [Step 4: Preview and Publish Content](#step-4-preview-and-publish-content)
-- [Lab 2](#lab-2)
   - [Exercise 2: Know the Development Flow for EDS](#exercise-2-know-the-development-flow-for-eds)
     - [Step 1: Install AEM CLI](#step-1-install-aem-cli-if-not-already-done)
     - [Step 2: Clone Your Repository](#step-2-clone-your-repository-via-ssh-or-https)
     - [Step 3: Start Local Development Server](#step-3-start-local-development-server)
+- [Lab 2](#lab-2)
   - [Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI](#exercise-3-setup-ai-tooling-configure-mcp-build-a-block-using-ai)
     - [Step 1: Configure MCP Servers](#step-1-configure-mcp-servers)
       - [1.1 Get Access Tokens](#11-get-access-tokens)
@@ -152,8 +152,6 @@ Your site is now live at:
 
 ---
 
-## Lab 2
-
 ### Exercise 2: Know the Development Flow for EDS
 
 **Objective**: Set up local development environment, make changes to code, and experience live reload.
@@ -189,6 +187,8 @@ Your browser should automatically open. If not, navigate to http://localhost:300
 - Iterate quickly without waiting for builds or deployments
 
 ---
+
+## Lab 2
 
 ### Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI
 
