@@ -124,9 +124,39 @@ body {
     font-weight: 600;
 }
 
+/* Accordion functionality */
+.table-of-contents li > a {
+    position: relative;
+    padding-right: 30px; /* Space for dropdown arrow */
+}
+
+.table-of-contents li > a::after {
+    content: '▼'; /* Dropdown arrow */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transition: transform 0.3s ease;
+    font-size: 0.7em;
+    color: var(--text-light);
+}
+
+.table-of-contents li.expanded > a::after {
+    transform: translateY(-50%) rotate(0deg);
+}
+
 .table-of-contents ul ul {
+    display: none; /* Hide sub-items by default */
     margin-left: 15px;
     margin-top: 5px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+}
+
+.table-of-contents ul ul.show {
+    display: block; /* Show sub-items when expanded */
+    max-height: 1000px; /* Arbitrary large value for smooth transition */
 }
 
 .table-of-contents ul ul a {
@@ -142,6 +172,26 @@ body {
     font-size: 0.85rem;
     padding: 5px 10px;
     color: var(--text-light);
+}
+
+.table-of-contents > ul > li > a {
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: var(--bg-light);
+    border-left: 4px solid var(--secondary-color); /* Highlight main headings */
+    margin-bottom: 5px;
+}
+
+.table-of-contents > ul > li > a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-left-color: var(--primary-dark);
+}
+
+.table-of-contents > ul > li > a.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-left-color: var(--primary-dark);
 }
 
 /* Custom scrollbar for table of contents */
