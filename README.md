@@ -253,7 +253,7 @@ javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**For Cursor IDE:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Open Cursor IDE  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Go to **Cusrsor > Setting > Cursor Settings** → **Tools & MCP**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Go to **Cursor > Setting > Cursor Settings** → **Tools & MCP**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Add the following configuration (replace the token placeholders with your actual tokens):
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> **Note**: If you already have other MCP servers configured, just add `eds-mcp-server` and `da-live-admin` to your existing `mcpServers` object. Don't replace your entire configuration!
