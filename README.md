@@ -86,13 +86,13 @@ node -v # Must now show Node v20.x.y installed
 2. Click **"Use this template"** → **"Create a new repository"**
    <img width="700" alt="Screenshot 2026-01-13 at 7 28 19 PM" src="https://github.com/user-attachments/assets/04dd7645-7f8b-4294-97eb-0405915cc747" />
 
-4. Choose your GitHub user as the owner
+3. Choose your GitHub user as the owner
 
-5. Provide the repository name
+4. Provide the repository name
 
-6. Set the repository to **public** (recommended)
+5. Set the repository to **public** (recommended)
 
-7. Click **"Create repository"**
+6. Click **"Create repository"**
 
 ---
 
@@ -103,11 +103,11 @@ node -v # Must now show Node v20.x.y installed
 2. Select the "github-user" same as where you create the repo in the previous steps
    <img width="400" alt="image" src="https://github.com/user-attachments/assets/cd43982d-0dcb-4758-a88d-eced776a0276" />
 
-4. IMPORTANT: Under **Repository access**, select **"Only select repositories"**
+3. IMPORTANT: Under **Repository access**, select **"Only select repositories"**
 
-5. Choose your newly created repository
+4. Choose your newly created repository
 
-6. Click **"Save"**
+5. Click **"Save"**
 
 Your site is now live at:
 - **Preview**: `https://main--<github-repo>--<github-user>.aem.page`
@@ -155,18 +155,18 @@ Your site is now live at:
 1. Open up the page `https://da.live/edit#/<github-user>/<github-repo>/index` 
 
 2. Click the **Preview** button to preview your changes.
-<img width="311" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
+   <img width="311" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
 
-4. Once satisfied with the preview, click the **Publish** button to make your content live.
-<img width="311" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
+3. Once satisfied with the preview, click the **Publish** button to make your content live.
+   <img width="311" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
   
 4. Your content will now be available on both preview and live URLs.
 
 5. Repeat steps 2 to 4 for `https://da.live/edit#/<github-user>/<github-repo>/nav` and `https://da.live/edit#/<github-user>/<github-repo>/footer`
 
 6. Feel free to add your own personalized content to the page. Do the same **Preview/Publish** steps to visualize your changes.
-   <img width="57" alt="image" src="https://github.com/user-attachments/assets/7d6543b7-4dc7-452c-95b1-241978c4ba1c" />
-> **Pro Tip:** You can also visualize your changes inline by clicking on the preview button. 
+
+> **Pro Tip:** You can also visualize your changes inline by clicking on the preview button. <img width="57" alt="image" src="https://github.com/user-attachments/assets/7d6543b7-4dc7-452c-95b1-241978c4ba1c" /> 
 
 **Congratulations!** 🎉 You have successfully bootstrapped your live personal website with default blocks on AEM Edge Delivery Services. Your site is now live and accessible on the web!
 
@@ -205,10 +205,7 @@ This starts a local server at `http://localhost:3000/`
 
 Your browser should automatically open. If not, navigate to http://localhost:3000/ manually.
 
-**Congratulations!** 🎉 You now understand the EDS development flow:
-- Make changes locally
-- See instant feedback in the browser
-- Iterate quickly without waiting for builds or deployments
+**Congratulations!** 🎉 You now understand the EDS development flow
 
 ---
 ---
