@@ -130,21 +130,33 @@ body {
 
 /* Only show arrow for items with sub-menus */
 .table-of-contents li:has(> ul) > a {
-    padding-right: 50px; /* Space for dropdown arrow */
+    padding-right: 45px; /* Space for dropdown arrow */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Create a spacer before the arrow to prevent text overlap */
+.table-of-contents li:has(> ul) > a::before {
+    content: '';
+    flex-shrink: 0;
+    width: 35px;
+    order: 2;
 }
 
 .table-of-contents li:has(> ul) > a::after {
     content: '▼'; /* Dropdown arrow */
     position: absolute;
-    right: 10px;
+    right: 8px;
     top: 50%;
     transform: translateY(-50%) rotate(-90deg);
     transition: transform 0.3s ease;
-    font-size: 0.6em;
+    font-size: 0.65em;
     color: var(--text-light);
-    padding: 8px;
+    padding: 10px;
     cursor: pointer;
     z-index: 10;
+    flex-shrink: 0;
 }
 
 .table-of-contents li.expanded > a::after {
