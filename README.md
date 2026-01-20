@@ -302,14 +302,11 @@ javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken
 ```json
 {
   "servers": {
-    "github-mcp": {
-      "type": "http",
-      "url": "https://api.githubcopilot.com/mcp"
-    },
     "eds-mcp-server": {
       "command": "npx",
       "args": [
-        "https://github.com/jindaliiita/eds-mcp"
+        "-y",
+        "github:jindaliiita/eds-mcp"
       ],
       "env": {
         "HELIX_ADMIN_API_TOKEN": "<eds-token>"
