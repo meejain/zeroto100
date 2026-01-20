@@ -297,16 +297,19 @@ javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Open VS Code  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Add the following configuration (replace the token placeholders with your actual tokens):
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> **Note**: If you already have other MCP servers configured, just add `eds-mcp-server` and `da-live-admin` to your existing `mcpServers` object. Don't replace your entire configuration!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> **Note**: If you already have other MCP servers configured, just add `eds-mcp-server` and `da-live-admin` to your existing `servers` object. Don't replace your entire configuration!
 
 ```json
 {
-  "mcpServers": {
+  "servers": {
+    "github-mcp": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp"
+    },
     "eds-mcp-server": {
       "command": "npx",
       "args": [
-        "-y",
-        "github:jindaliiita/eds-mcp"
+        "https://github.com/jindaliiita/eds-mcp"
       ],
       "env": {
         "HELIX_ADMIN_API_TOKEN": "<eds-token>"
@@ -323,8 +326,7 @@ javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken
       }
     }
   }
-}
-```
+}```
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Click on "Configure Tools" icon at the bottom of AI Chat window in VSCode.
 
