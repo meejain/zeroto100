@@ -130,17 +130,17 @@ body {
 
 /* Only show arrow for items with sub-menus */
 .table-of-contents li:has(> ul) > a {
-    padding-right: 40px; /* Space for dropdown arrow */
+    padding-right: 50px; /* Space for dropdown arrow */
 }
 
 .table-of-contents li:has(> ul) > a::after {
     content: '▼'; /* Dropdown arrow */
     position: absolute;
-    right: 15px;
+    right: 18px;
     top: 50%;
     transform: translateY(-50%) rotate(-90deg);
     transition: transform 0.3s ease;
-    font-size: 0.65em;
+    font-size: 0.6em;
     color: var(--text-light);
 }
 
