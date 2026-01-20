@@ -215,7 +215,7 @@ Now that you have both tokens, add the MCP servers to your IDE. **Replace `<eds-
         "github:jindaliiita/eds-mcp"
       ],
       "env": {
-        "HELIX_ADMIN_API_TOKEN": "<helix-token>"
+        "HELIX_ADMIN_API_TOKEN": "<eds-token>"
       }
     },
     "da-live-admin": {
@@ -251,7 +251,7 @@ Now that you have both tokens, add the MCP servers to your IDE. **Replace `<eds-
         "github:jindaliiita/eds-mcp"
       ],
       "env": {
-        "HELIX_ADMIN_API_TOKEN": "<helix-token>"
+        "HELIX_ADMIN_API_TOKEN": "<eds-token>"
       }
     },
     "da-live-admin": {
