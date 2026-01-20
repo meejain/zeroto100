@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dev Day Lab - Zero to 100: Build your High-Performance Personal Website with AI">
+    <title>Dev Day Lab - Zero to 100</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <h1>Dev Day Lab - Zero to 100</h1>
+            <p class="subtitle">Prompt, Build & Go Live with your High-Performance Personal Website with AI</p>
+        </div>
+    </header>
+
+    <div class="layout-wrapper">
+        <nav class="table-of-contents">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#prerequisites">Prerequisites</a>
+                    <ul>
+                        <li><a href="#checking-nodejs">Checking and Upgrading Node.js</a></li>
+                    </ul>
+                </li>
+                <li><a href="#exercise-1">Exercise 1: Bootstrap a Live Personal Site</a>
+                    <ul>
+                        <li><a href="#step-1-create">Step 1: Create Your Repository</a></li>
+                        <li><a href="#step-2-aem-sync">Step 2: Install AEM Code Sync</a></li>
+                        <li><a href="#step-3-author">Step 3: Author and Manage Content</a></li>
+                        <li><a href="#step-4-preview">Step 4: Preview and Publish</a></li>
+                        <li><a href="#optional-sidekick">Optional: Install AEM Sidekick</a></li>
+                    </ul>
+                </li>
+                <li><a href="#exercise-2">Exercise 2: Know the Development Flow for EDS</a>
+                    <ul>
+                        <li><a href="#step-1-cli">Step 1: Install AEM CLI</a></li>
+                        <li><a href="#step-2-clone">Step 2: Clone Your Repository</a></li>
+                        <li><a href="#step-3-dev-server">Step 3: Start Local Development Server</a></li>
+                        <li><a href="#step-4-change">Step 4: Make a Minor Change</a></li>
+                    </ul>
+                </li>
+                <li><a href="#exercise-3">Exercise 3: Setup AI Tooling & Build a Block</a>
+                    <ul>
+                        <li><a href="#step-1-mcp">Step 1: Configure MCP Servers</a></li>
+                        <li><a href="#step-2-gh-cli">Step 2: Install GitHub CLI and Add Agent Skills</a></li>
+                        <li><a href="#step-3-build-block">Step 3: Build a Block Using AI</a></li>
+                    </ul>
+                </li>
+                <li><a href="#troubleshooting">Troubleshooting</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <section id="intro" class="section">
+                <p class="intro-text">A hands-on lab where you'll be building your very own personal website from the ground up with ease. You'll be using Adobe Experience Manager with AI tools like Cursor, and by the end, you'll be walking away with your own live site — a keepsake you can share and continue evolving.</p>
+            </section>
+
+            <section id="prerequisites" class="section">
+                <h2>Prerequisites</h2>
+                <p>Before starting this lab, ensure you have:</p>
+                <ul>
+                    <li>A personal GitHub account</li>
+                    <li>A laptop (Mac, Windows Or Linux) with an installed IDE — preferably an AI-enabled editor (Cursor is strongly recommended; VS Code is also acceptable)</li>
+                    <li>Node.js (version 20 or higher) and npm installed on your local system</li>
+                </ul>
+
+                <div id="checking-nodejs" class="subsection">
+                    <h3>Checking and Upgrading Node.js</h3>
+                    <p>Check your current Node.js version:</p>
+                    <pre><code>node --version</code></pre>
+                    <p>If your version is lower than 20.x.x, you'll need to upgrade:</p>
+                    <ul>
+                        <li><strong>Mac/Linux</strong>: Use <a href="https://github.com/nvm-sh/nvm#installing-and-updating" target="_blank">nvm (Node Version Manager)</a> or download from <a href="https://nodejs.org/" target="_blank">nodejs.org</a></li>
+                        <li><strong>Windows</strong>: Use <a href="https://github.com/coreybutler/nvm-windows#installation--upgrades" target="_blank">nvm-windows</a> or download from <a href="https://nodejs.org/" target="_blank">nodejs.org</a></li>
+                    </ul>
+                    <pre><code>nvm install 20 # To install Node v20
+node -v # Must now show Node v20.x.y installed</code></pre>
+                </div>
+            </section>
+
+            <section id="exercise-1" class="section">
+                <h2>Exercise 1: Bootstrap a Live Personal Site</h2>
+                <div class="exercise-objective">
+                    <p><strong>Objective:</strong> Set up your GitHub repository, configure DA (Document Authoring), add your personal content, and publish your site.</p>
+                    <p><strong>Outcome:</strong> You will have a live personal website running on AEM Edge Delivery Services.</p>
+                </div>
+
+                <div id="step-1-create" class="step">
+                    <h3>Step 1: Create Your Repository from Boilerplate</h3>
+                    <ol>
+                        <li>Visit the <a href="https://github.com/meejain/zeroto100" target="_blank">Dev Day Boilerplate repository</a></li>
+                        <li>Click <strong>"Use this template"</strong> → <strong>"Create a new repository"</strong>
+                            <img src="https://github.com/user-attachments/assets/04dd7645-7f8b-4294-97eb-0405915cc747" alt="Use template screenshot" class="screenshot">
+                        </li>
+                        <li>Choose your GitHub personal user as the owner</li>
+                        <li>Provide the repository name</li>
+                        <li>Set the repository to <strong>public</strong> (recommended)</li>
+                        <li>Click <strong>"Create repository"</strong></li>
+                    </ol>
+                </div>
+
+                <div id="step-2-aem-sync" class="step">
+                    <h3>Step 2: Install AEM Code Sync</h3>
+                    <ol>
+                        <li>Visit <a href="https://github.com/apps/aem-code-sync/installations/new" target="_blank">AEM Code Sync GitHub App</a></li>
+                        <li>Select the "owner" same as where you create the repo in the previous steps
+                            <img src="https://github.com/user-attachments/assets/cd43982d-0dcb-4758-a88d-eced776a0276" alt="Select owner screenshot" class="screenshot">
+                        </li>
+                        <li><strong>IMPORTANT:</strong> Under <strong>Repository access</strong>, select <strong>"Only select repositories"</strong></li>
+                        <li>Choose your newly created repository</li>
+                        <li>Click <strong>"Save"</strong></li>
+                    </ol>
+                    <div class="note">
+                        <p>Your site is now live at:</p>
+                        <ul>
+                            <li><strong>Preview:</strong> <code>https://main--&lt;repo&gt;--&lt;owner&gt;.aem.page/</code></li>
+                            <li><strong>Production:</strong> <code>https://main--&lt;repo&gt;--&lt;owner&gt;.aem.live/</code></li>
+                        </ul>
+                        <p><strong>Note:</strong> Replace <code>&lt;repo&gt;</code> with your repository name and <code>&lt;owner&gt;</code> with your GitHub user/org.</p>
+                        <p>You may see a 404 page right now, which is OK since we are going to create the page in next steps.</p>
+                    </div>
+                </div>
+
+                <div id="step-3-author" class="step">
+                    <h3>Step 3: Author and Manage Content</h3>
+                    <ol>
+                        <li>Navigate to <a href="https://da.live/start" target="_blank">DA.live</a>
+                            <img src="https://github.com/user-attachments/assets/67d6b5f5-d036-41bc-a251-6a30518f143a" alt="DA.live start screenshot" class="screenshot">
+                        </li>
+                        <li>Add your newly created github repository link</li>
+                        <li>Select the <strong>No Sample Content</strong> option.
+                            <img src="https://github.com/user-attachments/assets/cdb2264d-1150-4516-ae0b-b0a72c366c40" alt="No sample content screenshot" class="screenshot">
+                        </li>
+                        <li>We should now have an empty content space create for the site.
+                            <img src="https://github.com/user-attachments/assets/5167c77f-67ac-43e4-949e-04b347e43fe3" alt="Empty content space screenshot" class="screenshot">
+                        </li>
+                        <li>Let's import some sample content now. Visit <a href="https://da.live/apps/import" target="_blank">https://da.live/apps/import</a> and import the following pages using the <strong>"By URL"</strong> option:
+                            <ul>
+                                <li><code>https://main--zeroto100--meejain.aem.live/lab1</code></li>
+                                <li><code>https://main--zeroto100--meejain.aem.live/nav</code></li>
+                                <li><code>https://main--zeroto100--meejain.aem.live/footer</code></li>
+                            </ul>
+                        </li>
+                        <li>In the <strong>Org</strong> field, enter your organization name and in <strong>Site</strong> field, enter your repository name.
+                            <p>For example: If your DA.live URL is <code>https://da.live/#/meejain/zeroto100</code>, then:</p>
+                            <ul>
+                                <li><strong>Org:</strong> <code>meejain</code></li>
+                                <li><strong>Site:</strong> <code>zeroto100</code></li>
+                            </ul>
+                            <img src="https://github.com/user-attachments/assets/5cb9d167-5e45-43b1-9e8c-aa4feaf16635" alt="Org and site screenshot" class="screenshot">
+                        </li>
+                        <li>Wait for the content to import successfully. It should take 15-30 secs.</li>
+                        <li>You should now see the content imported for your site at <code>https://da.live/#/&lt;org&gt;/&lt;repo&gt;</code>
+                            <img src="https://github.com/user-attachments/assets/df996783-2dad-44d6-a522-1ef35562710d" alt="Content imported screenshot" class="screenshot">
+                        </li>
+                    </ol>
+                </div>
+
+                <div id="step-4-preview" class="step">
+                    <h3>Step 4: Preview and Publish Content</h3>
+                    <ol>
+                        <li>Open up the page <code>lab1</code></li>
+                        <li>In DA, Click the <strong>Preview</strong> button to preview your changes.
+                            <img src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" alt="Preview button screenshot" class="screenshot">
+                        </li>
+                        <li>Once satisfied with the preview, click the <strong>Publish</strong> button to make your content live.</li>
+                        <li>Your content will now be available on both preview and live URLs.</li>
+                        <li>Feel free to add your own personalized content to the page. Do the same <strong>Preview/Publish</strong> steps to visualize your changes.</li>
+                    </ol>
+                    <div class="tip">
+                        <p><strong>Pro Tip:</strong> You can also visualize your changes inline by clicking on the preview button. <img src="https://github.com/user-attachments/assets/7d6543b7-4dc7-452c-95b1-241978c4ba1c" alt="Inline preview" style="height: 24px; vertical-align: middle;"></p>
+                    </div>
+                </div>
+
+                <div class="success">
+                    <p><strong>Congratulations!</strong> 🎉 You have successfully bootstrapped your live personal website with default blocks on AEM Edge Delivery Services. Your site is now live and accessible on the web!</p>
+                </div>
+
+                <div id="optional-sidekick" class="step">
+                    <h3>Optional: Install AEM Sidekick</h3>
+                    <p>For easier content preview and publishing workflow:</p>
+                    <ol>
+                        <li>Install the <a href="https://chrome.google.com/webstore/search/aem%20sidekick" target="_blank">AEM Sidekick Chrome Extension</a></li>
+                        <li>Pin the extension for easy access</li>
+                        <li>Navigate to your site (preview or live URL)</li>
+                        <li>Click the Sidekick icon in your browser</li>
+                        <li>Use Sidekick to preview and publish content directly from your browser without going to DA.live</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="exercise-2" class="section">
+                <h2>Exercise 2: Know the Development Flow for EDS</h2>
+                <div class="exercise-objective">
+                    <p><strong>Objective:</strong> Set up local development environment, make changes to code, and experience live reload.</p>
+                    <p><strong>Outcome:</strong> You will understand the local development workflow and see real-time changes reflected in your browser.</p>
+                </div>
+
+                <div id="step-1-cli" class="step">
+                    <h3>Step 1: Install AEM CLI</h3>
+                    <pre><code>npm install -g @adobe/aem-cli</code></pre>
+                </div>
+
+                <div id="step-2-clone" class="step">
+                    <h3>Step 2: Clone Your Repository (via SSH or HTTPS)</h3>
+                    <pre><code>git clone https://github.com/&lt;owner&gt;/&lt;repo&gt;
+cd &lt;repo&gt;</code></pre>
+                    <div class="note">
+                        <p>Replace <code>&lt;owner&gt;</code> with your GitHub user/org and <code>&lt;repo&gt;</code> with your repository name.</p>
+                    </div>
+                </div>
+
+                <div id="step-3-dev-server" class="step">
+                    <h3>Step 3: Start Local Development Server</h3>
+                    <pre><code>aem up</code></pre>
+                    <p>This starts a local server at <code>http://localhost:3000/</code></p>
+                    <p>Your browser should automatically open. If not, navigate to <code>http://localhost:3000/</code> manually.</p>
+                </div>
+
+                <div id="step-4-change" class="step">
+                    <h3>Step 4: Make a Minor Change and See Live Reload</h3>
+                    <p>Let's make a simple CSS change to see live reload in action:</p>
+                    <ol>
+                        <li>Open your project in your IDE (Cursor or VS Code)</li>
+                        <li>Navigate to <code>styles/styles.css</code></li>
+                        <li>Find the <code>body</code> selector and modify a style property. For example, change the background color:</li>
+                    </ol>
+                    <pre><code>body {
+  /* Add or modify this line */
+  background-color: black;
+}</code></pre>
+                    <ol start="4">
+                        <li>Save the file (Ctrl/Cmd + S)</li>
+                        <li>Watch your browser automatically reload and display the change!</li>
+                    </ol>
+                </div>
+
+                <div class="success">
+                    <p><strong>Congratulations!</strong> 🎉 You now understand the EDS development flow:</p>
+                    <ul>
+                        <li>Make changes locally</li>
+                        <li>See instant feedback in the browser</li>
+                        <li>Iterate quickly without waiting for builds or deployments</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="exercise-3" class="section">
+                <h2>Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI</h2>
+                <div class="exercise-objective">
+                    <p><strong>Objective:</strong> Configure AI tooling (MCP servers) and build a block using AI assistance.</p>
+                    <p><strong>Outcome:</strong> You will be able to leverage AI to accelerate your development work in EDS.</p>
+                </div>
+
+                <div id="step-1-mcp" class="step">
+                    <h3>Step 1: Configure MCP Servers</h3>
+                    <p>Before adding the MCP server configuration, you need to get the access tokens first.</p>
+                    
+                    <div class="substep">
+                        <h4>1.1 Get Access Tokens</h4>
+                        
+                        <div class="token-section">
+                            <h5>a) Get Helix Admin API Token:</h5>
+                            <ol>
+                                <li>Go to <a href="https://admin.hlx.page/login" target="_blank">https://admin.hlx.page/login</a></li>
+                                <li>Use the <code>login_adobe</code> address to login with the Adobe identity provider</li>
+                                <li>You will be forwarded to <a href="https://admin.hlx.page/profile" target="_blank">https://admin.hlx.page/profile</a></li>
+                                <li>Open your browser's <strong>Developer Tools</strong> (F12)</li>
+                                <li>Go to the <strong>Application</strong> tab and <strong>Storage</strong></li>
+                                <li>Under <strong>Cookies</strong>, find <code>auth_token</code></li>
+                                <li>Copy the value of the <code>auth_token</code> cookie</li>
+                                <li>Place this token in notepad or similar for now - you'll need it in the next step as <code>{helix-token}</code></li>
+                            </ol>
+                            <img src="https://github.com/user-attachments/assets/a1dff6e0-ecc2-4e00-bcf3-786ee35948cc" alt="Auth token screenshot" class="screenshot">
+                        </div>
+
+                        <div class="token-section">
+                            <h5>b) Get DA Live Admin API Token using Bookmarklet:</h5>
+                            <p><strong>Step 1: Create the Bookmarklet</strong></p>
+                            <ol>
+                                <li>In your browser, create a new bookmark (Right-click bookmarks bar → Add Page)</li>
+                                <li>Name: <code>Get DA Token</code></li>
+                                <li>In the URL/Location field, paste the following code:</li>
+                            </ol>
+                            <pre><code>javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken!=='function'){alert('adobeIMS not available on this page');return;}try{const r=await adobeIMS.getAccessToken();if(!r||!r.token){alert('Token not found in response');console.log(r);return;}prompt('Adobe IMS Access Token (Ctrl/Cmd + C to copy):',r.token);}catch(e){console.error(e);alert('Failed to get access token');}})();</code></pre>
+                            <ol start="4">
+                                <li>Save the bookmark</li>
+                            </ol>
+                            
+                            <p><strong>Step 2: Use the Bookmarklet</strong></p>
+                            <ol>
+                                <li>Navigate to <a href="https://da.live" target="_blank">https://da.live</a></li>
+                                <li>Click on the <strong>Get DA Token</strong> bookmarklet in your bookmarks bar</li>
+                                <li>A prompt will appear with your access token</li>
+                                <li>Copy the token</li>
+                                <li>Place this token in notepad or similar for now - you'll need it in the next step as <code>{da-token}</code></li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="substep">
+                        <h4>1.2 Add MCP Server Configuration</h4>
+                        <p>Now that you have both tokens, add the MCP servers to your IDE. <strong>Replace <code>{helix-token}</code> and <code>{da-token}</code> with your actual tokens from step 1.1.</strong></p>
+                        
+                        <div class="ide-config">
+                            <h5>For Cursor IDE:</h5>
+                            <ol>
+                                <li>Open Cursor IDE</li>
+                                <li>Go to <strong>Cursor > Setting > Cursor Settings</strong> → <strong>Tools & MCP</strong></li>
+                                <li>Add the following configuration (replace the token placeholders with your actual tokens):</li>
+                            </ol>
+                            <div class="note">
+                                <p><strong>Note:</strong> If you already have other MCP servers configured, just add <code>helix-mcp-server</code> and <code>da-live-admin</code> to your existing <code>mcpServers</code> object. Don't replace your entire configuration!</p>
+                            </div>
+                            <pre><code>{
+  "mcpServers": {
+    "helix-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "github:jindaliiita/eds-mcp"
+      ],
+      "env": {
+        "HELIX_ADMIN_API_TOKEN": "{helix-token}"
+      }
+    },
+    "da-live-admin": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "github:meejain/mcp-da-live-admin"
+      ],
+      "env": {
+        "DA_ADMIN_API_TOKEN": "{da-token}"
+      }
+    }
+  }
+}</code></pre>
+                            <ol start="4">
+                                <li>After successful configuration, you should see the Helix and DA MCP servers available and enabled.</li>
+                            </ol>
+                            <img src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" alt="MCP servers enabled screenshot" class="screenshot">
+                        </div>
+
+                        <div class="ide-config">
+                            <h5>For Visual Studio Code:</h5>
+                            <ol>
+                                <li>Open VS Code</li>
+                                <li>Add the following configuration (replace the token placeholders with your actual tokens):</li>
+                            </ol>
+                            <div class="note">
+                                <p><strong>Note:</strong> If you already have other MCP servers configured, just add <code>helix-mcp-server</code> and <code>da-live-admin</code> to your existing <code>mcpServers</code> object. Don't replace your entire configuration!</p>
+                            </div>
+                            <pre><code>{
+  "mcpServers": {
+    "helix-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "github:jindaliiita/eds-mcp"
+      ],
+      "env": {
+        "HELIX_ADMIN_API_TOKEN": "{helix-token}"
+      }
+    },
+    "da-live-admin": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "github:meejain/mcp-da-live-admin"
+      ],
+      "env": {
+        "DA_ADMIN_API_TOKEN": "{da-token}"
+      }
+    }
+  }
+}</code></pre>
+                            <ol start="3">
+                                <li>Click on "Configure Tools" icon at the bottom of AI Chat window in VSCode.
+                                    <img src="https://github.com/user-attachments/assets/c3107dec-0018-4850-9ac2-e2914e4f23a6" alt="Configure tools icon" class="screenshot-small">
+                                </li>
+                                <li>Enable <code>da-live-admin</code> and <code>helix-mcp-server</code>
+                                    <img src="https://github.com/user-attachments/assets/8baa6d3a-b2b3-4868-b5b8-281faf2180f7" alt="Enable servers screenshot" class="screenshot">
+                                </li>
+                                <li>Once enabled successfully, the list of tools should appear.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="step-2-gh-cli" class="step">
+                    <h3>Step 2: Install GitHub CLI and Add Agent Skills</h3>
+                    
+                    <div class="substep">
+                        <h4>2.1 Install GitHub CLI (If not present)</h4>
+                        <ul>
+                            <li><strong>For macOS:</strong> See the <a href="https://github.com/cli/cli/blob/trunk/docs/install_macos.md#homebrew" target="_blank">official installation guide</a></li>
+                            <li><strong>For Windows:</strong> See the <a href="https://github.com/cli/cli/blob/trunk/docs/install_windows.md" target="_blank">official installation guide</a></li>
+                            <li><strong>For Linux:</strong> See the <a href="https://github.com/cli/cli/blob/trunk/docs/install_linux.md#recommended-official" target="_blank">official installation guide</a></li>
+                        </ul>
+                        <div class="note">
+                            <p><strong>Note:</strong> After installation, you may need to authenticate with GitHub by running <code>gh auth login</code> before using <code>gh</code> commands.</p>
+                        </div>
+                    </div>
+
+                    <div class="substep">
+                        <h4>2.2 Install gh-upskill Extension</h4>
+                        <p>Install the gh-upskill extension for GitHub CLI:</p>
+                        <pre><code>gh extension install trieloff/gh-upskill</code></pre>
+                    </div>
+
+                    <div class="substep">
+                        <h4>2.3 Add AEM Skills to Your Project</h4>
+                        <p>Navigate to your project root directory:</p>
+                        <pre><code>cd &lt;repo&gt;</code></pre>
+                        <p class="note">Replace <code>&lt;repo&gt;</code> with your repository name (the repo you cloned in Exercise 2).</p>
+                        <p>Then run:</p>
+                        <pre><code>gh upskill adobe/helix-website --dest-path .claude/skills --all</code></pre>
+                        <p>This command will add AEM-specific skills to your project, enabling AI agents to better understand and work with AEM Edge Delivery Services patterns and best practices.</p>
+                    </div>
+                </div>
+
+                <div id="step-3-build-block" class="step">
+                    <h3>Step 3: Build a Block Using AI</h3>
+                    <p>Now that you have MCP servers configured, you can use AI to help you build blocks and manage content. Here are some sample workflows and prompts to get you started:</p>
+                    
+                    <div class="workflow">
+                        <h4>Sample Workflow: Replace a Block with Another Block Type</h4>
+                        <p>This workflow demonstrates a complete development cycle - from content editing to code generation to publishing.</p>
+                        <p><strong>Scenario:</strong> Replace a <code>cards-skills</code> block with an <code>accordion</code> block while preserving the content.</p>
+                        <div class="note">
+                            <p><strong>Note:</strong> In the prompts below, replace <code>[org]</code>, <code>[site]</code>, and <code>[page-path]</code> with your own DA organization name, site/repository name, and page path. For example, if your DA URL is <code>https://da.live/edit#/meejain/zeroto100/lab1</code>, then <code>[org]</code> is <code>meejain</code>, <code>[site]</code> is <code>zeroto100</code>, and <code>[page-path]</code> is <code>lab1</code>.</p>
+                        </div>
+                        
+                        <div class="workflow-steps">
+                            <div class="workflow-step">
+                                <h5>1. Content Edit and Preview (using Cursor/VS Code)</h5>
+                                <div class="prompt-box">
+                                    <pre><code>Get the page from DA at https://da.live/edit#/[org]/[site]/[page-path], 
+replace the cards-skills block with an Accordion block containing the same content, 
+and preview the page.</code></pre>
+                                </div>
+                                <p>This prompt will:</p>
+                                <ul>
+                                    <li>Fetch the page content from DA</li>
+                                    <li>Replace the block structure</li>
+                                    <li>Update the content on DA</li>
+                                    <li>Provide the page with new content</li>
+                                </ul>
+                            </div>
+
+                            <div class="workflow-step">
+                                <h5>2. Code Generation (if the block doesn't exist yet)</h5>
+                                <div class="prompt-box">
+                                    <pre><code>Write the code for the Accordion block as well.</code></pre>
+                                </div>
+                                <p>This prompt will:</p>
+                                <ul>
+                                    <li>Generate the block's JavaScript (<code>accordion.js</code>)</li>
+                                    <li>Generate the block's CSS (<code>accordion.css</code>)</li>
+                                    <li>Follow the project's coding standards</li>
+                                </ul>
+                                
+                                <p><strong>Follow-up: Adapt Styling from Existing Design</strong></p>
+                                <p>After the basic accordion block is generated, you can adapt styling from an existing design:</p>
+                                <div class="prompt-box">
+                                    <pre><code>Can you check accordion designed on the page - https://lab2--zeroto100--meejain.aem.live/lab2 
+and convert the styling as is</code></pre>
+                                </div>
+                                <p>This will:</p>
+                                <ul>
+                                    <li>Inspect the accordion design</li>
+                                    <li>Extract the visual styling</li>
+                                    <li>Apply the same design to your accordion block</li>
+                                </ul>
+                            </div>
+
+                            <div class="workflow-step">
+                                <h5>3. Push Code to Repository (manual or AI-assisted)</h5>
+                                <div class="prompt-box">
+                                    <pre><code>Push the updated code to the repository</code></pre>
+                                </div>
+                                <p>Or manually:</p>
+                                <pre><code>git add blocks/accordion/
+git commit -m "Add accordion block"
+git push origin main</code></pre>
+                            </div>
+
+                            <div class="workflow-step">
+                                <h5>4. Publish the Resource (using DA or Sidekick)</h5>
+                                <ul>
+                                    <li>Use the Publish button in DA.live</li>
+                                    <li>Or use the AEM Sidekick extension</li>
+                                    <li>Or use this prompt:</li>
+                                </ul>
+                                <div class="prompt-box">
+                                    <pre><code>Publish the resource https://da.live/edit#/[org]/[site]/[page-path]</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sample-prompts">
+                        <h4>More Sample Prompts</h4>
+                        
+                        <div class="prompt-category">
+                            <h5>Creating a New Block:</h5>
+                            <div class="prompt-box">
+                                <pre><code>Create a hero-banner block with a heading, subtext, background image, 
+and call-to-action button. Match the existing design system.</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="prompt-category">
+                            <h5>Modifying an Existing Block:</h5>
+                            <div class="prompt-box">
+                                <pre><code>Update the cards block to add hover animations and ensure it's 
+responsive across mobile, tablet, and desktop breakpoints.</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="prompt-category">
+                            <h5>Debugging a Block:</h5>
+                            <div class="prompt-box">
+                                <pre><code>The carousel block isn't working properly. Debug the issue and fix it.</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="prompt-category">
+                            <h5>Content Management:</h5>
+                            <div class="prompt-box">
+                                <pre><code>Get the page from DA at https://da.live/edit#/[org]/[repo]/[path] 
+and update the hero section text.</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="prompt-category">
+                            <h5>Performance Optimization:</h5>
+                            <div class="prompt-box">
+                                <pre><code>Review all blocks and optimize them for Core Web Vitals. 
+Ensure images are lazy-loaded and CSS is minimal.</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="success">
+                    <p><strong>Congratulations!</strong> 🎉 You have successfully completed Exercise 3 and you have a live personal website on which you have built your own block using AI!</p>
+                </div>
+
+                <div class="accomplishments">
+                    <h4>Check Your Website's Performance</h4>
+                    <p>After publishing your content, verify your Lighthouse score:</p>
+                    <ol>
+                        <li>Visit <a href="https://pagespeed.web.dev/" target="_blank">PageSpeed Insights</a></li>
+                        <li>Enter your live website URL: <code>https://main--{repo}--{owner}.aem.live/{path}</code></li>
+                        <li>Click "Analyze" to see your Core Web Vitals and Lighthouse scores</li>
+                        <li>Aim for a score of 100 on Performance, Accessibility, Best Practices</li>
+                    </ol>
+
+                    <h4>What You've Accomplished:</h4>
+                    <ul>
+                        <li>Built and deployed a custom block on AEM - Edge Delivery Services</li>
+                        <li>Published a live personal website</li>
+                        <li>Learned EDS development patterns and best practices</li>
+                        <li>Can now use AI to accelerate your EDS development</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="troubleshooting" class="section">
+                <h2>Troubleshooting</h2>
+                
+                <div class="troubleshoot-section">
+                    <h3>MCP Installation Issues with npx</h3>
+                    <div class="issue">
+                        <p><strong>Problem:</strong></p>
+                        <p>If you're facing issues with MCP server installation or the servers are not connecting properly.</p>
+                        <p><strong>Solution:</strong></p>
+                        <p>Try clearing the npx cache:</p>
+                        <pre><code>rm -rf ~/.npm/_npx</code></pre>
+                        <p>After clearing the cache, restart your IDE and try reconnecting the MCP servers.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container">
+            <p>Built with Adobe Experience Manager Edge Delivery Services</p>
+            <p><a href="https://github.com/meejain/zeroto100" target="_blank">View on GitHub</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight current section in navigation
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.table-of-contents a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
