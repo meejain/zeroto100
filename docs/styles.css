@@ -132,7 +132,6 @@ body {
     background-color: var(--bg-light);
     padding: 12px 15px;
     margin: 8px 0;
-    border-left: 4px solid var(--secondary-color);
 }
 
 .table-of-contents > ul > li > a:hover {
@@ -270,7 +269,7 @@ body {
     padding: 30px;
     background: var(--bg-light);
     border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
+    border: 1px solid var(--border-color);
 }
 
 .exercise-objective {
@@ -278,7 +277,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 25px;
-    border-left: 4px solid var(--primary-color);
+    border: 1px solid #90caf9;
 }
 
 .exercise-objective p {
@@ -299,7 +298,7 @@ body {
     padding: 20px;
     background: var(--bg-light);
     border-radius: 6px;
-    border-left: 3px solid var(--secondary-color);
+    border: 1px solid var(--border-color);
 }
 
 /* Lists */
@@ -375,13 +374,12 @@ img {
     padding: 20px;
     border-radius: 8px;
     margin: 20px 0;
-    border-left: 4px solid;
+    border: 1px solid var(--border-color);
     background-color: var(--bg-light);
 }
 
 .note {
     background-color: #fff3cd;
-    border-color: var(--warning-color);
 }
 
 .note strong {
@@ -390,12 +388,10 @@ img {
 
 .tip {
     background-color: #d1ecf1;
-    border-color: #0dcaf0;
 }
 
 .success {
     background-color: #d4edda;
-    border-color: var(--success-color);
 }
 
 .success strong {
@@ -403,7 +399,6 @@ img {
 }
 
 blockquote {
-    border-color: var(--primary-color);
     background-color: #f0f7ff;
 }
 
@@ -417,7 +412,7 @@ blockquote p {
     padding: 20px;
     background: var(--bg-light);
     border-radius: 6px;
-    border-left: 3px solid var(--primary-color);
+    border: 1px solid var(--border-color);
 }
 
 .token-section {
@@ -425,7 +420,7 @@ blockquote p {
     padding: 20px;
     background: var(--bg-light);
     border-radius: 6px;
-    border-left: 3px solid var(--secondary-color);
+    border: 1px solid var(--border-color);
 }
 
 /* Workflow Styles */
@@ -434,7 +429,7 @@ blockquote p {
     padding: 30px;
     background: var(--bg-light);
     border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
+    border: 1px solid var(--border-color);
 }
 
 .workflow h5 {
@@ -470,7 +465,7 @@ blockquote p {
     padding: 20px;
     border-radius: 6px;
     margin: 15px 0;
-    border-left: 4px solid var(--secondary-color);
+    border: 1px solid #1a202c;
 }
 
 .prompt-box pre {
@@ -508,9 +503,9 @@ blockquote p {
 .accomplishments {
     margin: 30px 0;
     padding: 25px;
-    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    background: #e8f5e9;
     border-radius: 8px;
-    border-left: 4px solid var(--success-color);
+    border: 1px solid var(--border-color);
 }
 
 .accomplishments h6 {
@@ -541,7 +536,7 @@ blockquote p {
     padding: 25px;
     background: var(--bg-light);
     border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
+    border: 1px solid var(--border-color);
 }
 
 .issue h4 {
