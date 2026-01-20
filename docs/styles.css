@@ -124,34 +124,6 @@ body {
     font-weight: 600;
 }
 
-/* Top level items (Prerequisites, Lab 1, Lab 2) */
-.table-of-contents > ul > li > a {
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: var(--primary-color);
-    background-color: var(--bg-light);
-    padding: 12px 15px;
-    margin: 8px 0;
-    border-left: 4px solid var(--secondary-color);
-}
-
-.table-of-contents > ul > li > a:hover {
-    background-color: var(--primary-color);
-    color: white;
-    padding-left: 15px;
-}
-
-/* Collapse nested lists by default */
-.table-of-contents > ul > li > ul {
-    display: none !important;
-    margin-left: 15px;
-    margin-top: 5px;
-}
-
-.table-of-contents > ul > li > ul.show {
-    display: block !important;
-}
-
 .table-of-contents ul ul {
     margin-left: 15px;
     margin-top: 5px;
@@ -170,23 +142,6 @@ body {
     font-size: 0.85rem;
     padding: 5px 10px;
     color: var(--text-light);
-}
-
-/* Toggle icon for expandable items */
-.table-of-contents > ul > li {
-    position: relative;
-}
-
-.table-of-contents > ul > li > a::after {
-    content: '▼';
-    position: absolute;
-    right: 15px;
-    font-size: 0.8rem;
-    transition: transform 0.3s ease;
-}
-
-.table-of-contents > ul > li.expanded > a::after {
-    transform: rotate(180deg);
 }
 
 /* Custom scrollbar for table of contents */
@@ -371,12 +326,11 @@ img {
 }
 
 /* Note, Tip, Success Boxes */
-.note, .tip, .success, blockquote {
+.note, .tip, .success {
     padding: 20px;
     border-radius: 8px;
     margin: 20px 0;
     border-left: 4px solid;
-    background-color: var(--bg-light);
 }
 
 .note {
@@ -402,39 +356,30 @@ img {
     color: var(--success-color);
 }
 
-blockquote {
-    border-color: var(--primary-color);
-    background-color: #f0f7ff;
-}
-
-blockquote p {
-    margin: 5px 0;
-}
-
 /* IDE Config Sections */
 .ide-config {
     margin: 25px 0;
     padding: 20px;
-    background: var(--bg-light);
+    background: var(--bg-white);
     border-radius: 6px;
-    border-left: 3px solid var(--primary-color);
+    border: 2px solid var(--border-color);
 }
 
 .token-section {
     margin: 20px 0;
     padding: 20px;
-    background: var(--bg-light);
+    background: var(--bg-white);
     border-radius: 6px;
-    border-left: 3px solid var(--secondary-color);
+    border: 1px solid var(--border-color);
 }
 
 /* Workflow Styles */
 .workflow {
     margin: 30px 0;
     padding: 30px;
-    background: var(--bg-light);
+    background: linear-gradient(to right, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 .workflow h5 {
@@ -532,8 +477,6 @@ blockquote p {
     color: var(--primary-color);
     font-size: 1.5rem;
     margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--secondary-color);
 }
 
 .issue {
@@ -541,13 +484,12 @@ blockquote p {
     padding: 25px;
     background: var(--bg-light);
     border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
+    border-left: 4px solid var(--warning-color);
 }
 
 .issue h4 {
-    color: var(--primary-color);
+    color: var(--warning-color);
     margin-bottom: 15px;
-    font-size: 1.15rem;
 }
 
 /* Footer */
