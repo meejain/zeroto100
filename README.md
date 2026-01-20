@@ -6,31 +6,33 @@ A hands-on lab where you'll be building your very own personal website from the 
 
 - [Prerequisites](#prerequisites)
   - [Checking and Upgrading Node.js](#checking-and-upgrading-nodejs)
-- [Exercise 1: Bootstrap a Live Personal Site](#exercise-1-bootstrap-a-live-personal-site)
-  - [Step 1: Create Your Repository from Boilerplate](#step-1-create-your-repository-from-boilerplate)
-  - [Step 2: Install AEM Code Sync](#step-2-install-aem-code-sync)
-  - [Step 3: Author and Manage Content](#step-3-author-and-manage-content)
-  - [Step 4: Preview and Publish Content](#step-4-preview-and-publish-content)
-- [Exercise 2: Know the Development Flow for EDS](#exercise-2-know-the-development-flow-for-eds)
-  - [Step 1: Install AEM CLI](#step-1-install-aem-cli-if-not-already-done)
-  - [Step 2: Clone Your Repository](#step-2-clone-your-repository-via-ssh-or-https)
-  - [Step 3: Start Local Development Server](#step-3-start-local-development-server)
-- [Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI](#exercise-3-setup-ai-tooling-configure-mcp-build-a-block-using-ai)
-  - [Step 1: Configure MCP Servers](#step-1-configure-mcp-servers)
-    - [1.1 Get Access Tokens](#11-get-access-tokens)
-    - [1.2 Add MCP Server Configuration](#12-add-mcp-server-configuration)
-  - [Step 2: Install GitHub CLI and Add Agent Skills](#step-2-install-github-cli-and-add-agent-skills)
-    - [2.1 Install GitHub CLI](#21-install-github-cli-if-not-present)
-    - [2.2 Install gh-upskill Extension](#22-install-gh-upskill-extension)
-    - [2.3 Add AEM Skills to Your Project](#23-add-aem-skills-to-your-project)
-  - [Step 3: Build a Block Using AI](#step-3-build-a-block-using-ai)
-    - [Sample Workflow: Replace a Block with Another Block Type](#sample-workflow-replace-a-block-with-another-block-type)
-      - [1. Content Edit and Preview](#1-content-edit-and-preview-using-cursorvs-code)
-      - [2. Code Generation](#2-code-generation-if-the-block-doesnt-exist-yet)
-      - [3. Push Code to Repository](#3-push-code-to-repository-manual-or-ai-assisted)
-      - [4. Publish the Resource](#4-publish-the-resource-using-da)
-      - [5. Check Your Website's Performance](#5-check-your-websites-performance)
-    - [More Sample Prompts](#more-sample-prompts-to-experiment-with-later)
+- [Lab 1](#lab-1)
+  - [Exercise 1: Bootstrap a Live Personal Site](#exercise-1-bootstrap-a-live-personal-site)
+    - [Step 1: Create Your Repository from Boilerplate](#step-1-create-your-repository-from-boilerplate)
+    - [Step 2: Install AEM Code Sync](#step-2-install-aem-code-sync)
+    - [Step 3: Author and Manage Content](#step-3-author-and-manage-content)
+    - [Step 4: Preview and Publish Content](#step-4-preview-and-publish-content)
+- [Lab 2](#lab-2)
+  - [Exercise 2: Know the Development Flow for EDS](#exercise-2-know-the-development-flow-for-eds)
+    - [Step 1: Install AEM CLI](#step-1-install-aem-cli-if-not-already-done)
+    - [Step 2: Clone Your Repository](#step-2-clone-your-repository-via-ssh-or-https)
+    - [Step 3: Start Local Development Server](#step-3-start-local-development-server)
+  - [Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI](#exercise-3-setup-ai-tooling-configure-mcp-build-a-block-using-ai)
+    - [Step 1: Configure MCP Servers](#step-1-configure-mcp-servers)
+      - [1.1 Get Access Tokens](#11-get-access-tokens)
+      - [1.2 Add MCP Server Configuration](#12-add-mcp-server-configuration)
+    - [Step 2: Install GitHub CLI and Add Agent Skills](#step-2-install-github-cli-and-add-agent-skills)
+      - [2.1 Install GitHub CLI](#21-install-github-cli-if-not-present)
+      - [2.2 Install gh-upskill Extension](#22-install-gh-upskill-extension)
+      - [2.3 Add AEM Skills to Your Project](#23-add-aem-skills-to-your-project)
+    - [Step 3: Build a Block Using AI](#step-3-build-a-block-using-ai)
+      - [Sample Workflow: Replace a Block with Another Block Type](#sample-workflow-replace-a-block-with-another-block-type)
+        - [1. Content Edit and Preview](#1-content-edit-and-preview-using-cursorvs-code)
+        - [2. Code Generation](#2-code-generation-if-the-block-doesnt-exist-yet)
+        - [3. Push Code to Repository](#3-push-code-to-repository-manual-or-ai-assisted)
+        - [4. Publish the Resource](#4-publish-the-resource-using-da)
+        - [5. Check Your Website's Performance](#5-check-your-websites-performance)
+      - [More Sample Prompts](#more-sample-prompts-to-experiment-with-later)
 - [Troubleshooting](#troubleshooting)
   - [MCP Server Issues](#mcp-server-issues)
     - [Issue 1: MCP Server Installation or Connection Problems](#issue-1-mcp-server-installation-or-connection-problems)
@@ -67,7 +69,9 @@ node -v # Must now show Node v20.x.y installed
 ```
 ---
 
-## Exercise 1: Bootstrap a Live Personal Site
+## Lab 1
+
+### Exercise 1: Bootstrap a Live Personal Site
 
 **Objective**: Set up your GitHub repository, configure DA (Document Authoring), add your personal content, and publish your site.
 
@@ -148,7 +152,9 @@ Your site is now live at:
 
 ---
 
-## Exercise 2: Know the Development Flow for EDS
+## Lab 2
+
+### Exercise 2: Know the Development Flow for EDS
 
 **Objective**: Set up local development environment, make changes to code, and experience live reload.
 
@@ -184,7 +190,7 @@ Your browser should automatically open. If not, navigate to http://localhost:300
 
 ---
 
-## Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI
+### Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI
 
 **Objective**: Configure AI tooling (MCP servers) and build a block using AI assistance.
 
