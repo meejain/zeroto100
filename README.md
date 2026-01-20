@@ -234,58 +234,58 @@ Your browser should automatically open. If not, navigate to http://localhost:300
 
 Before adding the MCP server configuration, you need to get the access tokens first.
 
-#### 1.1 Get Access Tokens
+&nbsp;&nbsp;&nbsp;&nbsp;**1.1 Get Access Tokens**
 
-  ##### a) Get Edge Delivery Services Admin API Token:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**a) Get Edge Delivery Services Admin API Token:**
 
-  - Go to https://admin.hlx.page/login
-  - Use the `login_adobe` address to login with the Adobe identity provider
-  - You will be forwarded to https://admin.hlx.page/profile
-  - Open your browser's **Developer Tools** (F12)
-  - Go to the **Application** tab and **Storage**
-  - Under **Cookies**, find `auth_token`
-  - Copy the value of the `auth_token` cookie
-  - Place this token in notepad or similar for now - you'll need it in the next step as `<eds-token>`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Go to https://admin.hlx.page/login  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Use the `login_adobe` address to login with the Adobe identity provider  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- You will be forwarded to https://admin.hlx.page/profile  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Open your browser's **Developer Tools** (F12)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Go to the **Application** tab and **Storage**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Under **Cookies**, find `auth_token`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Copy the value of the `auth_token` cookie  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Place this token in notepad or similar for now - you'll need it in the next step as `<eds-token>`
 
-  <img width="800" alt="image" src="https://github.com/user-attachments/assets/a1dff6e0-ecc2-4e00-bcf3-786ee35948cc" />
-
----
-
-  ##### b) Get DA Live Admin API Token using Bookmarklet:
-
-  **Step 1: Create the Bookmarklet**
-
-  - In your browser, create a new bookmark (Right-click bookmarks bar → Add Page)
-  - Name: `Get DA Token`
-  - In the URL/Location field, paste the following code:
-
-  ```javascript
-  javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken!=='function'){alert('adobeIMS not available on this page');return;}try{const r=await adobeIMS.getAccessToken();if(!r||!r.token){alert('Token not found in response');console.log(r);return;}prompt('Adobe IMS Access Token (Ctrl/Cmd + C to copy):',r.token);}catch(e){console.error(e);alert('Failed to get access token');}})();
-  ```
-
-  - Save the bookmark
-
-  **Step 2: Use the Bookmarklet**
-
-  - Navigate to https://da.live
-  - Click on the **Get DA Token** bookmarklet in your bookmarks bar
-  - A prompt will appear with your access token
-  - Copy the token
-  - Place this token in notepad or similar for now - you'll need it in the next step as `<da-token>`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="800" alt="image" src="https://github.com/user-attachments/assets/a1dff6e0-ecc2-4e00-bcf3-786ee35948cc" />
 
 ---
 
-#### 1.2 Add MCP Server Configuration
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**b) Get DA Live Admin API Token using Bookmarklet:**
 
-Now that you have both tokens, add the MCP servers to your IDE. **Replace `<eds-token>` and `<da-token>` with your actual tokens from step 1.1.**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Step 1: Create the Bookmarklet**
 
-##### For Cursor IDE:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- In your browser, create a new bookmark (Right-click bookmarks bar → Add Page)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Name: `Get DA Token`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- In the URL/Location field, paste the following code:
 
-1. Open Cursor IDE
-2. Go to **Cusrsor > Setting > Cursor Settings** → **Tools & MCP**
-3. Add the following configuration (replace the token placeholders with your actual tokens):
+```javascript
+javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken!=='function'){alert('adobeIMS not available on this page');return;}try{const r=await adobeIMS.getAccessToken();if(!r||!r.token){alert('Token not found in response');console.log(r);return;}prompt('Adobe IMS Access Token (Ctrl/Cmd + C to copy):',r.token);}catch(e){console.error(e);alert('Failed to get access token');}})();
+```
 
-> **Note**: If you already have other MCP servers configured, just add `helix-mcp-server` and `da-live-admin` to your existing `mcpServers` object. Don't replace your entire configuration!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Save the bookmark
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Step 2: Use the Bookmarklet**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Navigate to https://da.live  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Click on the **Get DA Token** bookmarklet in your bookmarks bar  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- A prompt will appear with your access token  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Copy the token  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Place this token in notepad or similar for now - you'll need it in the next step as `<da-token>`
+
+---
+
+&nbsp;&nbsp;&nbsp;&nbsp;**1.2 Add MCP Server Configuration**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now that you have both tokens, add the MCP servers to your IDE. **Replace `<eds-token>` and `<da-token>` with your actual tokens from step 1.1.**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**For Cursor IDE:**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Open Cursor IDE  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Go to **Cusrsor > Setting > Cursor Settings** → **Tools & MCP**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Add the following configuration (replace the token placeholders with your actual tokens):
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> **Note**: If you already have other MCP servers configured, just add `helix-mcp-server` and `da-live-admin` to your existing `mcpServers` object. Don't replace your entire configuration!
 
 ```json
 {
@@ -313,18 +313,19 @@ Now that you have both tokens, add the MCP servers to your IDE. **Replace `<eds-
   }
 }
 ```
-4. After successful configuration, you should see the EDS and DA MCP servers available and enabled.
 
-<img width="1028" height="378" alt="Screenshot 2026-01-13 at 7 46 55 PM" src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. After successful configuration, you should see the EDS and DA MCP servers available and enabled.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="1028" height="378" alt="Screenshot 2026-01-13 at 7 46 55 PM" src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" />
 
 ---
 
-##### For Visual Studio Code:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**For Visual Studio Code:**
 
-1. Open VS Code
-2. Add the following configuration (replace the token placeholders with your actual tokens):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Open VS Code  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Add the following configuration (replace the token placeholders with your actual tokens):
 
-> **Note**: If you already have other MCP servers configured, just add `helix-mcp-server` and `da-live-admin` to your existing `mcpServers` object. Don't replace your entire configuration!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> **Note**: If you already have other MCP servers configured, just add `helix-mcp-server` and `da-live-admin` to your existing `mcpServers` object. Don't replace your entire configuration!
 
 ```json
 {
@@ -352,41 +353,42 @@ Now that you have both tokens, add the MCP servers to your IDE. **Replace `<eds-
   }
 }
 ```
-3. Click on "Configure Tools" icon at the bottom of AI Chat window in VSCode.
 
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/c3107dec-0018-4850-9ac2-e2914e4f23a6" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Click on "Configure Tools" icon at the bottom of AI Chat window in VSCode.
 
-4. Enable `da-live-admin` and `helix-mcp-server`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="300" alt="image" src="https://github.com/user-attachments/assets/c3107dec-0018-4850-9ac2-e2914e4f23a6" />
 
-<img width="610" height="501" alt="image" src="https://github.com/user-attachments/assets/8baa6d3a-b2b3-4868-b5b8-281faf2180f7" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Enable `da-live-admin` and `helix-mcp-server`
 
-5. Once enabled successfully, the list of tools should appear.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="610" height="501" alt="image" src="https://github.com/user-attachments/assets/8baa6d3a-b2b3-4868-b5b8-281faf2180f7" />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. Once enabled successfully, the list of tools should appear.
 
 ---
 
 ### Step 2: Install GitHub CLI and Add Agent Skills
 
-#### 2.1 Install GitHub CLI (If not present)
+&nbsp;&nbsp;&nbsp;&nbsp;**2.1 Install GitHub CLI (If not present)**
 
-**For macOS:**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**For macOS:**
 
-See the [official installation guide](https://github.com/cli/cli/blob/trunk/docs/install_macos.md#homebrew)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See the [official installation guide](https://github.com/cli/cli/blob/trunk/docs/install_macos.md#homebrew)
 
-**For Windows:**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**For Windows:**
 
-See the [official installation guide](https://github.com/cli/cli/blob/trunk/docs/install_windows.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See the [official installation guide](https://github.com/cli/cli/blob/trunk/docs/install_windows.md)
 
-**For Linux:**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**For Linux:**
 
-See the [official installation guide](https://github.com/cli/cli/blob/trunk/docs/install_linux.md#recommended-official)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See the [official installation guide](https://github.com/cli/cli/blob/trunk/docs/install_linux.md#recommended-official)
 
-> **Note**: After installation, you may need to authenticate with GitHub by running `gh auth login` before using `gh` commands.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> **Note**: After installation, you may need to authenticate with GitHub by running `gh auth login` before using `gh` commands.
 
 ---
 
-#### 2.2 Install gh-upskill Extension
+&nbsp;&nbsp;&nbsp;&nbsp;**2.2 Install gh-upskill Extension**
 
-Install the gh-upskill extension for GitHub CLI:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Install the gh-upskill extension for GitHub CLI:
 
 ```bash
 gh extension install trieloff/gh-upskill
@@ -394,21 +396,21 @@ gh extension install trieloff/gh-upskill
 
 ---
 
-#### 2.3 Add AEM Skills to Your Project
+&nbsp;&nbsp;&nbsp;&nbsp;**2.3 Add AEM Skills to Your Project**
 
-Navigate to your project root directory:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Navigate to your project root directory:
 
 ```bash
 cd <github-repo>
 ```
 
-Then run:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Then run:
 
 ```bash
 gh upskill adobe/helix-website --dest-path .claude/skills --all
 ```
 
-This command will add AEM-specific skills to your project, enabling AI agents to better understand and work with AEM Edge Delivery Services patterns and best practices.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This command will add AEM-specific skills to your project, enabling AI agents to better understand and work with AEM Edge Delivery Services patterns and best practices.
 
 ---
 
