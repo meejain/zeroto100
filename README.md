@@ -176,7 +176,7 @@ Before adding the MCP server configuration, you need to get the access tokens fi
 
 #### 1.1 Get Access Tokens
 
-**a) Get Helix Admin API Token:**
+**a) Get Edge Delivery Services Admin API Token:**
 
 - Go to https://admin.hlx.page/login
 - Use the `login_adobe` address to login with the Adobe identity provider
@@ -185,7 +185,7 @@ Before adding the MCP server configuration, you need to get the access tokens fi
 - Go to the **Application** tab and **Storage**
 - Under **Cookies**, find `auth_token`
 - Copy the value of the `auth_token` cookie
-- Place this token in notepad or similar for now - you'll need it in the next step as `<helix-token>`
+- Place this token in notepad or similar for now - you'll need it in the next step as `<eds-token>`
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/a1dff6e0-ecc2-4e00-bcf3-786ee35948cc" />
 
 
@@ -213,7 +213,7 @@ javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken
 
 #### 1.2 Add MCP Server Configuration
 
-Now that you have both tokens, add the MCP servers to your IDE. **Replace `<helix-token>` and `<da-token>` with your actual tokens from step 1.1.**
+Now that you have both tokens, add the MCP servers to your IDE. **Replace `<eds-token>` and `<da-token>` with your actual tokens from step 1.1.**
 
 **For Cursor IDE:**
 
@@ -249,7 +249,7 @@ Now that you have both tokens, add the MCP servers to your IDE. **Replace `<heli
   }
 }
 ```
-4. After successful configuration, you should see the Helix and DA MCP servers available and enabled.
+4. After successful configuration, you should see the EDS and DA MCP servers available and enabled.
 <img width="1028" height="378" alt="Screenshot 2026-01-13 at 7 46 55 PM" src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" />
 
 **For Visual Studio Code:**
