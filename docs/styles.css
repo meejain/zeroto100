@@ -127,10 +127,14 @@ body {
 /* Accordion functionality */
 .table-of-contents li > a {
     position: relative;
+}
+
+/* Only show arrow for items with sub-menus */
+.table-of-contents li:has(> ul) > a {
     padding-right: 30px; /* Space for dropdown arrow */
 }
 
-.table-of-contents li > a::after {
+.table-of-contents li:has(> ul) > a::after {
     content: '▼'; /* Dropdown arrow */
     position: absolute;
     right: 10px;
