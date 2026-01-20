@@ -139,24 +139,6 @@ This starts a local server at `http://localhost:3000/`
 
 Your browser should automatically open. If not, navigate to http://localhost:3000/ manually.
 
-### Step 4: Make a Minor Change and See Live Reload
-
-Let's make a simple CSS change to see live reload in action:
-
-1. Open your project in your IDE (Cursor or VS Code)
-2. Navigate to `styles/styles.css`
-3. Find the `body` selector and modify a style property. For example, change the background color:
-
-```css
-body {
-  /* Add or modify this line */
-  background-color: black;
-}
-```
-
-4. Save the file (Ctrl/Cmd + S)
-5. Watch your browser automatically reload and display the change!
-
 **Congratulations!** 🎉 You now understand the EDS development flow:
 - Make changes locally
 - See instant feedback in the browser
