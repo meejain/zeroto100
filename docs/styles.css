@@ -552,7 +552,7 @@ img {
     padding: 25px;
     background: var(--bg-light);
     border-radius: 8px;
-    border-left: 4px solid var(--warning-color);
+    /* border-left: 4px solid var(--warning-color); */
 }
 
 .issue h4 {
