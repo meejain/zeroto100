@@ -458,8 +458,26 @@ After publishing your content, verify your Lighthouse score:
 
 ### MCP Installation Issues with npx
 
+**Problem:** 
 If you're facing issues with MCP server installation or the servers are not connecting properly, try clearing the npx cache:
 
+**Solution**
 ```bash
 rm -rf ~/.npm/_npx
 ```
+**Problem:**
+I'm able to connnect the MCP server via the terminal using command "npx -y github:jindaliiita/eds-mcp"
+However in the cursor settings I'm getting the error "[error] Client error for command A system error occurred (spawn npx ENOENT)" while configuring this MCP Server
+
+**Solution**
+Likely Cursor is not able to find the location of the `npx` executable. Do the following:
+1. Open terminal
+2. Ensure you have `npx` installed.
+   ```
+   $ which npx
+   /Users/satyam/.nvm/versions/node/v20.14.0/bin/npx
+   ```
+3. Update the `npx` path to `/Users/satyam/.nvm/versions/node/v20.14.0/bin/npx` to `.cusrsor/mcp.json` in Cursor.
+4. Restart Cursor.
+   
+   
