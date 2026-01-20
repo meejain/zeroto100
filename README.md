@@ -84,16 +84,15 @@ node -v # Must now show Node v20.x.y installed
 1. Visit the [Dev Day Boilerplate repository](https://github.com/meejain/zeroto100)
 
 2. Click **"Use this template"** → **"Create a new repository"**
+   <img width="700" alt="Screenshot 2026-01-13 at 7 28 19 PM" src="https://github.com/user-attachments/assets/04dd7645-7f8b-4294-97eb-0405915cc747" />
 
-<img width="700" alt="Screenshot 2026-01-13 at 7 28 19 PM" src="https://github.com/user-attachments/assets/04dd7645-7f8b-4294-97eb-0405915cc747" />
+4. Choose your GitHub user as the owner
 
-3. Choose your GitHub user as the owner
+5. Provide the repository name
 
-4. Provide the repository name
+6. Set the repository to **public** (recommended)
 
-5. Set the repository to **public** (recommended)
-
-6. Click **"Create repository"**
+7. Click **"Create repository"**
 
 ---
 
@@ -102,14 +101,13 @@ node -v # Must now show Node v20.x.y installed
 1. Visit [AEM Code Sync GitHub App](https://github.com/apps/aem-code-sync/installations/new)
 
 2. Select the "github-user" same as where you create the repo in the previous steps
+   <img width="400" alt="image" src="https://github.com/user-attachments/assets/cd43982d-0dcb-4758-a88d-eced776a0276" />
 
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/cd43982d-0dcb-4758-a88d-eced776a0276" />
+4. IMPORTANT: Under **Repository access**, select **"Only select repositories"**
 
-3. IMPORTANT: Under **Repository access**, select **"Only select repositories"**
+5. Choose your newly created repository
 
-4. Choose your newly created repository
-
-5. Click **"Save"**
+6. Click **"Save"**
 
 Your site is now live at:
 - **Preview**: `https://main--<github-repo>--<github-user>.aem.page`
@@ -124,18 +122,15 @@ Your site is now live at:
 1. Navigate to [DA.live](https://da.live/start)
 
 2. Add your newly created github repository link.
-
-<img width="700" alt="image" src="https://github.com/user-attachments/assets/67d6b5f5-d036-41bc-a251-6a30518f143a" />
+   <img width="700" alt="image" src="https://github.com/user-attachments/assets/67d6b5f5-d036-41bc-a251-6a30518f143a" />
 
 3. Click on **Go** Button.
 
 4. Select the **No Sample Content** option and click **Make something wonderful**.
-
-<img width="600" alt="image" src="https://github.com/user-attachments/assets/cdb2264d-1150-4516-ae0b-b0a72c366c40" />
+   <img width="600" alt="image" src="https://github.com/user-attachments/assets/cdb2264d-1150-4516-ae0b-b0a72c366c40" />
 
 5. We should now have an empty content space create for the site.
-
-<img width="600" alt="image" src="https://github.com/user-attachments/assets/5167c77f-67ac-43e4-949e-04b347e43fe3" />
+   <img width="600" alt="image" src="https://github.com/user-attachments/assets/5167c77f-67ac-43e4-949e-04b347e43fe3" />
 
 6. Let's import some sample content now. Visit https://da.live/apps/import and import the following pages using the **"By URL"** option. Import them as is, without modifying the URLs
    - `https://main--zeroto100--meejain.aem.live`
@@ -146,14 +141,12 @@ Your site is now live at:
    - For example: If your DA.live URL is `https://da.live/#/sdmcraft/dev-day-lab-3`, then:
      - **Org**: `sdmcraft`
      - **Site**: `dev-day-lab-3`
-
-<img width="700" alt="image" src="https://github.com/user-attachments/assets/5cb9d167-5e45-43b1-9e8c-aa4feaf16635" />
+     <img width="700" alt="image" src="https://github.com/user-attachments/assets/5cb9d167-5e45-43b1-9e8c-aa4feaf16635" />
 
 8. Wait for the content to import successfully. It should take 15-30 secs.
 
 9. You should now see the content imported for your site at https://da.live/#/<github-user>/<github-repo>
-
-<img width="400" height="450" alt="image" src="https://github.com/user-attachments/assets/df996783-2dad-44d6-a522-1ef35562710d" />
+  <img width="400" height="450" alt="image" src="https://github.com/user-attachments/assets/df996783-2dad-44d6-a522-1ef35562710d" />
 
 ---
 
@@ -162,20 +155,18 @@ Your site is now live at:
 1. Open up the page `https://da.live/edit#/<github-user>/<github-repo>/index` 
 
 2. Click the **Preview** button to preview your changes.
+<img width="311" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
 
-<img width="311" height="88" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
-
-3. Once satisfied with the preview, click the **Publish** button to make your content live.
-
-<img width="311" height="88" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
+4. Once satisfied with the preview, click the **Publish** button to make your content live.
+<img width="311" alt="Screenshot 2026-01-13 at 7 16 41 PM" src="https://github.com/user-attachments/assets/da191597-8e31-4238-b760-43da25ef2445" />
   
 4. Your content will now be available on both preview and live URLs.
 
 5. Repeat steps 2 to 4 for `https://da.live/edit#/<github-user>/<github-repo>/nav` and `https://da.live/edit#/<github-user>/<github-repo>/footer`
 
 6. Feel free to add your own personalized content to the page. Do the same **Preview/Publish** steps to visualize your changes.
-
-> **Pro Tip:** You can also visualize your changes inline by clicking on the preview button. <img width="57" height="67" alt="image" src="https://github.com/user-attachments/assets/7d6543b7-4dc7-452c-95b1-241978c4ba1c" />
+   <img width="57" alt="image" src="https://github.com/user-attachments/assets/7d6543b7-4dc7-452c-95b1-241978c4ba1c" />
+> **Pro Tip:** You can also visualize your changes inline by clicking on the preview button. 
 
 **Congratulations!** 🎉 You have successfully bootstrapped your live personal website with default blocks on AEM Edge Delivery Services. Your site is now live and accessible on the web!
 
