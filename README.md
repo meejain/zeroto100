@@ -437,40 +437,108 @@ Ensure images are lazy-loaded and CSS is minimal.
 
 ## Troubleshooting
 
-### MCP Installation Issues with npx
+### MCP Server Issues
 
-**Problem:** 
-If you're facing issues with MCP server installation or the servers are not connecting properly, try clearing the npx cache:
+#### Issue 1: MCP Server Installation or Connection Problems
 
-**Solution**
+**Problem:**
+
+If you're facing issues with MCP server installation or the servers are not connecting properly, this may be due to corrupted npx cache.
+
+**Solution:**
+
+Clear the npx cache by running:
+
 ```bash
 rm -rf ~/.npm/_npx
 ```
-**Problem:**
-I'm able to connnect the MCP server via the terminal using command "npx -y github:jindaliiita/eds-mcp"
-However in the cursor settings I'm getting the error "[error] Client error for command A system error occurred (spawn npx ENOENT)" while configuring this MCP Server
 
-**Solution**
-Likely Cursor is not able to find the location of the `npx` executable. Do the following:
-1. Open terminal
-2. Ensure you have `npx` installed.
-   ```
-   $ which npx
-   /Users/satyam/.nvm/versions/node/v20.14.0/bin/npx
-   ```
-3. Update the `npx` path to `/Users/satyam/.nvm/versions/node/v20.14.0/bin/npx` to `.cursor/mcp.json` in Cursor.
-4. Restart Cursor.
-   
+After clearing the cache, restart your IDE and try reconnecting the MCP servers.
+
+---
+
+#### Issue 2: MCP Server Works in Terminal but Fails in Cursor Settings
+
 **Problem:**
-You are unable to install `gh` extension.
+
+You can connect to the MCP server via terminal using:
+
+```bash
+npx -y github:jindaliiita/eds-mcp
 ```
-~/Documents/dev-day ❯ gh extension install trieloff/gh-upskill                              12:26:53
+
+However, in Cursor settings you're getting the error:
+
+```
+[error] Client error for command A system error occurred (spawn npx ENOENT)
+```
+
+**Solution:**
+
+Cursor is unable to find the location of the `npx` executable. Follow these steps:
+
+1. Open your terminal
+2. Find the full path to your `npx` installation:
+
+```bash
+which npx
+```
+
+Example output:
+
+```
+/Users/satyam/.nvm/versions/node/v20.14.0/bin/npx
+```
+
+3. Update your Cursor MCP configuration (`.cursor/mcp.json`) to use the full path instead of just `npx`:
+
+```json
+{
+  "mcpServers": {
+    "helix-mcp-server": {
+      "command": "/Users/satyam/.nvm/versions/node/v20.14.0/bin/npx",
+      "args": [
+        "-y",
+        "github:jindaliiita/eds-mcp"
+      ],
+      "env": {
+        "HELIX_ADMIN_API_TOKEN": "<eds-token>"
+      }
+    }
+  }
+}
+```
+
+4. Restart Cursor
+
+---
+
+### GitHub CLI Issues
+
+#### Issue 3: Permission Denied When Installing gh Extension
+
+**Problem:**
+
+You're unable to install the `gh` extension and see this error:
+
+```bash
+~/Documents/dev-day ❯ gh extension install trieloff/gh-upskill
 ⡿fatal: could not create leading directories of '/Users/akshits/.local/share/gh/extensions/gh-upskill': Permission denied
 failed to run git: exit status 128
 ```
-**Solution**
-Your user does not have sufficient permissions to install `gh`. Update the permsision as follows:
-```
+
+**Solution:**
+
+Your user account doesn't have sufficient permissions for the `.local` directory. Update the permissions:
+
+```bash
 sudo chown -R "$USER":staff ~/.local
 ```
+
+After updating permissions, try installing the extension again:
+
+```bash
+gh extension install trieloff/gh-upskill
 ```
+
+---
