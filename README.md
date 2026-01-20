@@ -19,26 +19,9 @@ A hands-on lab where you'll be building your very own personal website from the 
 - [**Lab 2**](#lab-2)
   - [**Exercise 3: Setup AI Tooling (Configure MCP). Build a Block Using AI**](#exercise-3-setup-ai-tooling-configure-mcp-build-a-block-using-ai)
     - [Step 1: Configure MCP Servers](#step-1-configure-mcp-servers)
-      - [1.1 Get Access Tokens](#11-get-access-tokens)
-      - [1.2 Add MCP Server Configuration](#12-add-mcp-server-configuration)
     - [Step 2: Install GitHub CLI and Add Agent Skills](#step-2-install-github-cli-and-add-agent-skills)
-      - [2.1 Install GitHub CLI](#21-install-github-cli-if-not-present)
-      - [2.2 Install gh-upskill Extension](#22-install-gh-upskill-extension)
-      - [2.3 Add AEM Skills to Your Project](#23-add-aem-skills-to-your-project)
     - [Step 3: Build a Block Using AI](#step-3-build-a-block-using-ai)
-      - [Sample Workflow: Replace a Block with Another Block Type](#sample-workflow-replace-a-block-with-another-block-type)
-      - [1. Content Edit and Preview](#1-content-edit-and-preview-using-cursorvs-code)
-      - [2. Code Generation](#2-code-generation-if-the-block-doesnt-exist-yet)
-      - [3. Push Code to Repository](#3-push-code-to-repository-manual-or-ai-assisted)
-      - [4. Publish the Resource](#4-publish-the-resource-using-da)
-      - [5. Check Your Website's Performance](#5-check-your-websites-performance)
-      - [More Sample Prompts](#more-sample-prompts-to-experiment-with-later)
-- [Troubleshooting](#troubleshooting)
-  - [MCP Server Issues](#mcp-server-issues)
-    - [Issue 1: MCP Server Installation or Connection Problems](#issue-1-mcp-server-installation-or-connection-problems)
-    - [Issue 2: MCP Server Works in Terminal but Fails in Cursor](#issue-2-mcp-server-works-in-terminal-but-fails-in-cursor-settings)
-  - [GitHub Extension Installation Issues](#github-extension-installation-issues)
-    - [Issue 3: Permission Denied When Installing gh Extension](#issue-3-permission-denied-when-installing-gh-extension)
+- [**Troubleshooting**](#troubleshooting)
 
 ---
 
@@ -304,7 +287,7 @@ javascript:(async function(){if(!window.adobeIMS||typeof adobeIMS.getAccessToken
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. After successful configuration, you should see the EDS and DA MCP servers available and enabled.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="1028" height="378" alt="Screenshot 2026-01-13 at 7 46 55 PM" src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="1028" height="378" alt="Screenshot 2026-01-13 at 7 46 55 PM" src="https://github.com/user-attachments/assets/f2cba43a-98f3-49e7-bc24-ee22861dc110" />
 
 ---
 
@@ -540,7 +523,7 @@ Ensure images are lazy-loaded and CSS is minimal.
 
 ---
 
-## Troubleshooting
+## **Troubleshooting**
 
 ### MCP Server Issues
 
