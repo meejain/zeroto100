@@ -129,7 +129,7 @@ Your site is now live at:
 8. Wait for the content to import successfully. It should take 15-30 secs.
 
 9. You should now see the content imported for your site at `https://da.live/#/<github-user>/<github-repo>`
-  <img width="400" height="450" alt="image" src="https://github.com/user-attachments/assets/df996783-2dad-44d6-a522-1ef35562710d" />
+  <img width="1244" height="322" alt="Screenshot 2026-01-20 at 9 24 22 PM" src="https://github.com/user-attachments/assets/536a3686-f21b-4023-a948-6d5ee4bb210f" />
 
 ---
 
